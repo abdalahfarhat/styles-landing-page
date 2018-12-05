@@ -27,6 +27,7 @@
         background-image: url(adult-business-computer-374720.jpg);
         background-size: cover;
         background-position: center center;
+        filter: blur(3px);
       }
 
       /* ====================================
@@ -189,22 +190,6 @@
 
       .slide-in-nav-item-delay-4-reverse {
         animation: slide-in-nav-item-reverse 0.3s linear 1 both;
-      }
-      h1 {
-        display: inline;
-        text-align: center;
-        position: absolute;
-        font-family: sans-serif;
-        right: 700px;
-        top: 230px;
-        text-decoration: none;
-        background-color: #555;
-        color: white;
-        font-size: 25px;
-        padding: 20px 50px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
       }
 
       /* ====================================
@@ -410,6 +395,37 @@
           width: 15px;
         }
       }
+      h1 {
+        color: #ea495f;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-left: 25rem;
+        font-weight: 400;
+        font-size: 6rem;
+        line-height: 1.5;
+        cursor: pointer;
+      }
+      h1:hover {
+        filter: blur(1.5px);
+      }
+      h2 {
+        color: antiquewhite;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        margin-left: 25rem;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+      main {
+        z-index: 1;
+        position: absolute;
+        padding: 4rem;
+        min-height: calc(100vh - 70px);
+      }
+
+      main#home h1 {
+        margin-top: 30vh;
+      }
     </style>
   </head>
   <body>
@@ -424,12 +440,18 @@
         </ul>
       </nav>
     </div>
-
+    <main id="home">
+      <h1 class="lg-heading">
+        Abdalah <span class="text-secondary">Farhat</span>
+      </h1>
+      <h2 class="sm-heading">
+        Web Developer, programmer, Front-End Developer & Back-End Developer
+      </h2>
+    </main>
     <section class="home">
       <div class="open-overlay">
         <span class="bar-top"></span> <span class="bar-middle"></span>
         <span class="bar-bottom"></span>
-        <h1>Welcome to Abdalah Website</h1>
       </div>
     </section>
     <script src="opennav.js"></script>
