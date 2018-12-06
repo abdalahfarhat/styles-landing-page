@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>counter up effect</title>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+  </head>
+    
+    <style>
+    
+        body{
+            font-family: tahoma;
+            background-image: url(home.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    
+        .feature-counter.skin1 .features-list .features-description span{
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 38px;
+            color: #000;
+        }
+        
+        
+        .features-counter.skin1 .features-list .features-description p{
+            font-weight: bold;
+            color: #e41a1e;
+             
+        }
+        
+        
+        .features-heading:before{
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 8px;
+            background: #e41a1e;
+        }
+        
+        h2{
+            font-size: 26px;
+            font-weight: bold;
+        }
+        
+        .features-heading-description{
+            font-size: 16px;
+            text-align: justify;
+        }
+        
+        .btn{
+            background: #f70a37;
+            padding: 10px 30px;
+            border: 0px;
+            border-radius: 0px;
+        }
+        
+        
+        .features-description p{
+            background: #f4f4f4;
+            padding: 8px;
+            width: 120px;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+        
+        span.counter{
+            font-size: 40px;
+        }
+        
+        .counter span{
+            font-size: 40px;
+        }
+         
+    </style>
+
+</head>
+<body>
+    <br><br><br><br><br>
+    <section class="features skin1 feature-counter section-bg clearfix">
+        
+        <div class="container">
+            <div class="features-heading pb-50">
+                <br><br>
+                <h2 class="features-heading-title">
+                    <b>WHY CHOOSE US</b>
+                </h2>
+                <br>
+                <p class="features-heading-description">
+                    When we set out to create Angmar, we wanted something you could drink throughout <br>
+                    the day, without any side effects. A drink that would reduce stress, but also keepthe day,<br>
+                    without any side effects. A drink that would reduce stress, but also keep you sharp, focused,<r></r>
+                    create and productive.
+                    
+                </p>
+                
+                <a href="" class="btn btn-danger">READ MORE</a>
+                
+             
+            </div>
+            <br><br><br>
+            
+            <div class="row">
+                <div class="col-md-2 col-sm-6">
+                    <div class="features-list">
+                        <img src="icon_counter2.png" alt="">
+                    </div><br>
+                    
+                    <div class="features-description">
+                        <span class="counter">1568</span>
+                        <span>+</span>
+                        <p>
+                            Teams
+                        </p>
+                    </div>
+                    
+                </div>
+                   
+                   <div class="col-md-2 col-sm-6">
+                    <div class="features-list">
+                        <img src="icon_counter3.png" alt="">
+                    </div><br>
+                    
+                    <div class="features-description">
+                        <span class="counter">98</span>
+                        <span>+</span>
+                        <p>
+                            Teams
+                        </p>
+                    </div>
+                    
+                </div> <div class="col-md-2 col-sm-6">
+                    <div class="features-list">
+                        <img src="icon_counter1.png" alt="">
+                    </div><br>
+                    
+                    <div class="features-description">
+                        <span class="counter">3.564</span>
+                        <span>+</span>
+                        <p>
+                            Teams
+                        </p>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+           
+            
+        </div>
+        
+        
+        
+        
+    </section>
+    
+    <script src="jquery.waypoints.min.js"></script>
+    <script src="jquery.counterup.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
+    </script>
+    </script>
+    
+</body>
+</html>
