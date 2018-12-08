@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Animated UI Profile Cards Demo">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Animate UI Profile Cards</title>
+	<!-- Use normalize for css reset -->
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+	<!-- Use fontawaesome for social icons -->
+	<link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+	<!-- Local css styling for the cards -->
+	<link type="text/css" rel="stylesheet" href="css/AnimateUIProfileCards.css">
+</head>
+
+<body>
+	
+	<!-- The outer most wrapper to keep everything in check -->
+	<div id="container">
+		
+    	<!-- The card container which displays multiple times -->
+    	<div class="card-wrapper">
+      		<!-- The card itself - one per card wrapper -->
+      		<div class="card profile-one">
+        		
+				<!-- The image : here we use profile-one for styling -->
+        		<div class="card-image profile-img-one">
+	  				<img src="images/profile_01_400x650.jpg" alt="profile image one">
+        		</div><!-- END card-image -->
+
+				<!-- The social icons are presented as a horizontal list -->
+      			<ul class="social-icons">
+        			<li>
+						<!-- fab=FontAwesomeBrands fa-facebook-f=TheIsolatedF -->
+          				<a href="#"><span class="fab fa-facebook-f"></span></a>
+        			</li>
+        			<li>
+          				<a href="#"><span class="fab fa-instagram"></span></a>
+        			</li>
+        			<li>
+          				<a href="#"><span class="fab fa-twitter"></span></a>
+        			</li>
+        			<li>
+          				<a href="#"><span class="fab fa-dribbble"></span></a>
+        			</li>
+      			</ul><!-- END social-icons -->
+				
+				<!-- Text details on the card -->
+      			<div class="details john-smith">
+        			<h2>John Smith<br>
+						<span class="job-title">UI Developer</span></h2>
+      			</div><!-- END details -->
+				
+    		</div><!-- END card -->
+  		</div><!-- END card-wrapper --> 
+    
+    	<!-- new card wrapper -->
+		<div class="card-wrapper">
+			<!-- new card -->
+     		<div class="card profile-two">
+        
+				<!-- The image : here we use profile-two for styling -->
+        		<div class="card-image profile-img-two">
+          			<img src="images/profile_02_400x650.jpg" alt="profile image two">
+        		</div><!-- END image -->
+				
+				<!-- The Social Icons, again a horizontal list -->
+        		<ul class="social-icons">
+          			<li>
+            			<a href="#"><span class="fab fa-facebook-f"></span></a>
+					</li>
+					<li>
+						<a href="#"><span class="fab fa-instagram"></span></a>
+					</li>
+					<li>
+						<a href="#"><span class="fab fa-twitter"></span></a>
+					</li>
+					<li>
+						<a href="#"><span class="fab fa-dribbble"></span></a>
+					</li>
+				</ul><!-- END social icons -->
+				
+				<!-- Text details on the card -->
+		        <div class="details jane-doe">
+            		<h2>Jane Doe<br>
+              		<span class="job-title">UI Designer</span></h2>
+        		</div><!-- END details -->
+    
+			</div><!-- END card -->
+		</div><!-- END card wrapper -->
+     
+	</div><!-- END container -->
+
+</body>
+</html>

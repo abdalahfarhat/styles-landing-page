@@ -1,0 +1,113 @@
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: sans-serif;
+}
+body{
+	background: #bdc3c7;
+}
+.card{
+	width: 30%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	box-shadow: 0px 0px 24px #2c3e50;
+}
+.card .header{
+	height: 36vh;
+	position: relative;
+	overflow: hidden;
+}
+.card .header img{
+	height: 100%;
+}
+.card .header .bg{
+	background: #00000073;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.card .header .name{
+	position: absolute;
+	bottom: 8px;
+	left: 12px;
+	color: white;
+}
+.card .header .name .top{
+	display: block;
+	font-size: 20pt;
+	font-weight: bold;
+	float: right;
+}
+.card .header .name .bottom{
+	display: block;
+	font-size: 14pt;
+	float: right;
+}
+.card .body{
+	background: white;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 44vh;
+}
+.card .body .center{
+	position: absolute;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.card .body .center h1{
+	font-size: 16pt;
+	color: #34495e;
+}
+.card .body .center p{
+	font-size: 10pt;
+	color: #34495e;
+	margin-top: 10px;
+}
+.card .body .center hr{
+	width: 40%;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+.card .body .center .socmed{
+	margin-top: 10px;
+}
+.card .body .center .socmed a{ 
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	display: inline-block;
+}
+.fb{
+	background: #4A669C;
+	color: white;
+	border-radius: 50%;
+	text-align: center;
+	padding: 2%;
+}
+.fb:hover{
+	background: none;
+	color: #4A669C;
+	transition: .5s all;
+}
+.wa{
+	background: #009A00;
+	color: white;
+	border-radius: 50%;
+	text-align: center;
+	padding: 2%;
+}
+.wa:hover{
+	background: none;
+	color: #009A00;
+	transition: .5s all;
+}

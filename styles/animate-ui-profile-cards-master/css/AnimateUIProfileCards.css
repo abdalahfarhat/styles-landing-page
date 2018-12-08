@@ -1,0 +1,184 @@
+/* Global settings */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	background: #333333;
+}
+
+/* The outer container */
+#container {
+	max-width: 900px;
+	display: flex; /* make use of flexbox (no need to float stuff */
+	flex-direction: row; /* force row display */
+	justify-content: space-evenly; /* space the cards evenly inside the container */
+	margin: 0 auto; /* center the container within body */
+}
+
+/* The card container */
+.card-wrapper {
+	width: 400px;
+	height: 550px; /* card-height + padding */
+	padding-top: 50px; /* creates a top-margin inside the wrapper */
+	position: relative; /* allows multiple cards next to each other */
+}
+
+/* The card itself */
+.card {
+	position: absolute; /* within card-wrapper */
+	width: 400px; /* full-width, no reason not to */
+	height: 500px; /* the images are 650px high */
+	border-radius: 16px; /* make it look like a card */
+	overflow: hidden;
+	box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+	cursor: pointer; /* as if rollover */
+}
+
+.card .card-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	z-index: 2; /* put the image on top of the details */
+	top: 0px; /* position the image at top=0px */
+	transition: 0.7s; /* slightly quicker */
+}
+
+/* Fade the picture */
+.card:hover img {
+	opacity: 0.4; /* make the image 40% opacity and show black background */
+	transition: 0.5s; /* take 0.5 seconds */
+}
+
+/* Move the image up on hover (takes 0.9s) */
+/* This will reveal the details of card one */
+.card:hover .card-image {
+	transform: translateY(-100px);
+	transition: all 0.9s;
+}
+
+/* Social Icons */
+.social-icons {
+	position: absolute;
+	top: 50%; /* position top-left at center */
+	left: 50%; /* move -50%,-50% puts center social-icons at center parent */
+	transform: translate(-50%, -50%);
+	display: flex; /* make use of flexbox (no need to float stuff */
+	flex-direction: row; /* force row display */
+	z-index: 3; /* position on top */
+}
+/* Remove the list style for the social-icons */
+.social-icons li {
+	list-style: none;
+}
+/* Initialize the social-icons */
+/* Position them not outside the card, or hover states on the icons might be triggered */
+.social-icons li a {
+	position: relative;
+	display: block;
+	width: 50px; /* this is card one */
+	height: 50px; /* these icons will be square */
+	line-height: 50px;
+	text-align: center;
+	background: #ffffff;
+	font-size: 23px;
+	color: #333333;
+	font-weight: bold;
+	margin: 0 6px;
+	transform: translateY(200px); /* position them down so we can animate up */
+	opacity: 0; /* make them transparent so nobody sees them */
+	transition: 0.4s; /* do this in 0.4 seconds */
+}
+
+/* When the card gets hovered, animate the social icons and make them visible */
+.card:hover .social-icons li a {
+	transform: translateY(0px); /* move back to initial position */
+	opacity: 1; /* make visible */
+}
+
+/* Invert the icon square on hover */
+.social-icons li a:hover {
+	background: #000000; /* color black */
+	transition: 0.2s;
+}
+/* Invert the icon symbol on hover as well */
+.social-icons li a:hover .fab {
+	color: #ffffff; /* color white */
+}
+
+/* Rotate the symbol on hover */
+.social-icons li a .fab:hover {
+	transform: rotateY(360deg);
+	transition: 0.8s;
+}
+
+/* The following styles makes the social icons appear after one another */
+.card:hover li:nth-child(1) a {
+	transition-delay: 0.1s;
+}
+.card:hover li:nth-child(2) a {
+	transition-delay: 0.2s;
+}
+.card:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+.card:hover li:nth-child(4) a {
+	transition-delay: 0.4s;
+}
+
+/* Personal Details */
+.details {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	background: #ffffff;
+	width: 100%;
+	height: 120px;
+	z-index: 1;
+}
+.details h2 {
+	margin: 30px 0;
+	padding: 0;
+	text-align: center;
+}
+.details h2 .job-title {
+	font-size: 1rem;
+	line-height: 2.5rem;
+	color: #333333;
+	font-weight: 300;
+}
+
+/* Below are the styles for animating the second card */
+.jane-doe {
+	position: absolute;
+	bottom: -120px;
+	left: 0;
+	padding: 10px;
+	background: #ffffff;
+	width: 100%;
+	height: 120px;
+	z-index: 3;
+	opacity: 0;
+}
+
+/* Rotate the second card on hover */
+.card:hover .profile-img-two {
+	transform: rotateY(180deg);
+	transition: 0.4s;
+}
+/* Rounding off the social icons on the second card */ 
+.profile-two .social-icons li a {
+	border-radius: 50%;
+}
+/* Delay the details on Jane Doe, so the rotation can finish first */
+.card:hover .jane-doe {
+	transition-delay: 0.5s;
+	bottom: 0;
+	opacity: 1;
+	transition: 0.9s;
+}
