@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+   
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    
+body {
+    font-size: 16px;
+    line-height: 22px;
+    color: #555;
+     background-image: url(kmk.jpeg);    
+    font-weight: 300;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+    background-size: cover;
+    
+}
+ 
+#section-feature ul {
+    margin: 100px 0 0 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+#section-feature li {
+    
+    box-sizing: border-box;
+    position: relative;
+    height: 380px;
+    padding: 2%;
+    float: left;
+    margin-bottom: 40px;     
+    user-select: none;
+}
+
+#section-feature .sf-wrap {
+    background-repeat: no-repeat;
+    position: absolute;
+    max-width: 280px;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    margin-left: -140px;
+    top: 0;    
+    perspective: 600px;
+    cursor: pointer;
+}
+
+.sf-mdl-left,
+.sf-mdl-right,
+.sf-mdl-left-full,
+.sf-mdl-right-full {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;     
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.sf-icon {
+    position: absolute;
+    top: 90px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    width: 200%;
+    color: #fb527a;
+}
+
+
+.sf-mdl-left-full .sf-icon,
+.sf-mdl-right-full .sf-icon {
+    color: #fff;
+}
+
+.sf-mdl-right,
+.sf-mdl-right-full {
+    left: auto;
+    right: 0;
+}
+
+.sf-mdl-left-full,
+.sf-mdl-right-full {
+    background-color: #fb527a;
+    z-index: 9;
+    color: #fff;
+}
+
+.sf-wrap a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 110px;
+}
+
+.sf-mdl-left,
+.sf-mdl-right {
+    background-color: #fff;
+    z-index: 10;
+}
+
+.sf-wrap > .sf-mdl-right-full,
+.sf-wrap > .sf-mdl-right {
+    background-position: right -30px;
+}
+
+.sf-wrap > .sf-mdl-right,
+.sf-wrap > .sf-mdl-left-full {     
+
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform-origin: 0 0;
+    transform: rotateY(0deg);
+}
+
+.sf-wrap.hover > .sf-mdl-right {     
+    transform: rotateY(-45deg);
+    background-color: #ececec;
+}
+
+.sf-wrap > .sf-mdl-left-full {     
+    transform-origin: 100% 0;     
+    transform: rotateY(180deg);
+}
+
+.sf-wrap.active > .sf-mdl-right,
+.sf-wrap.hover.active > .sf-mdl-right {     
+    transform: rotateY(-180deg);
+}
+
+.sf-wrap.active > .sf-mdl-left-full {     
+    transform: rotateY(0deg);
+}
+
+.active .sf-mdl-left-full,
+.active .sf-mdl-right-full {
+    z-index: 11;
+}
+
+.sf-wrap div h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 22px;
+     
+}
+
+.sf-wrap div h3,
+.sf-wrap div p {
+    width: 200%;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 190px;
+}
+
+.sf-wrap div p {
+    padding: 0 10%;
+    line-height: 18px;
+    font-size: 14px;
+    top: 180px;
+}
+
+.sf-wrap div.sf-mdl-right h3,
+.sf-wrap div.sf-mdl-right-full h3,
+.sf-wrap div.sf-mdl-right p,
+.sf-wrap div.sf-mdl-right-full p,
+.sf-mdl-right .sf-icon,
+.sf-mdl-right-full .sf-icon
+{
+    left: auto;
+    right: 0;
+}
+
+.sf-wrap div.sf-mdl-left-full h3,
+.sf-wrap div.sf-mdl-right-full h3 {
+    top: 175px;
+}
+    
+    p{
+        margin-top: 55px;
+    } 
+    
+    a{
+        margin-top: 50px;
+    }
+    
+    
+</style>
+</head>
+<body>
+  <br><br><br><br><br>
+   <section id="section-feature" class="container">
+    <div class="row">
+        <ul>
+            <li id="sf-innovation" class="col-md-3 col-sm-6 col-xs-12">
+                <div class="sf-wrap">
+                   
+                    <div class="sf-mdl-left">
+                       
+                        <div class="sf-icon">
+                           
+                            <i class="fa fa-fw fa-rocket fa-5x"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                       
+                    </div>
+                    <div class="sf-mdl-right">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-rocket fa-5x"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                        
+                    </div>
+
+                    <div class="sf-mdl-left-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-rocket fa-5x"></i>
+                        </div>
+                         
+                        <h3><a href="#">Responsive Design</a>
+                        </h3>
+                        <p>Curabitur blandit tempus ardua ridiculus sed magna. Integer legentibus erat a ante historiarum dapibus.</p>
+                        
+                    </div>
+                    <div class="sf-mdl-right-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-rocket fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Responsive Design</a></h3>
+                        <p>Curabitur blandit tempus ardua ridiculus sed magna. Integer legentibus erat a ante historiarum dapibus.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li id="sf-community" class="col-md-3 col-sm-6 col-xs-12">
+                <div class="sf-wrap">
+                    <div class="sf-mdl-left">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-camera-retro fa-5x"></i>
+                        </div>
+                        <h3>Loves Photography</h3>
+                    </div>
+                    <div class="sf-mdl-right">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-camera-retro fa-5x"></i>
+                        </div>
+                        <h3>Loves Photography</h3>
+                    </div>
+
+                    <div class="sf-mdl-left-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-camera-retro fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Loves Photography</a></h3>
+                        <p>Hi omnes lingua, institutis, legibus inter se differunt. Donec sed odio operae, eu vulputate felis rhoncus.</p>
+                    </div>
+                    <div class="sf-mdl-right-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-camera-retro fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Loves Photography</a></h3>
+                        <p>Hi omnes lingua, institutis, legibus inter se differunt. Donec sed odio operae, eu vulputate felis rhoncus.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li id="sf-academy" class="col-md-3 col-sm-6 col-xs-12">
+                <div class="sf-wrap">
+                    <div class="sf-mdl-left">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-cloud-upload fa-5x"></i>
+                        </div>
+                        <h3>Retina Display</h3>
+                    </div>
+                    <div class="sf-mdl-right">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-cloud-upload fa-5x"></i>
+                        </div>
+                        <h3>Retina Display</h3>
+                    </div>
+
+                    <div class="sf-mdl-left-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-cloud-upload fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Retina Display</a></h3>
+                        <p>Nec dubitamus multa iter quae et nos invenerat. Ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+                    </div>
+                    <div class="sf-mdl-right-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-cloud-upload fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Retina Display</a></h3>
+                        <p>Nec dubitamus multa iter quae et nos invenerat. Ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li id="sf-opportunity" class="col-md-3 col-sm-6 col-xs-12">
+                <div class="sf-wrap">
+                    <div class="sf-mdl-left">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-star-half-o fa-5x"></i>
+                        </div>
+                        <h3>Source File Included</h3>
+                    </div>
+                    <div class="sf-mdl-right">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-star-half-o fa-5x"></i>
+                        </div>
+                        <h3>Source File Included</h3>
+                    </div>
+
+                    <div class="sf-mdl-left-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-star fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Source File Included</a></h3>
+                        <p>Morbi fringilla convallis sapien, id pulvinar odio volutpat. Contra legem facit qui id facit quod lex prohibet.</p>
+                    </div>
+                    <div class="sf-mdl-right-full">
+                        <div class="sf-icon">
+                            <i class="fa fa-fw fa-star fa-5x"></i>
+                        </div>
+                        <h3><a href="#">Source File Included</a></h3>
+                        <p>Morbi fringilla convallis sapien, id pulvinar odio volutpat. Contra legem facit qui id facit quod lex prohibet.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section> 
+<script>
+    $(function () {
+    $('#section-feature .sf-wrap')
+        .hover(function() {
+            $(this).addClass('hover');
+        }, function() {
+            $(this).removeClass('hover');
+        })
+        .click(function(event) {
+            //if (event.target.nodeName != 'A') {
+                $(this).toggleClass('active');
+            //}
+        });
+});
+    
+</script>
+</body>
+</html>

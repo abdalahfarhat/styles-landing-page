@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    
+    * {
+  box-sizing: border-box;
+}
+body {
+  background: #202020;
+  font-size: 62.5%;
+}
+#app {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(76, 76, 76, 1);
+   
+   
+  color: #fff;
+}
+.controls {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translate(-50%, 0);
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  padding: 0;
+}
+.controls li {
+   
+  cursor: pointer;
+  overflow: hidden;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  padding: 0 20px;  
+  font: 0.8rem/30px Arial, sans-serif;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  background: #272727;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+.controls li.active {
+  background: #f4eeee;
+    color: black;
+    font-weight: bold;
+}
+.page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #c0c0c0;
+}
+.page .center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+}
+.page h1 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  font-size: 2.8rem;
+  text-transform: capitalize;
+}
+.page p {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  font-size: 1.1rem;
+}
+.page a {
+  transition: color 200ms ease-out;
+  color: rgba(153, 153, 153, .8);
+}
+.page a:hover {
+  color: rgba(102, 102, 102, .8);
+}
+.active-animation {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.fade {
+  background-image: url(002.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.slide {
+  background-image: url(005.jpeg);
+    background-size: cover;
+}
+.zoom {
+  background-image: url(111.jpeg);
+    background-size: cover;
+}
+.flipX {
+  background-image: url(o9.jpeg);
+    background-size: cover;
+}
+.flipY {
+  background-image: url(0002.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.slideUp {
+  background-image:  url(90.jpeg);
+    background-size: cover;
+}
+
+    
+    </style>
+</head>
+<body>
+    <!-- App -->
+<div id="app">
+	
+	<component :is="state.view">
+		 
+	</component>
+	<controls></controls>
+</div>
+
+<!-- Controls -->
+<template id="controls">
+	<ul class="controls">
+		<li v-for="(animation, index) in state.animations" @click.prevent="setView(animation)" v-bind:class="{ 'active': animation === state.view }">
+			{{ animation }}
+		</li>
+	</ul>
+</template>
+
+<!-- Transitions -->
+<template id="page">
+	<transition 
+		v-on:enter="enter" 
+		v-on:leave="leave"
+		v-bind:css="false"
+		appear
+	>
+		<div class="page" v-bind:class="state.view">
+			<div class="center">
+				<slot></slot>
+			</div>
+		</div>
+	</transition>
+</template>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+<script>
+    
+    'use strict';
+
+// State
+var state = {
+	animations: ['fade', 'slide', 'slideUp', 'zoom', 'flipX', 'flipY'],
+	view: 'slide'
+
+	// Controls
+};var controls = Vue.component('controls', {
+	template: '#controls',
+	data: state,
+	methods: {
+		setView: function setView(animation) {
+			state.view = animation;
+		}
+	}
+});
+
+// Transitions
+var fade = Vue.component('fade', {
+	template: '#page',
+	methods: {
+		enter: function enter(el, done) {
+			TweenMax.fromTo(el, 1, {
+				autoAlpha: 0,
+				scale: 1.5
+			}, {
+				autoAlpha: 1,
+				scale: 1,
+				transformOrigin: '50% 50%',
+				ease: Power4.easeOut,
+				onComplete: done
+			});
+		},
+		leave: function leave(el, done) {
+			TweenMax.fromTo(el, 1, {
+				autoAlpha: 1,
+				scale: 1
+			}, {
+				autoAlpha: 0,
+				scale: 0.8,
+				ease: Power4.easeOut,
+				onComplete: done
+			});
+		}
+	}
+});
+
+var slide = Vue.component('slide', {
+	template: '#page',
+	methods: {
+		enter: function enter(el, done) {
+			var tl = new TimelineMax({
+				onComplete: done
+			});
+
+			tl.set(el, {
+				x: window.innerWidth * 1.5,
+				scale: 0.8,
+				transformOrigin: '50% 50%'
+			});
+
+			tl.to(el, 0.5, {
+				x: 0,
+				ease: Power4.easeOut
+			});
+
+			tl.to(el, 1, {
+				scale: 1,
+				ease: Power4.easeOut
+			});
+		},
+		leave: function leave(el, done) {
+			TweenMax.fromTo(el, 1, {
+				autoAlpha: 1
+			}, {
+				autoAlpha: 0,
+				ease: Power4.easeOut,
+				onComplete: done
+			});
+		}
+	}
+});
+
+var slideUp = Vue.component('slideUp', {
+	template: '#page',
+	methods: {
+		enter: function enter(el, done) {
+			var tl = new TimelineMax({
+				onComplete: done
+			});
+
+			tl.set(el, {
+				y: window.innerWidth * 1.5,
+				scale: 0.8,
+				transformOrigin: '50% 50%'
+			});
+
+			tl.to(el, 0.5, {
+				y: 0,
+				ease: Power4.easeOut
+			});
+
+			tl.to(el, 1, {
+				scale: 1,
+				ease: Power4.easeOut
+			});
+		},
+		leave: function leave(el, done) {
+			TweenMax.to(el, 1, {
+				y: window.innerHeight * -1.5,
+				ease: Power4.easeOut,
+				onComplete: done
+			});
+		}
+	}
+});
+
+var zoom = Vue.component('zoom', {
+	template: '#page',
+	methods: {
+		enter: function enter(el, done) {
+			var tl = new TimelineMax({
+				onComplete: done
+			});
+
+			tl.set(el, {
+				autoAlpha: 0,
+				scale: 2,
+				transformOrigin: '50% 50%'
+			});
+
+			tl.to(el, 1, {
+				autoAlpha: 1,
+				scale: 1,
+				ease: Power4.easeOut
+			});
+		},
+		leave: function leave(el, done) {
+			TweenMax.to(el, 1, {
+				scale: 0,
+				ease: Power4.easeOut,
+				onComplete: done
+			});
+		}
+	}
+});
+
+var flipX = Vue.component('flipX', {
+	template: '#page',
+	methods: {
+		enter: function enter(el, done) {
+			var tl = new TimelineMax({
+				onComplete: done
+			});
+
+			tl.set(el, {
+				autoAlpha: 0,
+				rotationX: 90,
+				transformOrigin: '50% 50%'
+			});
+
+			tl.to(el, 1, {
+				autoAlpha: 1,
+				rotationX: 0,
+				ease: Power4.easeOut
+			});
+		},
+		leave: function leave(el, done) {
+			TweenMax.to(el, 1, {
+				scale: 0,
+				ease: Power4.easeOut,
+				onComplete: done
+			});
+		}
+	}
+});
+
+var flipY = Vue.component('flipY', {
+	template: '#page',
+	methods: {
+		enter: function enter(el, done) {
+			var tl = new TimelineMax({
+				onComplete: done
+			});
+
+			tl.set(el, {
+				autoAlpha: 0,
+				rotationY: 90,
+				transformOrigin: '50% 50%'
+			});
+
+			tl.to(el, 1, {
+				autoAlpha: 1,
+				rotationY: 0,
+				ease: Power4.easeOut
+			});
+		},
+		leave: function leave(el, done) {
+			TweenMax.to(el, 1, {
+				scale: 0,
+				ease: Power4.easeOut,
+				onComplete: done
+			});
+		}
+	}
+});
+
+// App
+var app = new Vue({
+	el: '#app',
+	data: function data() {
+		return state;
+	}
+});
+</script>
+</body>
+</html>
