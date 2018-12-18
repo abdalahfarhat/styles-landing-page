@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>amzang popup video</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: tahoma;
+      }
+      #why-choose-me {
+        position: relative;
+      }
+      .why-choose-content {
+        margin-bottom: 40px;
+      }
+      .why-choose-content:last-of-type {
+        margin-bottom: 0;
+      }
+      .why-choose-content h3 {
+        color: #333333;
+        font-size: 18px;
+        font-weight: 500px;
+        margin-bottom: 20px;
+      }
+      .why-choose-content p {
+        font-size: 16px;
+        color: #888888;
+        line-height: 27px;
+        margin-bottom: 0px;
+      }
+      .video_area {
+        position: absolute;
+      }
+      .author-video-section {
+        overflow: hidden;
+        border-radius: 200px 0px 0px 200px;
+        background: url(Be-Happy-Small.jpeg) no-repeat center center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background-position: 0% 66%;
+      }
+      #video-right-static {
+        position: static;
+      }
+      .profilepicture {
+        position: absolute;
+        border-radius: 50%;
+        border: 7px solid #333;
+        padding: 10px;
+        width: 90px;
+        height: 90px;
+        color: #ff6046;
+        margin: auto;
+        top: -1px;
+        left: 40rem;
+        bottom: 0;
+        right: 0;
+        display: inline-block;
+        text-align: center;
+        z-index: 888;
+        transition: 0.3s;
+      }
+      .profilepicture::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: url(video-play-button.png) no-repeat center center;
+        width: 29px;
+        height: 34px;
+        text-align: center;
+        margin: 0px auto;
+        top: 26%;
+      }
+      .profilepicture:hover {
+        background: rgb(187, 26, 26);
+        color: white;
+      }
+      .video_button {
+        position: absolute;
+        right: 43%;
+        z-index: 33;
+        top: 180px;
+      }
+      .video_button a img {
+        position: absolute;
+        right: 25%;
+        z-index: 12;
+        top: 38%;
+      }
+      .raisa-video-body {
+        padding-top: 45px;
+      }
+      .raisa-video-btn {
+        border-bottom: 0px;
+        padding-bottom: 0px;
+        position: relative;
+      }
+      .raisa-video-btn button {
+        display: inline-block;
+        background-color: #fab702;
+        position: absolute;
+        z-index: 12;
+        right: 22px;
+        padding: 8px 40px;
+        border-radius: 0px;
+        color: white;
+        border: 0;
+      }
+      .modal-body {
+        position: relative;
+        flex: 1 1 auto;
+        padding: 1rem;
+        margin-top: 35px;
+      }
+      .modal.show .modal.dialog {
+        margin-top: 60px;
+      }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      @media (min-width: 768px) {
+        .modal.dialog {
+          width: 760px;
+          margin: 10px auto;
+        }
+      }
+      .modal-content {
+        position: relative;
+        background-color: white;
+        background-clip: padding-box;
+        border: 1px solid #999;
+        border-radius: 6px;
+        outline: 0;
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+        margin-top: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <section id="why-choose-me">
+      <div class="default-space"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="default-title">
+              <h4><b> Why Choose Us ? </b></h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="why-choose-content">
+              <h3>Why Hire Me</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                vitae dolor et minus animi magnam dolorem ea, quaerat unde
+                inventore.
+              </p>
+            </div>
+
+            <div class="why-choose-content">
+              <h3>Which sevices you get from me?</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                voluptates dignissimos ex quia voluptatum blanditiis dolore
+                tempore nobis saepe odit.
+              </p>
+            </div>
+
+            <div class="why-choose-content">
+              <h3>Why Files I will Provide you ?</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+                perspiciatis vel quam laudantium distinctio iure. Alias rerum
+                autem perferendis omnis.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6" id="video-right-static">
+            <div class="author-video-section"></div>
+            <div class="video_area">
+              <div class="video_button">
+                <a href="" data-toggle="modal" data-target="#myModal">
+                  <span class="profilepicture"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="myModal" tabindex="1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header raisa-video-btn">
+                  <button
+                    type="button"
+                    class="btn btn-default"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <div class="video-container">
+                    <iframe
+                      width="640"
+                      height="360"
+                      src="https://www.youtube.com/embed/IGTGtl6gbEQ"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

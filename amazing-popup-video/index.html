@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>amzang popup video</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: tahoma;
+      }
+      #why-choose-me {
+        position: relative;
+      }
+      .why-choose-content {
+        margin-bottom: 40px;
+      }
+      .why-choose-content:last-of-type {
+        margin-bottom: 0;
+      }
+      .why-choose-content h3 {
+        color: #333333;
+        font-size: 18px;
+        font-weight: 500px;
+        margin-bottom: 20px;
+      }
+      .why-choose-content p {
+        font-size: 16px;
+        color: #888888;
+        line-height: 27px;
+        margin-bottom: 0px;
+      }
+      .video_area {
+        position: relative;
+      }
+      .author-video-section {
+        overflow: hidden;
+        border-radius: 10px;
+        background: url() no-repeat center center;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="why-choose-me">
+      <div class="default-space">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="default-tile">
+                <h4><b> Why Choose Us ? </b></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="why-choose-content">
+              <h3>Why Hire Me</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                vitae dolor et minus animi magnam dolorem ea, quaerat unde
+                inventore.
+              </p>
+            </div>
+
+            <div class="why-choose-content">
+              <h3>Which sevices you get from me?</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                voluptates dignissimos ex quia voluptatum blanditiis dolore
+                tempore nobis saepe odit.
+              </p>
+            </div>
+
+            <div class="why-choose-content">
+              <h3>Why Files I will Provide you ?</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+                perspiciatis vel quam laudantium distinctio iure. Alias rerum
+                autem perferendis omnis.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6" id="video-right-static">
+            <div class="author-video-section"></div>
+            <div class="video_area">
+              <div class="video_button">
+                <a href="" data-toggle="modal" data-target="#myModal">
+                  <span class="profilepicture"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="myModal" tabindex="1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header raisa-video-btn">
+                  <button
+                    type="button"
+                    class="btn btn-default"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <div class="video-container">
+                    <iframe
+                      width="640"
+                      height="360"
+                      src="https://www.youtube.com/embed/IGTGtl6gbEQ"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
