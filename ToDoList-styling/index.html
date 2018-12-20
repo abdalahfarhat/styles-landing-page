@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"  >
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{    
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+        body{
+            background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url(2.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+   .section-box .half-img {
+  background-position: 50% 50%;
+}
+.section-box .half-content {
+    padding: 30px;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+.section-box .box-white {
+  padding: 100px 10%;
+  background: #fff;  
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+}
+.section-box .accordion .item {
+  margin-bottom: 30px;
+}
+.section-box .accordion .title {
+  padding: 10px 20px;
+  background: #fff; 
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.section-box .accordion .title:after {
+  content: '\f067';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 19px;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+.section-box .accordion .title h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.section-box .accordion .accordion-info {
+  display: none;
+  padding: 0px 15px;
+  margin-top: 30px;
+  border-left: 1px dotted #ccc;
+}
+.section-box .accordion .accordion-info .spac {
+  margin-top: 30px;
+  padding-left: 30px;
+}
+.section-box .accordion .accordion-info .spac h6 {
+  position: relative;
+  margin-bottom: 15px;
+}
+ 
+ 
+.section-box .accordion .active {
+  display: block;
+}
+.section-box .accordion .active .title {
+  color: #fff;
+  background: #EE3158;  
+  background: linear-gradient(to right, #EE3158, #e1284e);  
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+        
+        
+.section-box .accordion .active .title:after {
+  content: '\f068';
+}
+ 
+
+    </style>
+     
+</head>
+<body>
+   
+      <section class="section-box bg-img" data-overlay-dark="4" data-background="2.jpg">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-5 offset-lg-2 half-content bg-gray">
+                        <div class="box-white">
+
+                            <div class="content mb-50">
+                                <h5 class="mb-15"><b>Why You Can Chooes Us?</b></h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer took a galley.</p>
+                            </div>
+
+                            <!-- accordion -->
+
+                            <div class="accordion">
+
+                                <div class="item active">
+                                    <div class="title">
+                                        <h6>Identifying Problem Source</h6>
+                                    </div>
+                                    <div class="accordion-info active">
+                                        <p>Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ubique maluisset vel te, his dico vituperata ut. in quodsi Ubique maluisset vel te, his dico vituperata ut in quodsi Ubique.</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="title">
+                                        <h6>Protecting brand integrity</h6>
+                                    </div>
+                                    <div class="accordion-info">
+                                        <p>Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ubique maluisset vel te, his dico vituperata ut.vituperata ut in quodsi in quodsiUbique maluisset vel te, his dico vituperata ut in quodsiUbique. in quodsi vulputate.</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="title">
+                                        <h6>We Are Creative And Professional</h6>
+                                    </div>
+                                    <div class="accordion-info">
+                                        <p>Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ubique maluisset vel te, his dico vituperata ut. in vituperata ut in quodsi maluisset vel te, his dico vituperata ut in quodsi Ubique. in quodsi vulputate.</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <script>
+    jQuery(document).ready(function(){
+     $(".accordion").on("click",".title", function () {
+
+        $(this).next().slideDown();
+
+        $(".accordion-info").not($(this).next()).slideUp();
+
+    });
+
+    $(".accordion").on("click",".item", function () {
+
+        $(this).addClass("active").siblings().removeClass("active");
+
+    });   
+        
+    });
+    </script>
+</body>
+</html>

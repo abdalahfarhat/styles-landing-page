@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+ ></script>
+    <style>
+    body{
+  margin: 0px;
+  padding: 0px;
+        overflow: hidden;
+}
+
+nav{ 
+  -webkit-backface-visibility: hidden;
+  z-index: 5; 
+  position: fixed; 
+  top: 36%; 
+  left:83%;
+  right: 0px;
+  margin: auto;
+  width: 100px;
+}
+
+nav li{ 
+  height: 20px;
+  margin: 20px 0px;
+  list-style: none;
+}
+
+nav a{ 
+  display: block; 
+  width: 20px; 
+  height: 20px; 
+  text-indent: -9999px;
+    
+  background-color: transparent; 
+  border: 3px solid #fff; 
+  transition: all 0.3s ease; 
+  position: relative;
+  left: 0px;
+  top: 0px;
+    
+}
+nav a:hover, nav a.active{ background-color: #fff; width: 20px; height: 20px; }
+
+.red { 
+    background-image: url(2b.jpeg);
+       background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  
+        }
+.blue { background-image: url(2a.jpeg);
+        background-size: cover;
+        background-attachment: fixed;
+        }
+        
+.green { 
+        background-image: url(2c.jpeg);
+        background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+        }
+.pink { background-image: url(2E.jpeg); background-size: cover;
+        background-attachment: fixed;}
+.black { background-image: url(2f.jpeg); background-size: cover;background-position: center;
+        background-attachment: fixed;}
+
+section{ height: 980px; }
+    </style>
+</head>
+<body>
+    <nav>
+		 <ul>
+			<li><a href="#main">one</a></li>
+			<li><a href="#secondary">two</a></li>
+			<li><a href="#third">one</a></li>
+			<li><a href="#fourth">two</a></li>
+			<li><a href="#fifth">one</a></li>
+			</ul>
+</nav>	
+
+<section id="main" class="blue full-height"></section>
+	
+<section id="secondary" class="red full-height"></section>
+	
+<section id="third" class="green full-height"></section>
+	
+<section id="fourth" class="pink full-height"></section>
+	
+<section id="fifth" class="black full-height"></section>
+<script>
+    
+    $('a[href^="#"]').click(function(event) {
+		var id = $(this).attr("href");
+		var target = $(id).offset().top;
+		$('html, body').animate({scrollTop:target}, 500);
+		event.preventDefault();
+	});
+
+function getTargetTop(elem){
+	var id = elem.attr("href");
+	var offset = 60;
+	return $(id).offset().top - offset;
+}
+
+
+	$(window).scroll(function(e){
+		isSelected($(window).scrollTop())
+	});
+
+var sections = $('a[href^="#"]');
+
+function isSelected(scrolledTo){
+   
+	var threshold = 100;
+	var i;
+
+	for (i = 0; i < sections.length; i++) {
+		var section = $(sections[i]);
+		var target = getTargetTop(section);
+	   
+		if (scrolledTo > target - threshold && scrolledTo < target + threshold) {
+			sections.removeClass("active");
+			section.addClass("active");
+		}
+
+	};
+}
+</script>
+</body>
+</html>
