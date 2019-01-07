@@ -1,0 +1,128 @@
+/*
+You can adjust the menu bar color or the line width vars
+*/
+$menuColor: #000;
+$lineWidth: 5px;
+
+
+//global menu style
+.spinner-master {
+  position: relative;
+  margin: 50px auto;
+  height: calc(#{$lineWidth} * 10 );
+  width: calc(#{$lineWidth} * 10 );
+
+  * {
+    transition: all 0.3s;
+    box-sizing: border-box;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 10px;
+    left: 0;
+  }
+  .spinner1,
+  .spinner2,
+  .spinner3,
+  .spinner4 {
+    position: absolute;
+    height: $lineWidth;
+    width: 100%;
+    background-color: $menuColor;
+  }
+  .diagonal {
+    &.part-1 {
+      position: relative;
+      float: left;
+    }
+    &.part-2 {
+      position: relative;
+      float: left;
+      margin-top: calc(#{$lineWidth} * 1.3 );
+    }
+  }
+
+  .horizontal {
+    position: relative;
+    float: left;
+    margin-top: calc(#{$lineWidth} * 1.3 );
+  }
+  input[type="checkbox"]:checked ~ {
+    .spinner-spin1, .spinner-spin2, .spinner-spin3, .spinner-spin4{
+      >  {
+        .horizontal {
+          opacity: 0;
+        }
+        .diagonal.part-2 {
+          margin-top: calc(-1 * ( #{$lineWidth} + (#{$lineWidth}  * 2.2 ) ));
+        }
+      }
+    }
+  }
+}//end global settings
+
+
+
+
+/* Style One */
+.spinner-master {
+  input[type="checkbox"]:checked ~ .spinner-spin1 >  {
+    .diagonal.part-1 {
+      transform: rotate(405deg);
+    }
+    .diagonal.part-2 {
+      transform: rotate(-405deg);
+    }
+  }
+}
+
+/*Style two*/
+.spinner-master {
+  input[type="checkbox"]:checked ~ .spinner-spin2 >  {
+    .diagonal.part-1 {
+      transform: rotate(135deg);
+    }
+    .diagonal.part-2 {
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+/*Style three*/
+.spinner-master {
+  input[type="checkbox"]:checked ~ .spinner-spin3 >  {
+    .horizontal {
+      transform: scale(2, 1);
+    }
+    .diagonal.part-1 {
+      transform: rotate(-135deg);
+    }
+    .diagonal.part-2 {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+/*Style four*/
+.spinner-master {
+  input[type="checkbox"]:checked ~ .spinner-spin4 >  {
+    .horizontal {
+      transform: translate(-100px, 0px);
+    }
+    .diagonal.part-1 {
+      transform: rotate(-135deg);
+    }
+    .diagonal.part-2 {
+      transform: rotate(135deg);
+    }
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>‘GIF for Restaurant Menu’ to web</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="box">
+	<div id="wrap">
+		<canvas id="bg"></canvas>
+		<ul id="list">
+			<li class="ice-cream"><a href="#">
+				<div class="svg">
+					<div class="head">
+						<svg>
+							<path d="M39,43 L77,43 Q86,36,74,31 Q77,22,68,20 Q70,5,54,9 Q59,9,55,12 Q61,16,50,18 Q58,25,65,22 Q58,25,52,19 Q39,21,43,29 Q51,34,65,33 Q51,34,43,28 Q30,35,39,43" />
+						</svg>
+					</div>
+					<svg class="body">
+						<path class="fill" d="M42,6 L75,6 L58,46 L42,6" />
+					</svg>
+				</div>
+				Ice Cream</a></li>
+			<li class="beer"><a href="#">
+				<div class="svg">
+					<div class="head">
+						<svg>
+							<path d="M27,10 Q21,18,29,25, Q33,29,45,25, Q56,29,64,25, Q74,28,78,24, Q82,17,77,12, Q71,9,66,11, Q57,3,46,8, Q33,3,27,10" />
+						</svg>
+					</div>
+					<svg class="body">
+						<mask id="mask-beer">
+							<rect x="34" y="6" width="40" height="37" />
+						</mask>
+						<path class="liquid" d="M0,17 L120,17 L120,100 L0,100" mask="url(#mask-beer)" />
+						<path d="M34,5 L86,5 Q88,5,88,7 L88,28 Q88,31,85,31 L73,31 L73,6 L73,39 Q73,43,70,43 L38,43 Q34,43,34,39 L34,5" />
+					</svg>
+				</div>
+				Beer</a></li>
+			<li class="hard-liquors"><a href="#">
+				<div class="svg">
+					<svg class="body">
+						<mask id="mask-hard-liquors">
+							<rect x="41" y="7" width="37" height="34" />
+							<rect x="48" y="41" width="23" height="7" />
+						</mask>
+						<path class="liquid" d="M0,22 L120,22 L120,100 L0,100" mask="url(#mask-hard-liquors)" />
+						<path d="M45,6 Q34,34,46,43 L59,52 L59,68 L46,68 L72,68 M59,52 L72,43 Q87,34,74,6 L45,6" />
+					</svg>
+				</div>
+				Hard Liquors</a></li>
+			<li class="wines"><a href="#">
+				<div class="svg">
+					<div class="head">
+						<svg>
+							<path d="M57,6 L57,8 L62,8 L62,6 Q60,5,57,6" />
+						</svg>
+					</div>
+					<svg class="body">
+						<mask id="mask-wines">
+							<rect x="45" y="24" width="28" height="50" />
+						</mask>
+						<path class="liquid" d="M0,32 L120,32 L120,100 L0,100" mask="url(#mask-wines)" />
+						<path d="M57,4 L57,19 Q43,23,44,32 L44,71 Q44,74,48,74 L71,74 Q75,74,75,71 L75,32 Q76,23,62,19 L62,4 L57,4 M44,43 L75,43 M44,59 L75,59" />
+					</svg>
+				</div>
+				Wines</a></li>
+			<li class="soups"><a href="#">
+				<div class="svg">
+					<div class="head">
+						<svg>
+							<path d="M35,8 L52,8 Q60,-1,68,8 L85,8, L35,8" />
+						</svg>
+					</div>
+					<svg class="body">
+						<mask id="mask-soups">
+							<rect x="35" y="3" width="50" height="37" />
+						</mask>
+						<path class="liquid" d="M0,16 L120,16 L120,100 L0,100" mask="url(#mask-soups)" />
+						<!-- <path class="liquid" d="M35,16 L85,16 L85,45 L35,45" /> -->
+						<path d="M35,3 L85,3 L85,32 Q85,42,75,42 L45,42 Q35,42,35,32, L35,3" />
+						<path d="M34,10 Q34,5,24,5" />
+						<path d="M86,10 Q86,5,96,5" />
+					</svg>
+				</div>
+				Soups</a></li>
+			<li class="burgers"><a href="#">
+				<div class="svg">
+					<div class="head">
+						<svg>
+							<path class="fill" d="M32,26 L88,26 Q84,4,60,4 Q36,4,32,25 M53,14 L53.1,14 M60,18 L60.1,18 M68,15 L68.1,15" />
+						</svg>
+					</div>
+					<svg class="body">
+						<path d="M30,4 L35,8 L40,4 L45,8 L50,4 L55,8 L60,4 L65,8 L70,4 L75,8 L80,4 L85,8 L90,4" />
+						<path d="M30,15 L90,15 L90,22 L30,22 L30,15" />
+						<path class="fill" d="M33,22 Q34,30,37,30 L80,30 Q86,30,87,22" />
+					</svg>
+				</div>
+				Burgers</a></li>
+			<li class="cakes"><a href="#">
+				<div class="svg">
+					<div class="head">
+						<svg>
+							<path class="fill" d="M33,33 L87,33 Q91,30,91,23 Q86,13,75,15 Q73,5,59,4 Q47,6,44,15 Q33,13,29,21 Q26,30,33,33" />
+						</svg>
+					</div>
+					<svg class="body">
+						<path d="M38,5 L81,5 L73,24 L45,24 L38,5" />
+					</svg>
+				</div>
+				Cakes</a></li>
+		</ul>
+	</div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://static.tumblr.com/o19dsmn/r5fnl4sy7/jquery-d.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

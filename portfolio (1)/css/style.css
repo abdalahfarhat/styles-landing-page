@@ -1,0 +1,767 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+ @import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+ .arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 60px; /*change with size of arrow to make sit on bottom */
+/*   background-image: url(); */
+/*   background-size: contain; */
+} 
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+i {
+  display: block;
+  color: #fff;
+}
+footer {
+    color: #fff;
+}
+
+footer h3 {
+    margin-bottom: 30px;
+}
+
+footer .footer-above {
+    padding-top: 50px;
+    background-color: #2c3e50;
+}
+
+footer .footer-col {
+    margin-bottom: 50px;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #233140;
+}
+
+.btn-social {
+	 display: inline-block;
+	width:50px;
+	height:50px;
+	font-size: 40px;
+}
+
+.btn-default:hover, .btn-default:active, .btn-default:visited {
+	background-color: gray !important;
+}
+
+.portfolio-modal .modal-content i{
+	color:#939393;
+}
+
+ /* .section {
+  width: 100%;
+  height: 100%;
+  
+  /*padding-top:50px;
+} */
+
+ 
+iframe {
+	width:100%;
+	height:500px;
+	border:6px solid gray;
+}
+
+.navbar-custom {
+    margin-bottom: 0;
+    
+    /*text-transform: uppercase;*/
+    font-family: 'Montserrat',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	
+   
+}
+/**recently added*************/
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    outline: 0;
+    background-color: transparent;
+}
+
+.navbar-custom .nav li.active {
+    outline: 0;
+}
+
+.navbar-custom .nav li.active a {
+    background-color: rgba(255,255,255,.3);
+}
+
+.navbar-custom .nav li.active a:hover {
+    color: #fff;
+}
+
+/*************boundary ends here*************/
+.navbar-custom a {
+    color: #fff;
+	font-size: 24px;
+}
+
+.navbar-custom .nav li a:hover {
+    outline: 0;
+    color: rgba(255,255,255,.8);
+    background-color: transparent;
+}
+
+
+
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+/* .navbar-custom .navbar-toggle .icon-bar {
+	background-color:white;
+}
+ */
+ 
+ h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font-family: 'Montserrat',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+	
+}
+
+p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+ 
+ .glyphicon {
+	 font-size:25px;
+	 color: white;
+ }
+ .intro-section .brand-heading {
+	 font-size:100px;
+	 color: white;
+	 margin-top:50px;
+	
+ }
+ 
+ /*I added this ***************
+ #intro .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+ /***********************************************/
+ .intro-section .intro-text{
+	 font-size:28px;
+	 color:#fff;
+ }
+/* a {
+	color:#fff;
+} */
+
+
+
+
+/****Resume button code ******************/
+.button
+{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #0C5;
+
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  padding: 20px;
+  width: 220px;
+  height:30px;
+
+  background: #363636	;
+  border: 1px solid #fff;
+  color: #FFF;
+  
+  
+}
+
+.button:hover, .button:active 
+{
+  text-decoration: none;
+  color: #0C5;
+  border-color: #0C5;
+  background: #FFF;
+}
+
+.button span 
+{
+  display: inline-block;
+  position: relative; 
+  margin-top:100px;
+  padding-right: 10px;
+  padding-left:10px;
+  
+  transition: padding-right 0.5s;
+}
+
+.button span:after 
+{
+  content: ' ';  
+  position: absolute;
+  top: 0;
+  right: -18px;
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: -10px;
+
+  background: rgba(0, 0, 0, 0);
+  border: 3px solid #FFF;
+  border-top: none;
+  border-right: none;
+
+  transition: opacity 0.5s, top 0.5s, right 0.5s;
+  transform: rotate(-45deg);
+}
+
+.button:hover span, .button:active span 
+{
+  padding-right: 30px;
+}
+
+.button:hover span:after, .button:active span:after 
+{
+  transition: opacity 0.5s, top 0.5s, right 0.5s;
+  opacity: 1;
+  border-color: #0C5;
+  right: 0;
+  top: 50%;
+}
+
+
+#services .portfolio-item {
+    display: block;
+    position: relative;
+    /*margin: 0 auto;
+    /*max-width: 800px;*/
+	margin-top:50px;
+	
+}
+
+
+#services .portfolio-item img{
+	border:6px solid gray;
+	width:370px;
+	height:230px;
+}
+#services .portfolio-item .portfolio-link .caption {
+    position: absolute;
+    width: 93%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(24,188,156,.9);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+#services .portfolio-item .portfolio-link .caption:hover {
+    opacity: 1;
+}
+ #services .portfolio-item .portfolio-link .nohigh {
+     Cursor:not-allowed; 
+	 background:transparent;
+} 
+
+/* #services .portfolio-item .portfolio-link .caption .caption-content i {
+    margin-top: -12px;
+} */
+#services .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#services .portfolio-item .portfolio-link .caption .caption-content h3,
+#services .portfolio-item .portfolio-link .caption .caption-content h4 {
+    margin: 0;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+#contact h4{
+	color: #fff;
+}
+
+
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+	width:100%;
+	height:100%;
+}
+
+.portfolio-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+
+@media(min-width:767px) {
+    .navbar-custom {
+        padding: 25px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+		background:0 0;
+    }
+
+#intro {
+
+	/* background: url(../Images/cup-of-coffee-1280537_1920.jpg) no-repeat bottom center scroll; */
+	background: url(https://res.cloudinary.com/ddqhcwp8j/image/upload/v1465835110/cup-of-coffee-1280537_1920_inrevw.jpg) no-repeat ;
+	background-size:cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+	
+}
+	
+   .navbar-custom.top-nav-collapse {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        background: #000;
+    }
+	
+	.navbar-fixed-top.navbar-shrink {
+        padding: 10px 0;
+    }
+
+    .navbar-fixed-top.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+	/****Jaduaye line hai ye ********/
+	section 
+	{ padding: 375px 0;
+	
+	}
+}
+
+
+
+footer {
+    color: #fff;
+}
+
+footer h3 {
+    margin-bottom: 30px;
+}
+
+footer .footer-above {
+    padding-top: 50px;
+    background-color: #2c3e50;
+}
+
+footer .footer-col {
+    margin-bottom: 50px;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #233140;
+}
+
+.btn-social {
+	 display: inline-block;
+	width:50px;
+	height:50px;
+	font-size: 40px;
+}
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #5BC8AC;
+}
+
+.services-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #FCFDFE;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #B6452C;
+}
+
+
+
+
+
+
+/***Potrait mode ******/
+
+@media (max-width: 768px) {
+	
+#intro {
+
+	/* background: url(../Images/cup-of-coffee-1280537_1920.jpg) no-repeat bottom center scroll; */
+	 background: url(https://res.cloudinary.com/ddqhcwp8j/image/upload/v1465835110/cup-of-coffee-1280537_1920medium_nngskf.jpg) no-repeat ;
+	
+	width:auto;
+	height:800px;
+ -webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;  
+	
+}
+            
+	.intro-section .brand-heading {
+	  font-size:45px;
+	 margin-top:200px;
+	
+}
+
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 15px;
+    margin-left: 35px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 15px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+
+iframe {
+	width:100%;
+	height:100%;
+}
+
+.button span{
+	margin-bottom:30px;
+}
+ 
+ #services {
+	 padding-bottom:25px;
+ }
+#contact {
+	padding-bottom:145px;
+}
+
+ .navbar-custom.top-nav-collapse {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        background: #000;
+    }
+	
+	
+
+
+	
+
+}
+
+
+/**landscape mode ******************/
+
+@media screen and (min-width:320px) and (max-width:767px) and (orientation:landscape) {
+  #intro { 
+           background: url(https://res.cloudinary.com/ddqhcwp8j/image/upload/v1465835109/cup-of-coffee-xs_pfy8mu.jpg) no repeat; 
+				width:auto;
+				height:500px;
+				
+}  
+#services .portfolio-item .portfolio-link .caption {
+    position: absolute;
+    width: 96%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(24,188,156,.9);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#services .portfolio-item img{
+	border:6px solid gray;
+	width:100%; height:100%;
+}
+
+#services {
+	margin-bottom:20px;
+}
+
+#services .portfolio-item .portfolio-link .nohigh {
+	 Cursor:not-allowed; 
+	 background:transparent;
+	 
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 5px;
+    height: 35px;
+    margin-left: 35px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 5px;
+    height: 35px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+.intro-section .brand-heading {
+	 font-size:50px;
+	 color: white;
+	 margin-top:150px;
+	
+ }
+
+iframe {
+	width:100%;
+	height:100%;
+}
+
+}
+
+
+/****************************************************************/
+
+/*iPhone 6 Plus Portrait & Landscape Size*/
+
+  /**Portrait iphone 6 plus ************/
+
+  
+  /* @media only screen 
+    and (max-device-width: 640px), 
+    only screen and (max-device-width: 667px), 
+    only screen and (max-width: 480px)
+{
+	#intro {
+
+	
+	background: url(../Images/cup-of-coffee-1280537_1920medium.jpg) no-repeat ;
+ -webkit-background-size: cover;
+-moz-background-size: cover;
+	background-size: cover; }
+} 
+*/
+
+/* @media only screen and (min-width : 414px) and (max-width : 736px) and (orientation:landscape) {
+#intro {
+
+	
+	background: url(../Images/test2.PNG) no-repeat ;
+	
+  }
+}  */
+
+
+  
+ /*iPhone 6+ Portrait*/
+/* @media only screen (max-width: 736px) and (orientation : landscape) { 
+#intro {
+
+	 background: url(../Images/test2.PNG) no repeat; 
+				height:500px;
+	
+  }
+  
+.intro-section .brand-heading {
+	 font-size:50px;
+	 color: white;
+	 margin-top:-100px;
+	
+ }
+} */
+
+@media screen and (min-width : 414px) 
+and (max-height : 736px) and (orientation : landscape)
+{
+#intro {
+
+	 background: url(../Images/test2.PNG) no repeat; 
+				height:500px;
+	
+  }
+  
+.intro-section .brand-heading {
+	 font-size:50px;
+	 color: white;
+	
+	
+ }
+}

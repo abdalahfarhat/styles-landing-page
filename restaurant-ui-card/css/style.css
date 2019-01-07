@@ -1,0 +1,315 @@
+body {
+	background-color: #00baff;
+	background-image: linear-gradient(45deg, #30CE89 49%, #ffffff 48%);	
+	height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Oswald', sans-serif;
+}
+
+ul {
+	margin: 0;
+	list-style: none;
+}
+
+.restaurant {
+	position: relative;
+	width: 600px;
+	height: 400px;
+	cursor: pointer;
+}
+
+.restaurant .reservation_btn {
+	position: absolute;
+	right: 20%;
+	top: 15%;
+	transform: rotate(90deg);
+	background: #30CE89;
+	text-transform: uppercase;
+	color: white;
+	padding: 5px 10px;
+	letter-spacing: 2px;
+	transition: right 0.3s;
+	z-index: 2;
+	transition: all 0.5s;
+}
+
+.restaurant .reservation_btn:hover {
+	right: 19%;
+}
+
+.restaurant .reservation_btn--active {
+	right: 0%;
+	top: 0%;
+	transform: rotate(0deg);
+	width: 27%;
+	text-align: center;
+}
+
+.restaurant .close_it {
+	opacity: 0;
+}
+
+.restaurant.restaurant--active .close_it {
+	opacity: 1;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 33.5px;
+	background: white;
+	color: rgba(0, 0, 0, 0.5);
+	z-index: 5;
+	transition: all 0.5s;
+	transition-delay: 0.5s;
+}
+
+.restaurant .reservation_btn--active:hover {
+	right: 0%;
+	top: 0%;
+	transform: rotate(0deg);
+	width: 27%;
+	text-align: center;	
+}
+
+.restaurant .infos_left {
+	position: relative;
+	z-index: 3;
+	width: 70%;
+	height: 100%;
+	float: left;
+	background: white;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant .reservation_right {
+	position: absolute;
+	left: 70%;
+	z-index: 1;
+	width: 0%;
+	height: 100%;
+	float: right;
+	background: white;
+	overflow-x: scroll;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	transition: width 0.5s;
+}
+
+.restaurant .reservation_right--active {
+	overflow: hidden;
+	width: 30%;
+}
+
+.restaurant .infos_left .image_container {
+	width: 100%;
+	height: 70%;
+	background-size: cover;
+	background-size: 100%;
+	background-position: center;
+	transition: background-size 0.5s;
+}
+
+.restaurant .infos_left:hover .image_container {
+	background-size: 120%;
+}
+
+.restaurant .infos_left .prix_block {
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background: white;
+	padding: 5px 10px;
+	box-shadow: -6px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant .infos_left .prix_block .text_prix {
+	font-size: 15px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.restaurant .infos_left .prix_block .prix {
+	font-size: 18px;
+	color: #30CE89;
+}
+
+.restaurant .infos_left .block_infos {
+	width: 100%;
+	height: 40%;
+	background: white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+   box-shadow: 0px -6px 20px 0px rgba(0, 0, 0, 0.1);
+	transition: height 0.5s;
+}
+
+.restaurant .infos_left .block_infos h1 {
+	width: 50%;
+	float: left;
+	text-transform: uppercase;
+	font-size: 18px;
+	margin: 10px 10px;
+	color: #30CE89;
+}
+
+.restaurant .infos_left .block_infos .adress_block {
+	text-align: right;
+	margin: 10px 10px;
+	color: rgba(0, 0, 0, 0.5);
+	text-transform: capitalize;
+}
+
+.restaurant .infos_left .block_infos .adress_block i {
+	margin-right: 5px;
+	font-size: 20px;
+}
+
+.restaurant .infos_left .block_infos .adress_block .adress {
+	font-size: 15px;
+}
+
+.restaurant .infos_left .block_infos .adress_block .locate {
+	background: #30CE89;
+	color: white;
+	padding: 2px 10px;
+	border-radius: 5px;
+}
+
+.restaurant .infos_left .block_infos .description_block {
+}
+
+.restaurant .infos_left .block_infos .description_block p {
+	text-align: justify;
+	padding: 0px 10px;
+	color: rgba(0, 0, 0, 0.8);
+	max-height: 72px;
+    text-overflow: ellipsis;
+    width: 90%;
+    display: block;
+    overflow: hidden
+}
+
+.restaurant .reservation_right .people {
+	padding: 40px 10px 0px 12px;
+	text-align: center;
+}
+
+.restaurant .reservation_right .people .text_people {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.restaurant .reservation_right .count_people {
+	display: flex;
+	align-items: center;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	margin: 10px;
+}
+
+.restaurant .reservation_right .count_people .total_people {
+	width: 45%;
+	flaot: left;
+	text-align: right;
+	font-size: 35px;
+	color: #30CE89;
+}
+
+.restaurant .reservation_right .count_people .btn_people {
+	width: 50%;
+	flaot: right;
+	text-align: left;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 25px;
+}
+
+.restaurant .reservation_right .count_people .btn_people li {
+	margin: 0;
+}
+
+.restaurant .reservation_right .count_people .btn_people i:hover {
+	transform: scale(1.2);
+}
+
+.restaurant .reservation_right .date {
+	padding: 0px 10px 0px 12px;
+	text-align: center;
+	margin-top: -5px;
+}
+
+.restaurant .reservation_right .date .input_date input {
+	width: 80%;
+	margin-top: 10px;
+	padding: 10px 15px;
+	border: none;
+	background: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	text-transform: uppercase;
+	font-size: 12px;
+	color: black;
+	box-shadow: none;
+}
+
+.restaurant .reservation_right .date .input_date input::placeholder {
+	color: black;
+}
+
+.restaurant .reservation_right .validate_btn_rvs {
+	position: absolute;
+	bottom: 5px;
+	left: 5%;
+	width: 90%;
+	background: #30CE89;
+	color: white;
+	text-align: center;
+	padding: 5px 0px;
+	text-transform: uppercase;
+	border: 2px solid #30CE89;
+	transition: all 0.5s;
+}
+
+.restaurant .reservation_right .validate_btn_rvs:hover {
+	background: white;
+	color: #30CE89;
+	
+}
+
+.ui-datepicker-inline {
+    display: block;
+    width: 100%;
+    height: auto;	
+	 margin-left: -5px;
+	 border: none !important;
+}
+
+.ui-datepicker table {
+	font-size: 11px;
+}
+
+.ui-datepicker-header {
+	font-size: 10px;
+	background: #30CE89;
+	color: white;
+}
+
+.ui-state-default.ui-state-active {
+	background: #30CE89 !important;
+	color: white !important;	
+}
+
+.ui-state-default.ui-state-highlight {
+	border: 2px solid #30CE89 !important;
+}
+
+.ui-state-default {
+	background: white !important;
+	border: none !important;
+	text-align: center !important;
+}

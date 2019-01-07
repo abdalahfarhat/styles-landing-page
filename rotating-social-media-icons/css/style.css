@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #EFE7BE;
+}
+
+#wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrapper i::before {
+  font-size: 500%;
+}
+#wrapper i {
+  margin: 2em;
+  padding: 1em;
+  width: 80px;
+  color: #002635;
+  border: 1px solid #002635;
+  border-radius: 20px;
+  transform: rotate(-7deg);
+  transition: transform 0.15s linear;
+}
+#wrapper i:hover {
+  transform: rotate(0deg);
+}

@@ -1,0 +1,39 @@
+mixin thumb-unit(price)
+  .thumb-unit
+    .heading
+      span #{price}
+      span: i.fa.fa-heart-o
+    .box
+    .info
+      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit
+      span.icon: i.fa.fa-shopping-cart
+
+header
+  h1.logo
+    span IN
+    | seller
+    .sub-info Luxury Shopping
+  .navigation
+    a(href="#") Just In
+    a(href="#") Men
+    a(href="#") Women
+    a(href="#") Brands
+    a(href="#").active Sales
+  .more
+    a(href="#").menu: i.fa.fa-align-right
+    .figure 5
+.container
+  .sub-header
+    h2.title Bags
+      span 1364 results
+    .close-btn: i.fa.fa-close
+  .thumb-wrapper
+    +thumb-unit('$120')
+    +thumb-unit('$300')
+    +thumb-unit('$250')
+    +thumb-unit('$75')
+    +thumb-unit('$180')
+    +thumb-unit('$800')
+    +thumb-unit('$400')
+    +thumb-unit('$600')
+  

@@ -1,0 +1,446 @@
+html, body {
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 auto;
+  overflow-X: hidden;
+  overflow-Y: auto;
+  padding: 0;
+}
+*, *::after,*::before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a, a:active, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+ul, li {
+  display: block;
+  list-style: none;
+}
+ul {
+  margin: 10px 5px 15px;
+  padding: 5px;
+}
+li {
+  margin: 2px 0;
+  padding: 6px 8px;
+}
+p {
+  line-height: 1.5;
+  margin: 10px;
+  padding: 5px 5px 15px;
+  text-align: justify;
+}
+img {
+  display: block;
+  width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #555;
+  padding: 5px 10px 10px;
+}
+header {
+  background: #FF5B06;
+  border-bottom: 1px solid #DF4C00;
+  box-shadow: 1px 0 2px rgba(0,0,0,.5);
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  vertical-laign: middle;
+  z-index: 9;
+  
+  -webkit-transform: translate3d(0,0,0);
+     -moz-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+  -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
+}
+header [class*="menu-"] {
+  cursor: pointer;
+  font-size: 22px;
+  height: initial;
+  padding: 5px;
+  width: initial;
+}
+header h1 {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 100;
+  padding: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+.intro {
+  margin: 57px auto 0px;
+  padding: 0;
+  -webkit-transform: translate3d(0,0,0);
+     -moz-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+  -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
+}
+section, article, div, .box {
+  overflow: hidden;
+  position: relative;
+}
+section {
+  margin: 20px auto 40px;
+  -webkit-transform: translate3d(0,0,0);
+     -moz-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+  -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
+}
+[id*="menu-"] {
+  background: #252525;
+  bottom: 0;
+  color: #858585;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 205px;
+  z-index: 99;
+}
+[id*="menu-"] .box {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+[id*="menu-"] .box::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+[id*="menu-"] ul {
+  margin: 0;
+  padding: 0;
+}
+[id*="menu-"] li {
+  border-bottom: 1px solid #1F1F1F;
+  font-size: 12px;
+  line-height: 28px;
+  margin: 0;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+}
+[id*="menu-"] li:last-child {
+  border: 0;
+}
+#menu-left {
+  border-right: 1px solid #161616;
+  left: -205px;
+  -webkit-transform: translate3d(0,0,0);
+     -moz-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+  -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
+}
+#menu-left .profile {
+  background: #222;
+  border-bottom: 5px solid #151515;
+  padding: 8px 5px;
+}
+#menu-left .profile  img {
+  border: 1px solid #111;
+  border-radius: 5px;
+  display: inline-block;
+  height: 32px;
+  vertical-align: middle;
+  width: 32px;
+}
+#menu-left .content {
+  position: relative;
+  height: initial;
+  width: 100%;
+}
+#menu-left .content  h5 {
+  background: #353535;
+  color: #CCC;
+  font-weight: 400;
+}
+#menu-left .content .fa {
+  padding: 0 8px 0 4px;
+}
+#menu-left .content ul:last-child {
+  color: #656565;
+}
+#menu-left .content ul:last-child .fa {
+  color: #151515;
+}
+#menu-right li  img  {
+  border: 1px solid #111;
+  border-radius: 5px;
+  display: inline-block;
+  height: 32px;
+  vertical-align: middle;
+  width: 32px;
+}
+#menu-left .profile span, #menu-right li span {
+  *font-weight: bold;
+  padding-left: 8px;
+}
+#menu-right li span {
+  font-size: 12px;
+}
+#menu-right li span:before {
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 100%;
+  box-shadow: inset 0 2px 5px #FFF;
+  content: "";
+  margin-top: -4px;
+  padding: 6px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+#menu-right li span.active:before {
+  background: #00CC0B;
+}
+#menu-right li span.so-active:before {
+  background: #FF5B06;
+}
+#menu-right li span.no-active:before {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+#menu-right {
+  border-left: 1px solid #161616;
+  top: 57px;
+  right: 0;
+  width: 205px;
+  -webkit-transform: translate3d(205px,0,0);
+     -moz-transform: translate3d(205px,0,0);
+          transform: translate3d(205px,0,0);
+  -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
+}
+#menu-right.active {
+  right: 0;
+  -webkit-transform: translate3d(0,0,0);
+     -moz-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+  -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
+}
+section.active, header.active, .intro.active, #menu-left.active, footer.active {
+  -webkit-transform: translate3d(205px,0,0);
+     -moz-transform: translate3d(205px,0,0);
+          transform: translate3d(205px,0,0);
+  -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
+}
+#footer.active {
+  -webkit-transform: translate3d(205px,0,0);
+     -moz-transform: translate3d(205px,0,0);
+          transform: translate3d(205px,0,0);
+  -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
+}
+section, article {
+  background: inherit;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: initial;
+}
+article img {
+  display: block;
+  width: 100%
+}
+article:nth-child(2n) {
+  -webkit-transform: rotate3d(0,1,0,180deg);
+     -moz-transform: rotate3d(0,1,0,180deg);
+          transform: rotate3d(0,1,0,180deg);
+}
+article:nth-child(2n) .box .feed {
+  -webkit-transform: rotate3d(0,1,0,180deg);
+     -moz-transform: rotate3d(0,1,0,180deg);
+          transform: rotate3d(0,1,0,180deg);
+}
+article .box:before {
+  background: #FFF;
+  content: "";
+  margin-top: -10px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: -10px;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.box .feed {
+  height: 100%;
+  overflow: hidden;
+  padding: 0 10px;
+  position: relative;
+  width: initial;
+}
+.box .feed h2 {
+  color: #FF5B06;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.box .feed p {
+  color: #555;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+footer {
+  background: inherit;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  -webkit-transform: translate3d(0,0,0);
+     -moz-transform: translate3d(,0,0);
+          transform: translate3d(0,0,0);
+  -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
+}
+footer h2 {
+  margin: 60px 10px 20px;
+}
+footer p {
+  color: #656565;
+  margin: 10px auto 50px;
+  text-align: center;
+  max-width: 500px;
+}
+footer .footer, .footer-02 {
+  height: 100%;
+  padding: 40px 10px 20px;
+}
+footer .footer {background: #111;}
+footer .footer-02 {background: #000;}
+footer .container {
+  background: #050505;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+
+/*-------------------------------*/
+/* CSS @media screen responsive
+/*-------------------------------*/
+
+@media only screen and (min-width: 240px) {
+  article .box .feed p {font-size: 13px;}
+}
+@media only screen and (min-width: 320px) {
+  article .box .feed p {font-size: 13px;}
+}
+@media only screen and (min-width: 480px) {  
+  article .box .feed p {font-size: 14px;}
+}
+@media only screen and (min-width: 528px) {
+  article .box, footer .box {
+    display: inline-block;
+    margin: 0 -2px;
+    vertical-align: middle;
+    width: 50%;
+  }
+  article .box .feed p {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  footer .box {height: 100%;}
+}
+@media only screen and (min-width: 640px) {
+  article .box {
+    display: inline-block;
+    margin: 0 -2px;
+    vertical-align: middle;
+    width: 50%;
+  }
+  article .box .feed p {font-size: 13px;}
+  footer .box {height: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  article .box {
+    display: inline-block;
+    margin: 0 -2px;
+    vertical-align: middle;
+    width: 50%;
+  }
+  article .box .feed p {font-size: 15px;line-height: 24px;}
+  footer .box {height: 100%;}
+}
+@media only screen and (min-width: 992px) {
+  article .box {
+    display: inline-block;
+    margin: 0 -2px;
+    vertical-align: middle;
+    width: 50%;
+  }
+  article .box .feed p {font-size: 15px;line-height: 24px;}
+  footer .box {height: 100%;}
+}
+@media only screen and (min-width: 1200px) {
+  article .box {
+    display: inline-block;
+    margin: 0 -2px;
+    vertical-align: middle;
+    width: 50%;
+  }
+  article .box .feed p {font-size: 15px;line-height: 24px;}
+  footer .box {height: 100%;}
+}
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  article .box {
+    display: inline-block;
+    margin: 0 -2px;
+    vertical-align: middle;
+    width: 50%;
+  }
+  article .box .feed p {font-size: 15px;line-height: 24px;}
+  footer .box {height: 100%;}
+}
+@media only screen and (max-width: 528px) {  
+  article .box .feed {margin: 15px 0 25px;}
+  article .box:before {
+  content: "";
+  margin-top: 0;
+  margin-left: -10px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: 50% !important;
+  right: auto;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+}
+@media only screen and (max-width: 240px) {
+  .intro {display: none}
+  section {margin-top: 57px}
+  article .box .feed p {font-size: 12px;}
+}

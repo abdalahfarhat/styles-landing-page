@@ -1,0 +1,172 @@
+.navbar {
+  margin-bottom: 0;
+  background-color: rgba(8,8,8,0.8);
+  border: none;
+  &.navbar-default .navbar-nav>li>a,
+  &.navbar-default .navbar-header .navbar-brand {
+    font-family: "Cantarell", sans-serif;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+    color: #FEFDEB;
+    &:hover, &:focus, &:active {
+      color: #48A09B;
+    }
+  }
+}
+section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  width: 100%;
+  .content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &.home-intro {
+    background-color: #AFB1C9;
+    background-image: url('https://jpk-image-hosting.s3.amazonaws.com/skyline.jpg');
+    h1 {
+      font-family: "Dancing Script", cursive;
+      font-weight: 700;
+      font-size: 60px;
+      color: #E33258;
+      margin-top: 0;
+      margin-bottom: 15px;
+      @media (min-width: 768px) {
+        font-size: 90px;
+      }
+    }
+    h2 {
+      font-family: "Cantarell", sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: #363B3A;
+      padding-top: 10px;
+      margin-top: 0;
+      margin-bottom: 13px;
+      border-top: 3px solid #363B3A;
+      display: inline-block;
+      @media (min-width: 768px) {
+        font-size: 32px;
+      }
+    }
+    ul {
+      padding: 0;
+      list-style-type: none;
+      li {
+        display: inline;
+        a {
+          color: #48A09B;
+          transition: color 0.3s linear;
+          &:hover, &:focus, &:active {
+            color: #E33258;
+          }
+        }
+      }
+    }
+  }
+  &.about {
+    background-color: #A4B5BF;
+    background-image: url('https://jpk-image-hosting.s3.amazonaws.com/computer-desk.jpg');
+    color: #FEFDEB;
+    font-family: "Cantarell", sans-serif;
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+    blockquote {
+      font-family: "Cantarell", sans-serif;
+      font-weight: 700;
+    }
+  }
+  &.portfolio {
+    background-color: #9DE0AD;
+    background-image: url('https://jpk-image-hosting.s3.amazonaws.com/chalk.jpg');
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      font-family: "Cantarell", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .project {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 20px;
+      .overlay {
+        display: table;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(8,8,8,0.7);
+        overflow: hidden;
+        z-index: 10;
+        transition: opacity 0.3s ease-in-out;
+        h4 {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: "Cantarell", sans-serif;
+          font-size: 24px;
+          color: #CDD7B6;
+        }
+      }
+      &:hover .overlay, &:focus .overlay, &:active .overlay {
+        opacity: 0.4;
+      }
+    }
+  }
+  &.contact {
+    background-color: #594F4F;
+    background-image: url('https://jpk-image-hosting.s3.amazonaws.com/can-talk.jpg');
+    h2 {
+      font-family: "Cantarell", sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: #CDD7B6;
+      text-transform: uppercase;
+      @media (min-width: 768px) {
+        font-size: 28px;
+      }
+    }
+    h3 a {
+      font-family: "Cantarell", sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #48A09B;
+      transition: color 0.3s linear;
+      &:hover, &:focus, &:active {
+        color: #E33258;
+      }
+      @media (min-width: 768px) {
+        font-size: 42px;
+      }
+    }
+  }
+  .vcenter {
+    height: 100%;
+    .row {
+      height: 100%;
+      display: table;
+      div[class^="col-"] {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+      }
+    }
+  }
+}

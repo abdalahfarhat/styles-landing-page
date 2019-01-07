@@ -1,0 +1,41 @@
+$size: 500;
+$color: #002635;
+$rotation: -7deg;
+$speed: .15s;
+$background: #EFE7BE;
+
+
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: $background;
+}
+
+#wrapper {
+	height: 100%;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	i::before {
+		font-size: $size * 1%;
+	}
+	
+	i {
+		margin: ($size / 500) * 2em;
+		padding: ($size / 500) * 1em;
+		width: ($size / 500) * 80px;
+		color: $color;
+		border: 1px solid $color;
+		border-radius: ($size / 500) * 20px;
+		
+		transform: rotate($rotation);
+		transition: transform $speed linear;
+	}
+	
+	i:hover {
+		transform: rotate(0deg);
+	}
+}

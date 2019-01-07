@@ -1,0 +1,158 @@
+html {
+  box-sizing: border-box;
+  font-family: "ff-meta-serif-web-pro", serif;
+  color: #333;
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+@media (min-width: 40.625rem) {
+  .section {
+    height: 100vh;
+  }
+}
+.section .section__inner {
+  display: block;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 100%;
+}
+
+.section--portfolio {
+  color: #333;
+  background: #fff;
+  min-height: 300px;
+  max-height: 70vh;
+  border-bottom: 1px solid #ccc;
+}
+@media (min-width: 40.625rem) {
+  .section--portfolio {
+    max-height: 80vh;
+  }
+}
+.section--portfolio + .section--portfolio {
+  padding-top: 5vh;
+}
+.section--portfolio .portfolio-description {
+  position: relative;
+  z-index: 10;
+  font-size: .875rem;
+  padding: 5vw 1rem 0;
+}
+@media (min-width: 40.625rem) {
+  .section--portfolio .portfolio-description {
+    width: 35%;
+    padding: 8vw 1rem 0;
+  }
+}
+.section--portfolio .portfolio-description .pre {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 1rem 0;
+  letter-spacing: -.04em;
+  font-size: .875rem;
+}
+.section--portfolio .portfolio-description .link {
+  display: inline-block;
+  letter-spacing: 1.4px;
+  font-size: .75rem;
+  color: #333;
+  font-style: italic;
+  margin: 1rem 0 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.section--portfolio .portfolio-description .link:hover {
+  border-bottom: 2px solid;
+}
+.section--portfolio .portfolio-description a {
+  font-family: "nimbus-sans", sans-serif;
+}
+.section--portfolio .portfolio-description p {
+  color: #999999;
+  line-height: 1.6;
+  font-family: "ff-meta-serif-web-pro", serif;
+}
+.section--portfolio img {
+  display: block;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  transition: all .5s ease;
+}
+.section--portfolio img:hover {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+@media (min-width: 40.625rem) {
+  .section--portfolio img {
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    width: 85%;
+  }
+}
+
+@media (min-width: 40.625rem) {
+  .section--documenta .portfolio-description {
+    margin: 0 0 0 auto;
+  }
+}
+@media (min-width: 40.625rem) {
+  .section--documenta img {
+    right: auto;
+    left: -10vw;
+  }
+}
+@media (min-width: 54.375rem) {
+  .section--documenta img {
+    right: auto;
+    left: 0;
+  }
+}
+
+.section--gofreaks {
+  background: url(http://i45.imgup.net/gofreaks_b18b3.jpg) no-repeat top center;
+  background-size: cover;
+  text-align: center;
+}
+@media (min-width: 40.625rem) {
+  .section--gofreaks .portfolio-description {
+    margin: 0 auto;
+    width: 40%;
+    padding-top: 5vh;
+  }
+}
+.section--gofreaks .portfolio-description p {
+  color: #515151;
+}
+.section--gofreaks img {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: 0;
+  margin: 3vw auto 0;
+}

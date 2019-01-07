@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+html,
+body {
+  color: #2a2a2a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  background: #13141c; 
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 55x;
+  margin: 100px 0 0 0;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-item a {
+  width: 100%;
+  padding: 10px;
+  color: #c0c0c0;
+  text-decoration: none;
+  font-size: calc(6px + .4vw);
+}
+
+.footer-item a:hover {
+  text-decoration: underline;
+}

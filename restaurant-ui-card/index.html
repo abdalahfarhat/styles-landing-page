@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant UI card</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="restaurant">
+	<div class="reservation_btn">
+		Réserver
+	</div>
+		<div class="close_it">
+			<i class="fas fa-times"></i>
+		</div>
+	<div class="infos_left">
+		<div class="image_container" style="background-image: url(https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e813bc9e93c2b7ede92476a3eddf3606&auto=format&fit=crop&w=1350&q=80)">
+		</div>
+		<div class="prix_block">
+			<span class="text_prix">Prix</span>
+			<span class="prix">€€€</span>
+		</div>
+		<div class="block_infos">
+			<h1>le petit bistrot</h1>
+			<div class="adress_block">
+				<i class="fas fa-map-marker-alt"></i>
+				<span class="adress">21 Rue basse</span>
+				<span class="locate">Lille</span>
+			</div>
+			<div class="description_block">
+				<p>Un petit bar à l'ambiance conviviale et chaleureuse. Vous y retrouverez une parti restaurant ainsi qu'une parti bar de quoi satisfaire toutes les envies.</p>
+			</div>
+		</div>
+	</div>
+	<div class="reservation_right">
+		<div class="people">
+			<span class="text_people">Nombre de personnes</span>
+		</div>
+		<div class="count_people">
+			<span class="total_people">2</span>
+			<div class="btn_people">
+				<ul>
+				<li class="more_people"><i class="fas fa-caret-up"></i>					</li>
+				<li class="less_people"><i class="fas fa-caret-down">						</i></li>
+				</ul>
+			</div>
+		</div>
+		<div class="date">
+			<div class="input_date">
+				<div id="datepicker"></div>
+			</div>
+		</div>		
+		<div class="validate_btn_rvs">
+			Réserver la table
+		</div>
+	</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

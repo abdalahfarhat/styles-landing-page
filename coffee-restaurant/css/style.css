@@ -1,0 +1,130 @@
+/* orange #f15025 */
+/* black  #353531*/
+/* navy blue #2d3142 */
+/* grey #ced0ce */
+/* whitesmoke */
+
+body{
+    font-family: 'Indie Flower', cursive;
+}
+
+/* Webkit scrollbar style */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+    box-shadow: inset 0 -1px 4px #bbb
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #6f421a;
+}
+
+/* navbar */
+.transparent{
+    background: rgba(0, 0, 0, 0.7);
+}
+.nav-link,
+.navbar-brand{
+    color: #f15025 !important;
+}
+
+.navbar a:hover{
+    color: whitesmoke !important;
+}
+
+/* Header */
+header{
+    height: 100vh;
+    background: url("https://s20.postimg.cc/59eo95bt9/coffee-wooden.jpg") fixed no-repeat center;
+    background-size: cover;
+}
+
+.banner-center{
+    height: 100vh;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-underline{
+    width: 300px;
+    border: 3px solid #f15025;
+    margin: 0 auto 20px auto;
+}
+
+.banner-center a{
+    font-size: 30px;
+    text-decoration: none;
+    width: 300px;
+    margin: 0 auto;
+    color: whitesmoke;
+    border: 3px solid whitesmoke;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.banner-center a:hover,
+.banner-center a:focus{
+    color: #f15025;
+    background-color: whitesmoke;
+}
+
+.title-underline{
+    width: 150px;
+    border: 3px solid #f15025;
+    margin: 0 auto 10px auto;
+}
+
+/* skills */
+#skills a{
+    background-color: #f15025;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+#skills a:hover{
+    background-color: #ced0ce;
+    color: #f15025;
+}
+
+/* about */
+#about{
+    background-color: #2d3142;
+}
+
+#about .pic{
+    height: 600px;
+    background: url("https://s20.postimg.cc/bn3rc9bil/coffee-beans.jpg") fixed no-repeat center;
+    background-size: cover;
+    border-bottom: 600px solid transparent;
+    border-left: 100px solid #2d3142;
+}
+
+#about .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+/* contact */
+#contact .form-control{
+    border-radius: 0 !important;
+    font-size: 20px;
+}
+
+#contact button{
+    background-color: #353531;
+    color: #f15025;
+    font-size: 24px;
+}
+
+#contact button:hover{
+    background-color: #ced0ce;
+}
+
+/* footer */
+footer a:hover{
+    color: #f15025;
+}

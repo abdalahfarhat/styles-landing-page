@@ -1,0 +1,122 @@
+#owl-demo .item img{
+	display: block;
+	width: 100%;
+	height: 80%;
+}
+span.text-content {
+	background: rgba(0,0,0,0.5);
+	color: white;
+	height: 1000px;
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	opacity: 0;
+		-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
+	text-align: center;
+	vertical-align: center;
+}
+
+.img-legal:hover span.text-content {
+	opacity: 1;
+}
+.bg-img-about {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url("https://www.architecture.com/Explore/Locations/Assets/Images/Locations/brasilia-chamber-of-deputies-RIBA51326-1269x548px.jpg");
+	background-size: cover;
+	background-color: white;
+	color: white;
+}
+.blue-bg{
+	background-color: blue;
+}
+.intro-divider {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+ul
+{
+	list-style-type: none;
+}
+.bg-img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url("http://wpidiots.com/html/ravan/standard/img/background-testimonials.jpg");
+	background-size: cover;
+	background-color: white;
+	color: whitesmoke;
+}
+.fa {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+.wrap {
+	z-index: 2;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.img-circle {
+	border-radius: 50%;
+	width: 20%;
+	height: 20%;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+	padding-top: 55px;
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+}
+
+.navbar {
+	display: block;
+}
+
+.navbar .navbar-nav {
+	display: inline-block;
+	float: none;
+}
+
+.navbar-collapse {
+	text-align: right;
+}
+
+@media(max-width:768px) {
+	.navbar-collapse {
+		text-align: center;
+	}
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Poiret One', 'Dosis', cursive, sans-serif;
+	font-weight: 800;
+}
+h1 {
+	font-size: 50px;
+}

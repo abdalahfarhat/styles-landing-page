@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Overpass+Mono:600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+$OverpassMonoFont: 'Overpass Mono', monospace;
+$PTSansFont: 'PT Sans', sans-serif;
+$AlexBrushFont: 'Alex Brush', cursive;
+$lightbrown: rgb(190, 128, 64);
+$white: rgb(255,255,255);
+$black: rgb(0,0,0);
+$darkgray: rgb(20,20,20);
+$lightgray: rgb(35,35,35);
+
+body {
+  overflow-x: hidden;
+}
+/*
+  GLOBAL
+*/
+h2 {
+  margin-top:0;
+}
+button {
+  border:0;
+  background:0;
+  cursor:pointer;
+}
+a {
+  text-decoration:none;
+  padding-bottom:5px;
+}
+ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+/*
+  HEADER
+*/
+header {
+  min-height:100vh;
+  background:linear-gradient(to bottom,rgba($black,.8),transparent),
+    url('http://zigis.com.au/wp-content/uploads/2014/05/holiday2013_front.jpg')no-repeat center center;
+  background-size:cover;
+  background-attachment: fixed;
+  display:flex;
+  flex-direction:column;
+  /*
+    NAV
+  */
+  nav {
+    padding:15px 35px;
+    display:flex;
+    position:relative;
+    h2 {
+      margin-bottom:0;
+      flex:1;
+      letter-spacing:3px;
+      font-family: $OverpassMonoFont !important;
+      #logo {
+        color:lightgray;
+        text-transform:uppercase;
+        border-bottom:solid 2px lightgray;
+      }
+    }
+    .nav-button {
+      // color:lightgray;
+      color: #c0c0c0;
+      font-size:23px;
+    }
+    div {
+      background:rgba(0,0,0,.9);
+      position:fixed;
+      right:0;
+      left:0;
+      top:0;
+      bottom:0;
+      z-index:1;
+      text-align:center;
+      transform:scale(0);
+      opacity:0;
+      transition:opacity .2s;
+      ul {
+        position:relative;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        .exit-menu {
+          position:absolute;
+          top:15px;
+          right:15px;
+          color:lightgray;
+          font-size:20px;
+          padding:10px;
+        }
+        li {
+          font-family: $PTSansFont !important;
+          text-transform:uppercase;
+          a {
+            display:block;
+            color:lightgray;
+            padding:15px 5px;
+            transition: all .4s;
+            &:hover, .active:hover {
+              color: $lightbrown;
+              border-bottom-color: $lightbrown;
+            }
+          }
+        }
+      }
+    }
+  }
+  // .alex-brush {
+  //   font-family: $AlexBrushFont !important;
+  // }
+  /*
+    CENTER HEADER TEXT
+  */
+  .center {
+    line-height:0;
+    margin:auto;
+    text-align:center;
+    color:$white;
+    h1 {
+      font-family: $AlexBrushFont !important;
+      color:$lightbrown;
+      font-size:80px;
+      margin-bottom:34px;
+    }
+    h2 {
+      text-transform:uppercase;
+      letter-spacing:5px;
+      font-size:28px;
+    }
+    #asterisk {
+      color:$lightbrown;
+      line-height:0.5;
+      font-size:30px;
+      display:flex;
+      justify-content:center;
+      &:before,&:after {
+        content:"";
+        display:inline-block;
+        position:relative;
+        vertical-align:middle;
+        height:1px;
+        // width:40%;
+        width: 0%;
+        opacity: 0;
+        background:$white;
+      }
+      &:before {
+        margin-right:10px;
+      }
+      &:after {
+        margin-left:10px;
+      }
+    }
+    p {
+      text-transform:uppercase;
+      margin-top:5px;
+      font-size:14px;
+      font-weight:bold;
+      letter-spacing:3px;
+    }
+  }
+}
+nav div.show {
+  transform:scale(1);
+  opacity:1;
+}
+
+/*
+  SECTIONS
+*/
+
+/*
+  CLASSES
+*/
+.custom-font {
+  font-family:$AlexBrushFont;
+  color:$lightbrown;
+  font-size:75px;
+  line-height:0;
+}
+
+.add-padding {
+  padding:25px;
+}
+
+.center-text {
+  text-align:center;
+  margin-bottom:40px;
+  margin-top:30px;
+  color:rgb(77, 77, 77);
+  h2 {
+    margin-top:25px;
+    line-height:0;
+  }
+  p {
+    margin-top:0;
+    font-family: $PTSansFont;
+    line-height:1.5;
+  }
+  a {
+    font-family: $PTSansFont;
+    color:$lightbrown;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:1px;
+    border-bottom:solid 2px $lightbrown; 
+  }
+}
+
+.add-flex {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  .stuffed-cherries {
+    background:url('https://s-media-cache-ak0.pinimg.com/736x/61/b1/98/61b19844448b2bad5c78e9a2c6347986.jpg')no-repeat center center;
+    background-size:cover;
+    height:315px;
+    width:320px;
+  }
+}
+
+.center-h1 {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.custom-h1 {
+  text-align:center;
+  color:$white;
+  letter-spacing:5px;
+  margin-bottom:0;
+  span {
+    letter-spacing:0;
+  }
+}
+
+/*
+  TASTEFUL RECIPES SECTION
+*/
+.bread-background {
+  background:$black url('http://www.performerprosites.com/development/clients/showpalace/wp-content/uploads/2014/05/tasteful-recipies-dinner-theatre.jpg')no-repeat center center;
+  background-size:cover;
+  background-attachment: fixed;
+  height:500px;
+}
+/*
+  MENU SECTION
+*/
+.menu {
+  padding:30px;
+  &-images {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:10px;
+    img {
+      width:100%;
+    }
+  }
+}
+/*
+  THE PERFECT BLEND SECTION
+*/
+.cake-background {
+  background:black url('http://www.rustiquerichmond.co.uk/wp-content/uploads/2014/06/desert.jpg')no-repeat center center;
+  background-size:cover;
+  background-attachment: fixed;
+  height:500px;
+}
+/*
+  CULINARY DELIGHT SECTION
+*/
+.reservation-section {
+  margin-bottom:40px;
+  div:first-child {
+    flex:1;
+  }
+  div:last-child {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr;
+    flex:1;
+    img {
+      margin: auto;
+      width:85%;
+    }
+  }
+}
+
+/*
+  FOOTER
+*/
+footer {
+  margin: 0;
+  position:relative;
+  button {
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:-20px;
+    left:50%;
+    transform:translate(-50%, -10%);
+    background:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1.2px;
+    line-height:1.2;
+    border-radius:50%;
+    margin-top: 0;
+  }
+  h4 {
+    margin-bottom:0;
+  }
+  h5 {
+    line-height:1.5;
+  }
+  background:$darkgray;
+  color:lightgray;
+  .restaurant-info {
+    padding:35px 40px !important;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .copyright {
+    background:$lightgray;
+    color:rgb(150,150,150);
+    font-size:14px;
+    letter-spacing:1px;
+    padding:10px 30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    span {
+      border-bottom:solid 1px;
+    }
+  }
+}
+
+/*
+  MEDIA QUERIES
+*/
+@media screen and (max-width: 425px) {
+  header, .bread-background, .cake-background {
+    background-attachment: scroll;
+  }
+}
+@media (min-width:768px) {
+  footer {
+    .restaurant-info {
+      flex-direction:row;
+      justify-content:space-around;
+      align-items:flex-start;
+    }
+  }
+}
+@media(min-width:769px) {
+  /*
+    NAV
+  */
+  nav {
+    position:initial !important;
+    align-items:baseline;
+    padding: 20px 70px !important;
+    .nav-button {
+      display:none;
+    }
+    div {
+      position:initial !important;
+      background:none !important;
+      opacity:initial !important;
+      transform:initial !important;
+      ul {
+        position:initial !important;
+        flex-direction:row !important;
+        .exit-menu {
+          display:none;
+        }
+        li a{
+          font-size: 12.8px;
+          margin:0 10px;
+          letter-spacing:1px;
+          padding:5px 0 !important;
+        }
+        .active {
+            border-bottom:solid 1px lightgray;
+        
+          }
+      }
+    }
+  }
+  .add-padding {
+    padding:50px 0;
+  }
+  .add-flex {
+    flex-direction:row;
+    align-items:center;
+    div:first-child {
+      flex:1;
+      padding:0 50px;
+    }
+    div:last-child {
+      min-width:400px;
+      margin:50px;
+    }
+  }
+  .menu {
+    &-images {
+      flex:1;
+    }
+    div:last-child {
+      flex:1;
+    }
+  }
+  /*
+    FOOTER
+  */
+  footer {
+    .restaurant-info {
+      padding:20px 80px;
+      flex-direction:row;
+      justify-content:space-around;
+      .locations {
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        h4 {
+          flex:1 0 100%;
+        }
+      }
+      .hours {
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        h4 {
+          flex:1 0 100%;
+        }
+      }
+    }
+    .copyright {
+      flex-direction:row;
+      justify-content:space-around;
+    }
+  }
+  
+}
+
+/* ANIMATIONS */
+#asterisk {
+  opacity: 0;
+  transform-origin: 50% 4%;
+  animation: spin .5s forwards;
+  animation-delay: .3s;
+}
+
+#asterisk::before, #asterisk::after {
+  transform-origin: center center;
+  animation: grow .5s forwards;
+  animation-delay: .8s;
+}
+.center p {
+  transform: translateY(-40px);
+  opacity: 0;
+  animation: fadeDown .9s forwards;
+  animation-delay: 1.3s;
+}
+
+.center h2 {
+  transform: scale(2);
+  opacity: 0;
+  animation: fade .5s forwards;
+}
+.center h1 {
+  transform: translateY(40px);
+  opacity: 0;
+  animation: fadeUp .5s forwards;
+  animation-delay: .3s;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes grow {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    width: 40%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  // 50% {
+  //   opacity: 1;
+  // }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}

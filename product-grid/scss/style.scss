@@ -1,0 +1,285 @@
+@import "compass";
+
+$primaryText: #212121;
+$secondaryText: #b6b6b6;
+$white: #ffffff;
+$green: #4CAF50;
+$bgColor: #fafafa;
+$bgColorDarken: darken($bgColor, 8.25);
+
+$cardHeight: 390px;
+$cardDescriptionHeight: 65px;
+$screen-sm: 768px;
+
+$bezierProperty: cubic-bezier(0.165, 0.84, 0.44, 1);
+$bezierDuration: .6s;
+
+// =============
+
+%no-flick {
+    transform: translate3d(0,0,0);
+    transform-style: preserve-3d;
+    perspective: 1000;
+    backface-visibility: hidden;
+}
+
+// =============
+
+body {
+	color: $primaryText;
+}
+
+.container {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+img {
+	max-width: 100%;
+}
+
+hr {
+	border-color: $bgColorDarken;
+	margin: 15px 0;
+}
+
+.secondary-text {
+	color: $secondaryText;
+}
+
+.list-inline {
+	margin: 0;
+	
+	li {
+		padding: 0;
+	}
+}
+
+// =============
+// product card
+// =============
+.card-wrapper {
+	position: relative;	
+	width: 100%;
+	height: $cardHeight;
+	border: 1px solid $bgColorDarken;
+	border-bottom-width: 2px;
+	overflow: hidden;
+	margin-bottom: 30px;
+	// transition: transform $bezierDuration $bezierProperty;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;		
+		box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+		transition: opacity $bezierDuration $bezierProperty;
+	}
+	
+	&:hover {
+		// transform: scale(1.025);
+		
+		&:after {
+			opacity: 1;	
+		}
+		
+		.image-holder {
+			&:before {
+				opacity: .75;
+			}
+			&:after {
+				opacity: 1;
+				transform: translate(-50%, -50%);
+			}
+		}
+		
+		.image-holder--original {
+			transform: translateY(-15px);
+		}
+		
+		.product-description {
+			height: ($cardHeight / 2 - 10) + 20;
+
+			@media (min-width: $screen-sm) {
+				height: $cardHeight / 2 - 10;	
+			}
+		}
+	}
+}
+
+// =============
+// image holder
+// =============
+.image-holder {
+	display: block;	
+	position: relative;
+	width: 100%;
+	height: $cardHeight - $cardDescriptionHeight - 15;
+	background-color: $white;
+	z-index: 1;
+	
+	@media (min-width: $screen-sm) {
+		height: $cardHeight - $cardDescriptionHeight;
+	}
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $green;
+		opacity: 0;
+		z-index: 5;		
+		transition: opacity $bezierDuration;
+	}
+	
+	&:after {
+		content: '+';
+		font-family: 'Raleway', sans-serif;
+		font-size: 70px;
+		color: $green;
+		text-align: center;
+		position: absolute;
+		top: ((($cardHeight / 2) / 2) + 10) - 15;
+		left: 50%;
+		width: 75px;
+		height: 75px;
+		line-height: 75px;
+		background-color: $white;
+		opacity: 0;
+		border-radius: 50%;		
+		z-index: 10;		
+		transform: translate(-50%, 100%);
+		box-shadow: 0 5px 15px rgba(0,0,0,0.3);		
+		transition: all $bezierDuration - .2 ease-out;
+		
+		@media (min-width: $screen-sm) {
+			top: (($cardHeight / 2) / 2) + 10;
+		}
+	}	
+	
+	.image-holder__link {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 15;		
+	}
+	
+	.image-holder--original {
+		transition: transform $bezierDuration + .2 $bezierProperty;	
+	}
+}
+
+.image-liquid {
+	width: 100%;
+	height: $cardHeight - $cardDescriptionHeight;
+	background-size: cover;
+	background-position: center center;
+}
+
+// =============
+// product description
+// =============
+.product-description {
+	@extend %no-flick;	
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;	
+	height: $cardDescriptionHeight + 15;
+	padding: 10px 15px;
+	overflow: hidden;
+	background-color: $bgColor;
+	border-top: 1px solid $bgColorDarken;
+	transition: height $bezierDuration $bezierProperty;
+	z-index: 2;
+	
+	@media (min-width: $screen-sm) {
+		height: $cardDescriptionHeight;		
+	}
+	
+	p {
+		margin: 0 0 5px;
+	}
+	
+	// title	
+	.product-description__title {
+		font-family: 'Raleway', sans-serif;		
+		position: relative;
+		white-space: nowrap;
+		overflow: hidden;
+		margin: 0;	
+		font-size: 18px;		
+		line-height: 1.25;		
+		
+		&:after {
+			content: '';
+			width: 60px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: linear-gradient(to right,rgba(255,255,255,0),rgba($bgColor,1));
+		}
+		
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+	
+	// category
+	.product-description__category {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	// price	
+	.product-description__price {
+		color: $green;
+		text-align: left;
+		font-weight: bold;
+		letter-spacing: 0.06em;
+		
+		@media (min-width: $screen-sm) {
+			text-align: right;
+		}
+	}
+	
+	// sizes	
+	.sizes-wrapper {
+		margin-bottom: 15px;
+	}
+	
+	//colors
+	.color-list {
+		font-size: 0;
+	}
+	
+	.color-list__item {
+		width: 25px;
+		height: 10px;
+		position: relative;
+		z-index: 1;
+		transition: all .2s;
+		
+		&:hover {
+			width: 40px;			
+		}
+	}
+	.color-list__item--red { background-color: #F44336; }
+	.color-list__item--blue { background-color: #448AFF; }
+	.color-list__item--green { background-color: #CDDC39; }
+	.color-list__item--orange { background-color: #FF9800; }
+	.color-list__item--purple { background-color: #673AB7; }
+}

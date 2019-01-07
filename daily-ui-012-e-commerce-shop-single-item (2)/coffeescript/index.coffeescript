@@ -1,0 +1,14 @@
+$qty = document.querySelector(".qty")
+$qty_num = $qty.textContent
+$price = document.querySelector(".price")
+$price_num = $price.textContent
+
+
+window.count = (num) ->
+	$qty_num = parseInt($qty_num) + parseInt(num)
+	$total = $price_num * $qty_num
+	if $qty_num > 0
+		$qty.textContent = $qty_num
+		$price.textContent = $total
+	return
+	

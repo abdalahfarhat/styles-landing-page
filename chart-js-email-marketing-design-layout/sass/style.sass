@@ -1,0 +1,351 @@
+@import compass
+
+// clearfix
+.clearfix
+  display: inline-block
+  &:after
+    visibility: hidden
+    display: block
+    font-size: 0
+    content: " "
+    clear: both
+    height: 0
+* html .clearfix
+  height: 1%
+.clearfix
+  display: block
+    
+$stat1: #4a809a //left
+$stat2: #9c9c9c //right
+    
+body
+  background: #eee
+  font-family: 'Montserrat', sans-serif
+.statCont
+  width: 100%
+  background: #fff
+  padding: 20px 0
+  border: solid 1px #e0e0e0
+  position: relative
+  +box-sizing(border-box)
+  margin-bottom: 20px
+  &#line_chart .legend
+    width: 100%
+    float: left
+    height: 40px
+    +box-sizing(border-box)
+    padding: 0 130px
+    overflow: hidden
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        padding: 0
+        margin: 0
+        display: block
+        width: 100%
+        float: left
+        font-size: 16px
+        line-height: 20px
+        color: #333
+        span
+          width: 12px
+          height: 12px
+          display: inline-block
+          margin-right: 14px
+          border-radius: 2px
+          opacity: 0.8
+          &.one
+            border: solid 1px $stat1
+            background: lighten($stat1, 20%)
+          &.two
+            border: solid 1px $stat1
+            background: lighten($stat2, 20%)
+  .lineChartCont
+    width: 80%
+    margin: 0 auto
+    overflow: visible
+    canvas#canvas
+      max-width: 100%
+      max-height: 400px
+  .statsCol
+    position: absolute
+    top: 0
+    width: 10%
+    height: 100%
+    padding-top: 60px
+    .stat
+      width: 80%
+      margin: 0 10% 10px 10%
+      height: 60px
+      border: solid 1px #ebebeb
+      float: left
+      +box-sizing(border-box)
+      +border-radius(3px)
+      +box-shadow(0 1px 1px #ccc)
+      span
+        width: 100%
+        display: inline-block
+        text-align: center
+        &.num
+          font-size: 26px
+        &.term
+          font-size: 12px
+  .leftStats
+    left: 0
+    color: #4a809a
+  .rightStats
+    right: 0
+    color: #9c9c9c
+#pie_chart
+  padding-left: 20px
+  padding-right: 20px
+  .pieChartCont
+    width: 35%
+    min-height: 300px
+    float: left
+    canvas#pieChart
+      width: 100%
+      height: auto
+  .legend
+    float: left
+    width: 35%
+    height: auto
+    +box-sizing(border-box)
+    padding: 0 20px
+    ul
+      margin: 0
+      padding: 0
+      li
+        display: inline-block
+        width: 100%
+        float: left
+        line-height: 26px
+        margin-bottom: 6px
+        +box-sizing(border-box)
+        padding: 0 10px
+        +border-radius(3px)
+        font-family: arial
+        &:nth-child(1)
+          background: #F7464A
+          color: #ebebeb
+        &:nth-child(2)
+          background: #4D5360
+          color: #ebebeb
+        &:nth-child(3)
+          background: #FDB45C
+        &:nth-child(4)
+          background: #46BFBD
+        &:nth-child(5)
+          background: #949FB1
+        i.fa
+          margin-right: 15px
+          min-width: 24px
+        span
+          margin-right: 10px
+          display: inline-block
+          min-width: 50px
+  .pieOptions
+    float: left
+    width: 25%
+    height: 100%
+    min-height: 20px
+    a
+      width: 100%
+      display: inline-block
+      float: left
+      margin-bottom: 12px
+      padding: 8px 12px
+      text-align: center
+      text-transform: uppercase
+      background: #84BE6A
+      text-decoration: none
+      color: #fff
+      text-shadow: 0 1px 1px darken(#84BE6A, 20%)
+      +border-radius(3px)
+      border-bottom: solid 4px darken(#84BE6A, 30%)
+      &:Hover
+        background: lighten(#84BE6A, 5%)
+        border-bottom: solid 4px darken(#84BE6A, 25%)
+      i.fa
+        margin-right: 10px
+        display: inline-block
+#bar_chart
+  .barChartCont
+    width: 60%
+    padding-left: 20px
+    +box-sizing(border-box)
+    canvas#barChart
+      width: 100%
+      height: auto
+      //height: 450px
+      min-height: 450px
+  .legend
+    position: absolute
+    top: 0
+    right: 20px
+    width: 35%
+    +box-sizing(border-box)
+    padding: 30px
+    h4
+      text-align: center
+      text-transform: uppercase
+    .items
+      width: 100%
+      float: left
+      +border-radius(3px)
+      padding: 12px 0
+      text-align: center
+      margin-bottom: 20px
+      span
+        width: 100%
+        display: inline-block
+        &.co
+          font-size: 34px
+    .clicks
+      background: rgba(220,220,220,0.5)
+      border: solid 2px rgba(220,220,220,0.8)
+    .conversions
+      background: rgba(151,187,205,0.5)
+      border: solid 2px rgba(151,187,205,0.8)
+    .avgClicks
+      width: 46%
+      background: #A6D785
+      border: solid 2px darken(#A6D785, 20%)
+      float: left
+    .avgConvs
+      width: 46%
+      background: #63D1F4
+      border: solid 2px darken(#63D1F4, 20%)
+      float: right
+#email_lists
+  h4
+    margin: 0
+    padding: 0 20px
+    font-size: 24px
+    width: 35%
+    +box-sizing(border-box)
+  ul.emailLists
+    margin: 0
+    padding: 20px
+    list-style: none
+    width: 35%
+    float: left
+    +box-sizing(border-box)
+    li
+      display: inline-block
+      width: 100%
+      padding: 0 10px
+      margin: 0
+      line-height: 36px
+      position: relative
+      +box-sizing(border-box)
+      +border-radius(20px)
+      &:hover
+        cursor: pointer
+      &:first-child
+        border-bottom: solid 3px #ebebeb
+        padding-bottom: 5px
+        margin-bottom: 20px
+        +border-radius(0)
+        &.selected
+          background: #fff
+          color: #009fd4
+          span
+            background: #ebebeb
+      &.selected
+        background: #ebebeb
+        span
+          background: #fff
+      span
+        display: inline-block
+        margin: 0 15px
+        padding: 4px 12px
+        background: #eee
+        line-height: 20px
+        +box-shadow(inset 0 1px 1px #ccc)
+        +border-radius(15px)
+        color: #444
+      a
+        float: right
+        text-decoration: none
+        font-size: 12px
+        color: #0079a2
+        font-family: arial, sans-serif
+        &:hover
+          text-decoration: underline
+  .indivEmailsTop
+    width: 65%
+    float: left
+    padding: 0 20px
+    margin: 0
+    margin-top: -30px
+    +box-sizing(border-box)
+    .info
+      width: 33.3%
+      +box-sizing(border-box)
+      float: left
+      &.infoBounced
+        width: 33.4%
+        float: right
+      span
+        width: 100%
+        display: inline-block
+        text-align: center
+        &.num
+          font-size: 34px
+  ul.indivEmailsBottom
+    width: 65%
+    margin: 0
+    padding: 20px
+    +box-sizing(border-box)
+    float: left
+    border-top: solid 3px #ebebeb
+    margin-top: 30px
+    list-style: none
+    font-family: arial, sans-serif
+    line-height: 24px
+    li
+      padding: 5px 12px
+      color: #009fd4
+      font-size: 14px
+      border: solid 2px #fff
+      +border-radius(20px)
+      &:nth-child(odd)
+        background: #ebebeb
+      a
+        opacity: 0
+        display: inline-block
+        float: right
+        padding: 3px 5px
+        background: #fff
+        border: solid 1px #ccc
+        margin-right: 5px
+        +border-radius(3px)
+        cursor: pointer
+        border-bottom-width: 3px
+      &:hover
+        border-color: #009fd4
+        a
+          opacity: 1
+          +transition(all 100ms ease-in-out)
+          &:hover
+            background: #ffc
+  .options
+    float: right
+    padding: 10px 20px
+    a
+      padding: 8px 14px
+      border: solid 1px #ccc
+      border-bottom-width: 4px
+      margin-left: 6px
+      +border-radius(6px)
+      color: #777
+      text-decoration: none
+      &:hover
+        background: #eee
+        color: #333
+      i.fa
+        margin-right: 4px
+        display: inline-block

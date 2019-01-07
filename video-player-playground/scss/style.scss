@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+}
+
+#select {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin: 2em 1em;
+}
+
+.video-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: none;
+  &:first-of-type {
+    display: block;
+  }
+}

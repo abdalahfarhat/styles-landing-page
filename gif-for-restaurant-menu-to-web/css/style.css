@@ -1,0 +1,64 @@
+
+html, body { height: 100%; }
+body { margin: 0; padding: 0; }
+
+#box { position: relative; height: 100%; overflow: hidden; opacity: 0; }
+#wrap { position: relative; }
+#bg { position: absolute; left: 0; top: 0;
+/* for retina, but too slow
+	transform-origin: 0 0; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -o-transform-origin: 0 0;
+	transform: scale(0.5, 0.5); -webkit-transform: scale(0.5, 0.5); -moz-transform: scale(0.5, 0.5); -o-transform: scale(0.5, 0.5);
+*/
+}
+#list { position: relative; height: 100%; margin: 0; padding: 0; }
+#list li { position: relative; list-style: none; }
+
+#list .ice-cream { background: #73dda5; }
+#list .beer { background: #bd84d6; }
+#list .hard-liquors { background: #9cb4f0; }
+#list .wines { background: #f3ba71; }
+#list .soups { background: #ff85a7; }
+#list .burgers { background: #7beced; }
+#list .cakes { background: #b2dc77; }
+
+#list a { position: relative; font-family: arial; font-size: 14px; font-weight: bold; color: #fff; letter-spacing: 0.25em; text-align: center; text-decoration: none; text-transform: uppercase; display: block; }
+#list a:after { position: absolute; right: 20px; top: 50%; width: 8px; height: 8px; content: ''; margin-top: -7px; border: solid #fff; border-width: 0 3px 3px 0; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+#list a .svg { position: absolute; left: 0; top: 50%; width: 120px; line-height: 0;
+	 transform: scale(0.8, 0.8) translate(-15px, 0); -webkit-transform: scale(0.8, 0.8) translate(-15px, 0); -moz-transform: scale(0.8, 0.8) translate(-15px, 0); -o-transform: scale(0.8, 0.8) translate(-15px, 0); 
+}
+#list a .svg svg { width: 120px; -background: rgba(0, 0, 0, 0.3); }
+#list a .svg .head { -background: rgba(255, 255, 255, 0.3); }
+#list a .svg .head svg { height: 100%; }
+#list a .svg svg.body { -background: rgba(255, 255, 255, 0.3); }
+#list .ice-cream .svg { margin-top: -52px; }
+#list .ice-cream .head { height: 50px; transform-origin: 50% 102%; -webkit-transform-origin: 50% 102%; -moz-transform-origin: 50% 102%; -o-transform-origin: 50% 102%; }
+#list .ice-cream svg.body { height: 52px; }
+#list .beer .svg { margin-top: -43px; }
+#list .beer .head { height: 32px; transform-origin: 50% 127%; -webkit-transform-origin: 50% 127%; -moz-transform-origin: 50% 127%; -o-transform-origin: 50% 127%; }
+#list .beer svg.body { height: 49px; }
+#list .hard-liquors .svg { margin-top: -37px; }
+#list .hard-liquors svg.body { height: 74px; }
+#list .wines .svg { margin-top: -45px; }
+#list .wines .head { height: 11px; transform-origin: 50% 400%; -webkit-transform-origin: 50% 400%; -moz-transform-origin: 50% 400%; -o-transform-origin: 50% 400%; }
+#list .wines svg.body { height: 78px; }
+#list .soups .svg { margin-top: -30px; }
+#list .soups .head { height: 12px; transform-origin: 50% 242%; -webkit-transform-origin: 50% 242%; -moz-transform-origin: 50% 242%; -o-transform-origin: 50% 242%; }
+#list .soups svg.body { height: 46px; }
+#list .burgers .svg { margin-top: -33px; }
+#list .burgers .head { height: 29px; }
+#list .burgers svg.body { height: 35px; }
+#list .cakes .svg { margin-top: -30px; }
+#list .cakes .head { height: 37px; transform-origin: 50% 89%; -webkit-transform-origin: 50% 89%; -moz-transform-origin: 50% 89%; -o-transform-origin: 50% 89%; }
+#list .cakes svg.body { height: 29px; }
+
+body.show { background: #373737; }
+body.show #box { opacity: 1; }
+
+svg path { stroke: white; stroke-width: 5px; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+svg.head path { fill: none; }
+svg [id^="mask"] rect { fill: white; }
+svg path.liquid { stroke: none; }
+svg path.fill,
+svg path.liquid { fill: rgba(255, 255, 255, 0.3); }
+svg [id^="mask"] rect,
+svg path.liquid { transform-origin: 50% 0; -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; -o-transform-origin: 50% 0; }

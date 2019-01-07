@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+body {
+  font-family: "Open Sans";
+  font-size: 16px;
+  background-color: #eae1d5;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+
+/*Nav*/
+
+.navbar-inverse {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-brand:focus,
+.navbar-inverse .navbar-brand:hover {
+  color: #FF0052;
+  background-color: transparent;
+  outline: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #E05416;
+  background-color: transparent;
+}
+
+.navbar-brand {
+  padding: 15px 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar-inverse.navbar-animated {
+  background-color: #222222;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fed136;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover,
+a:focus {
+  color: #e05416;
+  text-decoration: none;
+}
+
+.navbar-brand:before {
+  content: 'MN';
+  background-color: #E05416;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 50px;
+  color: #fff;
+  padding: 3px 10px;
+  z-index: -1;
+  border: 3px solid;
+  vertical-align: bottom;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+  color: #E05416;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #E05416;
+}
+
+.navbar-toggle {
+  margin-right: 0;
+  padding: 9px 0;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+}
+
+section#about,
+footer {
+  background: #222222;
+  color: #fff;
+}
+
+section#contact {
+  background: #fff;
+  color: #000;
+}
+
+section#about,
+section#contact,
+section#portfolio {
+  padding: 150px 0;
+  min-height: 100vh;
+}
+
+
+/*header*/
+
+header {
+  background-repeat: none;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+  /*background-image: url('http://static2.format-assets.com/static/marketing/home/testimonials/03/background-477ec11262dc2aa237c099a6342af29cdf6ad4b507941450cc7481c7d4f0ee78.jpg');*/
+  background-image: url('http://media02.hongkiat.com/freebies-web-designer-sep-2015/free-5k-retina-and-27-imac-psd-mockup.jpg');
+  z-index: -2;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  height: 100vh;
+}
+
+header:before {
+  content: '';
+  position: absolute;
+  background: #000;
+  opacity: .5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+p.lead {
+  color: #eae1d5;
+}
+
+header .header-content .header-content-inner {
+  padding: 100px 0 50px;
+  position: relative;
+  z-index: 1;
+}
+
+header .header-content .header-content-inner p {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+header .header-content .header-content-inner h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+
+hr {
+  border-color: #f05f40;
+  border-width: 3px;
+  max-width: 50px;
+}
+
+.thumbnail .caption {
+  height: 150px;
+}
+
+footer {
+  padding: 10px 0;
+  text-align: center;
+}
+
+#contact .section-heading {
+  margin: 0 0 2em;
+}
+
+#contact #message {
+  min-height: 132px;
+  height: auto;
+}
+
+footer span.copyright {
+  line-height: 40px;
+  text-transform: uppercase;
+  text-transform: none;
+}
+
+footer ul.quicklinks {
+  margin-bottom: 0;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-transform: none;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+  display: block;
+  background-color: #222222;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+  background-color: #E05416;
+}
+
+@media (min-width: 768px) {
+  .navbar-inverse {
+    padding: 25px 0;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+    border: none;
+  }
+  .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  header .header-content .header-content-inner {
+    padding: 0;
+    height: 300px;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    position: absolute;
+  }
+  header .header-content .header-content-inner p {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0 0 25px;
+  }
+  header .header-content .header-content-inner h1 {
+    font-size: 75px;
+    line-height: 75px;
+  }
+  .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .navbar-inverse.navbar-animated {
+    background-color: #222222;
+    padding: 10px 0;
+  }
+  .navbar-inverse.navbar-shrink .navbar- brand {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .navbar-inverse .navbar-collapse,
+  .navbar-inverse .navbar-form {
+    float: left!important;
+    background: #222;
+    width: 100vw;
+    position: absolute;
+  }
+  .navbar-inverse .navbar-toggle {
+    z-index: 1;
+    position: relative;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Video Player w/ slider</title>
+  
+  
+  <link rel='stylesheet' href='css/oryezj.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="video__container">
+  <!-- Video -->
+  <video id="video" preload="metadata" poster="https://mango.blender.org/wp-content/uploads/2013/06/12_scients_header.jpg?x88450">      
+    <source src="https://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
+  </video>
+  <div id="video__controls__container">
+    <div id="video__caption">Tears of Steel<i id="close__lightbox" class="fa fa-close"></i></div>
+    <div id="video__play__centerButton" class="fa fa-play-circle-o fa-5x"></div>
+    <div id="video__controls">
+      <button type="button" id="play-pause" class="controls play fa fa-play"></button>
+      <input type="range" id="seek-bar" value="0" class="controls">
+      <button type="button" id="mute" class="controls fa fa-volume-off"></button>
+      <input type="range" id="volume-bar" class="controls" min="0" max="1" step="0.1">
+      <button type="button" id="full-screen" class="controls fa fa-arrows-alt"></button>
+    </div>
+  </div>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

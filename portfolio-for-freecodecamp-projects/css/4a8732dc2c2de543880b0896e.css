@@ -1,0 +1,134 @@
+/* Obnoxious styling for icon fonts */
+i {
+  display: inline;
+}
+
+.fa {
+  font-size: calc(1em + 3vw);
+  padding: .15em .2em;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .4);
+  margin: 0 .25em;
+  box-shadow: .1em .1em .1em rgba(0, 0, 0, .4);
+  transition: all .5s ease;
+}
+
+.fa-twitter {
+  color: #4099FF;
+  transition: all .5s ease;
+}
+
+.fa-twitter:hover {
+  color: white;
+  background: #4099FF;
+  transition: all .5s ease;
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-github:hover {
+  color: white;
+  background: #333;
+  transition: all .5s ease;
+}
+
+.fa-dribbble {
+  color: #ea4c89;
+}
+
+.fa-dribbble:hover {
+  color: white;
+  background: #ea4c89;
+  transition: all .5s ease;
+}
+
+.fa-codepen {
+  color: black;
+}
+
+.fa-codepen:hover {
+  color: white;
+  background: black;
+  transition: all .5s ease;
+}
+
+.fa-stack-overflow {
+  color: #fe7a15;
+}
+
+.fa-stack-overflow:hover {
+  color: white;
+  background: #fe7a15;
+  transition: all .5s ease;
+}
+
+.devicons {
+  font-size: 4em;
+  color: #000;
+  margin: 0 .25em;
+}
+
+.devicons-html5 {
+  color: #E34C26;
+}
+
+.devicons-css3 {
+  color: #0b73b8;
+}
+
+.devicons-bootstrap {
+  color: #401F7C;
+}
+
+.devicons-wordpress {
+  color: #21759b;
+}
+
+.devicons-javascript {
+  background: #f0db4f;
+}
+
+.devicons-jquery {
+  color: #0769AD;
+}
+
+.devicons-angular {
+  color: #e62a39;
+}
+
+.devicons-nodejs {
+  color: #8CC84B;
+  font-size: 8em;
+}
+
+.devicons-npm {
+  color: #cb3837;
+}
+
+.devicons-sublime {
+  color: #ff8100;
+}
+
+.devicons-cloud9 {
+  color: #237cc5;
+}
+
+.devicons-vim {
+  color: #019833;
+}
+
+.devicons-heroku {
+  color: #6567a5;
+}
+
+.devicons-git {
+  color: #ee513b;
+}
+
+.devicons-react {
+  color: #61dafb;
+  border-radius: 50%;
+  background: #111;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Video Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  
+  <link rel='stylesheet' href='https://mui.aws.manheim.com/0.29.0/man-customer/css/mui.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+    <div class="video-component" id="videoComponent">
+
+      <!-- Video Menu -->
+      <select class="video-player-menu" disabled title="Select a video from this menu. Press the enter or spacebar key to open the menu." id="videoPlayerMenu" class="mui-m-h-b">
+        <option disabled value="null" selected>Select a video:</option>
+        <option value="cat">Keyboard Cat</option>
+        <option value="nasa" title="closed captions available">NASA</option>
+        <option value="nat_geo" title="closed captions available">National Geographic</option>
+        <option value="app-32cd.live">LIVE demo</option>
+      </select>
+
+      <!-- Video Element -->
+      <video disabled x-webkit-airplay="allow" width="100%" height="100%" class="video-player" id="videoPlayer" preload="metadata" poster="http://philhuffstickler.com/html5video/posters/poster_default.jpg" playsinline="true" tabindex="-1">
+      </video>
+
+      <!-- Show a message when Javascript is disabled -->
+      <noscript>
+        <div class="message--warning message--icon">JavaScript is disabled in your browser</div>
+      </noscript>
+
+      <!-- Custom Video Controls -->
+      <div class="video-controls" id="videoControls" dir="ltr" role="group"> 
+        <div class="icon-spinner anim-spin video-preloader" id="videoPreloader"></div>
+
+        <div class="video-progress-container">
+          <div class="video-buffer-progress-fill hide" id="videoBufferProgressFill"></div>
+          <div class="video-progress-fill" id="videoProgressFill"></div>
+          <input disabled type="range" min="0" title="Press the left or right arrow to control the video" value="0" id="videoProgressScrubber" />
+        </div>
+        <button disabled title="Play/Pause Video" class="icon-pause" id="playPauseBtn"></button>
+
+        <span disabled class="video-progress-text" id="videoProgressText">00:00 / 00:00</span>
+        <div class="float--right video-utilities">
+          <button disabled title="Toggle Closed Captions" class="icon-bubble" id="closedCaptionsBtn"></button>
+          <button disabled title="Mute the video volume" class="icon-volume-high" id="videoVolumeBtn">
+            <!--             <input min="0" max="0" disabled type="range" class="video-volume-slider" id="videoVolumeSlider" /> -->
+          </button>
+          <button disabled title="View video on external display" class="icon-display" id="videoExternalDisplayBtn"></button>
+          <button disabled title="Toggle Fullscreen Video" class="fullscreen-btn icon-pinch-out" id="fullscreenBtn"></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

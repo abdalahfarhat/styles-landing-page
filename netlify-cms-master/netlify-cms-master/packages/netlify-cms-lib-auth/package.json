@@ -1,0 +1,34 @@
+{
+  "name": "netlify-cms-lib-auth",
+  "description": "Shared authentication functionality for Netlify CMS.",
+  "version": "2.0.5",
+  "repository": "https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-lib-auth",
+  "bugs": "https://github.com/netlify/netlify-cms/issues",
+  "main": "dist/netlify-cms-lib-auth.js",
+  "license": "MIT",
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "keywords": [
+    "netlify-cms"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "watch": "webpack -w",
+    "develop": "npm run watch",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "dependencies": {
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "peerDependencies": {
+    "immutable": "^3.7.6",
+    "lodash": "^4.13.1"
+  }
+}

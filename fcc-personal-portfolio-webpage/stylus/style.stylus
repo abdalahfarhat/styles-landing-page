@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic\+SC:400,700")
+@import url(https://fonts.googleapis.com/css?family=Titillium\+Web:400,200,300,600,700,900,400italic);
+
+plum = hsl(280deg, 100%, 30%)
+
+*
+  box-sizing border-box
+  
+body
+  color #333
+  font-family 'Titillium Web', sans-serif
+  font-size 20px
+  line-height 1.5
+  position relative
+  
+  & > * ~ *
+    margin-bottom 1.5rem
+  
+p
+  margin-bottom 3rem
+  
+a
+  color white
+  display inline-block
+  padding 1rem
+  text-decoration none
+  
+  &:hover
+    background-color white
+    color hsl(280deg, 100%, 30%)
+  
+.nav
+  background-color plum
+  box-shadow 0 0 30px hsla(280deg, 100%, 10%, 100%)
+  display flex
+  justify-content space-between
+  position fixed
+  top 0
+  width 100vw
+  z-index 20
+  
+a.button
+  color plum
+  display inline-block
+  padding 1rem
+  text-decoration none
+  transition all .3s
+  
+  &:hover
+    background-color plum
+    color white
+    
+    
+a.logo
+  background-color plum
+  //color white
+  font-family titillium web
+  //font-size 1rem
+  font-weight 900
+  position relative
+  text-decoration none
+  transition all .1s
+  
+  &:hover
+    //background-color white
+    //color plum
+  
+    .free, .code, .camp, .icon
+      //color plum
+      //background-color white
+      transform translateX(0)
+  
+.free, .code, .camp, .icon
+  background-color plum
+  color white
+  display inline-block
+  transition all .33s cubic-bezier(.91,-0.44,.12,1.51)
+ 
+.code
+  transform translateX(-66%)
+  
+.camp
+  transform translateX(-125%)
+  
+.icon
+  background-color plum
+  color white
+  font-weight 200
+  padding-left 5px
+  transform translateX(-136%) 
+  
+
+[class*='__headline']
+  color white
+  font-size 15vw
+  font-weight 200
+  margin-bottom 2rem
+  text-shadow 5px 5px 0 rgba(indigo, 0.5)
+  
+.wrapper
+  background-color white
+  padding 1.5rem 0
+    
+.content
+  padding 0 10vw
+  
+[class*='__section-head']
+  color plum
+  font-size 2.5rem
+  font-weight 900
+  line-height 1
+  padding 6rem 0 1.5rem 0
+  text-align center
+  
+.call-to-action
+  box-shadow 0 -1px 0 #ccc
+  margin-bottom 0
+  text-align center
+  padding 3rem 0
+
+[class*=--cta]
+  // styles lifted from https://hackclub.com/
+  background-color hsl(60deg, 100%, 50%)
+  border-style solid
+  border-width 0px
+  color hsl(60deg, 100%, 20%)
+  display inline-block
+  font-size 3rem
+  padding 1rem 3rem
+  position relative
+  transition background-color 300ms ease-out
+  animation wiggle 2s linear infinite
+  
+  &::before
+    content: ''
+    position absolute
+    border 4px solid hsl(60deg, 100%, 50%)
+    top 0
+    right 0
+    bottom 0
+    left 0
+    transition-duration 0.3s
+    transition-property top, right, bottom, left
+    
+  &:hover
+    background-color hsl(60deg, 100%, 20%)
+    color hsl(60deg, 100%, 50%)
+    
+    &::before
+      border 5px solid hsl(60deg, 100%, 20%)
+      top -8px
+      right -8px
+      bottom -8px
+      left -8px
+
+      
+.full
+  background-blend-mode overlay
+  background-size cover
+  height 100vh
+  width 100vw
+  display flex
+  align-items center
+  justify-content center
+  margin-bottom 0
+  
+body
+  background-image url(https://drscdn.500px.org/photo/127805781/q%3D80_m%3D2000/23a13ef18d5c66f1a5e929f1fdc641ae), linear-gradient(45deg, #0fc, violet)
+  background-position center center
+  background-repeat no-repeat
+  background-attachment fixed
+  background-size cover
+  background-blend-mode overlay
+  
+      
+[class*=animate-reveal]
+  opacity 0
+  animation reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards
+
+[class*=--1]
+  animation-delay 0
+
+[class*=--2]
+  animation-delay .250s
+
+[class*=--3]
+  animation-delay .500s
+
+[class*=--4]
+  animation-delay .750s
+  
+[class*=--5]
+  animation-delay 1s
+  
+[class*=--6]
+  animation-delay 1.25s
+  
+[class*=--7]
+  animation-delay 1.5s
+
+@keyframes reveal
+  0%
+    opacity 0
+    transform translateY(100%)
+  100%
+    opacity 1
+    transform: translateY(0)

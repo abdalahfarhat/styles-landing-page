@@ -1,0 +1,257 @@
+html {
+  height: 100%;
+  background: #F1F1F1;
+}
+.no-button,
+.menu__control,
+.menu__control,
+.action {
+  background: transparent;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.no-button:hover,
+.no-button:focus,
+.no-button:active,
+.menu__control:hover,
+.menu__control:focus,
+.menu__control:active,
+.menu__control:hover,
+.menu__control:focus,
+.menu__control:active,
+.action:hover,
+.action:focus,
+.action:active {
+  outline: none;
+}
+.menu__control .icon {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  transition: -webkit-transform 1000ms cubic-bezier(0.11, 1, 0, 1) 0ms;
+  transition: transform 1000ms cubic-bezier(0.11, 1, 0, 1) 0ms;
+  transition: transform 1000ms cubic-bezier(0.11, 1, 0, 1) 0ms, -webkit-transform 1000ms cubic-bezier(0.11, 1, 0, 1) 0ms;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+}
+.menu__control .icon--menu {
+  z-index: 1;
+}
+.menu__control .icon--close {
+  z-index: 2;
+}
+.menu__control .icon--back {
+  z-index: 3;
+}
+.menu--active .menu__control .icon--close {
+  transition-delay: 400ms;
+}
+.menu--active .menu__control .icon--back {
+  transition-delay: 600ms;
+}
+.hide-icon,
+.menu__control .icon--close,
+.menu__control .icon--back,
+.menu--open .menu__control .icon--menu,
+.menu--active .menu__control .icon--menu {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+.show-icon,
+.menu--open .menu__control .icon--close,
+.menu--active .menu__control .icon--back {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #FFF;
+}
+.menu__options,
+.menu__actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.menu__options {
+  -webkit-filter: url(#goo);
+          filter: url(#goo);
+}
+.menu__bg {
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+  margin-top: -7px;
+}
+.menu,
+.menu__bg {
+  transition: background-color 500ms ease-in-out 0ms;
+}
+.menu--active,
+.menu--active .menu__bg {
+  transition-delay: 300ms;
+}
+.menu--camera,
+.menu--camera .menu__bg {
+  background-color: #309EE4;
+}
+.menu--users,
+.menu--users .menu__bg {
+  background-color: #0AB5A8;
+}
+.menu--comments,
+.menu--comments .menu__bg {
+  background-color: #F7C524;
+}
+.menu--likes,
+.menu--likes .menu__bg {
+  background-color: #F28F1B;
+}
+.menu__actions {
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 2em 1em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* Action Buttons */
+.menu__control {
+  width: 20%;
+}
+.menu__control,
+.action {
+  border-radius: 50%;
+  position: relative;
+  max-width: 6em;
+}
+.menu__control::after,
+.action::after {
+  content: ' ';
+  display: block;
+  padding-top: 100%;
+}
+.menu__control .icon,
+.action .icon {
+  fill: currentColor;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 50%;
+}
+.action {
+  background: #000;
+  color: #FFF;
+  width: 25%;
+  margin: 0 1em;
+}
+.action--camera {
+  background-color: #309EE4;
+}
+.action--users {
+  background-color: #0AB5A8;
+}
+.action--comments {
+  background-color: #F7C524;
+}
+.action--likes {
+  background-color: #F28F1B;
+}
+.action {
+  -webkit-transform: translateY(-200%) scale(0.5, 1.5);
+          transform: translateY(-200%) scale(0.5, 1.5);
+  transition: visibility 0ms linear 600ms, -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, visibility 0ms linear 600ms;
+  transition: transform 500ms ease-in-out, visibility 0ms linear 600ms, -webkit-transform 500ms ease-in-out;
+  transition-timing-function: cubic-bezier(0.8, 0.01, 0.6, 0.14), linear;
+  visibility: visible;
+}
+.action:nth-child(5) {
+  transition-delay: 600ms, 1000ms;
+}
+.action:nth-child(4) {
+  transition-delay: 450ms, 1000ms;
+}
+.action:nth-child(3) {
+  transition-delay: 300ms, 1000ms;
+}
+.action:nth-child(2) {
+  transition-delay: 150ms, 1000ms;
+}
+.action:nth-child(1) {
+  transition-delay: 0ms, 1000ms;
+}
+.action .icon {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: -webkit-transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
+  transition-delay: inherit;
+}
+.menu--open .action {
+  -webkit-transform: translateY(0) scale(1, 1);
+          transform: translateY(0) scale(1, 1);
+  transition-duration: 600ms, 0ms;
+  transition-timing-function: cubic-bezier(0, 0.01, 0, 1), linear;
+  visibility: visible;
+}
+.menu--open .action .icon {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.menu--active .action {
+  -webkit-transform: translateY(0) scale(0);
+          transform: translateY(0) scale(0);
+  visibility: hidden;
+}
+.menu--camera .action--camera,
+.menu--users .action--users,
+.menu--comments .action--comments,
+.menu--likes .action--likes {
+  -webkit-transform: translateY(-200%) scale(0.4, 1.5);
+          transform: translateY(-200%) scale(0.4, 1.5);
+  transition-duration: 900ms, 0ms;
+  transition-delay: 0ms, 0ms;
+  visibility: visible;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 1em 0.5em;
+  padding-top: 5.5em;
+}
+.box {
+  background: #eaeaea;
+  margin: 0.5em;
+  padding-top: 30%;
+  flex: 1 1 40%;
+}
+@media (min-width: 800px) {
+  .box {
+    flex-basis: 30%;
+  }
+}

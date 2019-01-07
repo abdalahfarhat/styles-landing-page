@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+$black: #222;
+$white: #fff;
+$blue:#3A539B;
+$green: rgb(26, 188, 156);
+$cubic: "cubic-bezier(.77,.06,.28,.85)";
+
+*{
+	z-index: -1;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Great Vibes', cursive;
+	font-weight: 400;
+	color: $white;
+	margin:0;
+}
+
+p{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	color: $white;
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: $white;
+	margin: 0;
+	transition: all 0.3s ease;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	&:hover{
+		cursor: pointer;
+		color: $green;
+	}
+	&.menu-item{
+		text-transform: uppercase;
+		margin-bottom: 3px;
+		display: block;
+	}
+}
+
+a,h1,p{
+	text-shadow: 1px 1px 2px #222;
+}
+
+.hr{
+	width: 30px;
+	height:3px;
+	background: $white;
+	margin: 15px auto 15px auto;
+	box-shadow: 1px 1px 2px #222;
+}
+
+body{
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+	font-smoothing: antialiased;
+	osx-font-smoothing: grayscale;
+}
+
+.table{
+	display:table;
+	height: 100%;
+	width: 100%;
+}
+
+.cell{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.container{
+	position: relative;
+	height:100vh;
+	width:100%;
+	background: #333;
+	z-index: 0;
+	transition: all 0.75s cubic-bezier(.77,.06,.28,.85);
+	&.push{
+		margin-left:25%;
+	}
+}
+
+#menu-trigger{
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index:99;
+	transition: all 0.5s ease;
+	transform: scale(0.85);
+	
+	div{
+		position: relative;
+		display:block;
+		height: 5px;
+		margin-bottom: 7px;
+		width: 40px;
+		background: $white;
+		transition: all 0.5s ease;
+		box-shadow: 1px 1px 2px #222;
+	}
+	&:hover{
+		cursor: pointer;
+		div:nth-child(odd){
+			width:35px;
+		}
+		div:nth-child(even){
+			width:25px;
+		}
+	}
+	&.clicked{
+		div:nth-child(even){
+			opacity:0;
+		}
+		div:nth-child(1){
+			transform: rotate(45deg);
+			top: 12px;
+		}
+		div:nth-child(3){
+			transform: rotate(-45deg);
+			top:-12px;
+		}
+		&:hover{
+			div{
+				width:40px !important;
+			}
+			transform: scale(0.75);
+		}
+	}
+}
+
+.menu{
+	position:fixed;
+	top:0px;
+	left: -50%;
+	width: 50%;
+	height: 100vh;
+	z-index: 98;
+	background: $blue;
+	transition: all 0.75s #{$cubic};
+	&.open{
+		left:0;
+		box-shadow: 1px 0px 5px $black;
+	}
+}
+
+.menu-tint{
+	position: fixed;
+	width:100%;
+	height:100%;
+	background: $blue;
+	opacity:0;
+	z-index: -1;
+	transition: all 0.75s #{$cubic};
+	&.open{
+		opacity:0.15;
+		z-index: 97;
+	}
+}

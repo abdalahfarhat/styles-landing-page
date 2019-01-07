@@ -1,0 +1,101 @@
+// My brand
+
+.brand
+  %a{:href => 'https://www.jamiecoulter.co.uk',:target => '_blank'}
+    %img{:src => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/logo.png'}
+
+// Begin Body
+
+.swanky
+
+  // Introduction Block
+  
+  .swanky_title
+    %h1 Swanky Lil Drop Down Menu V2.0
+    %p Pure CSS Drop down menu. Nice little addition to any non-javascript user interface. Uses the labels for trick to toggle animations.
+    .swanky_title__social
+      %a{:href => 'https://www.twitter.com/jamiecoulter89',:target => '_blank'}
+        .slide
+          .arrow
+            .stem
+            .point
+        %img{:src => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tw.png'}
+        Twitter
+    .swanky_title__social
+      %a{:href => 'https://www.codepen.io/jcoulterdesign/',:target => '_blank'}
+        .slide
+          .arrow
+            .stem
+            .point
+        %img{:src => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/cp.png'}
+        Codepen 
+        
+  //////////// Begin Dropdown ////////////
+  
+  .swanky_wrapper
+    %input{:type => 'radio',:name => 'radio',:id => 'Dashboard'}
+    %label{:for => 'Dashboard'}
+      %img{:src => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/dash.png'}
+      %span Dashboard
+      %div.lil_arrow
+      %div.bar
+      .swanky_wrapper__content
+        %ul
+          %li Tools
+          %li Reports
+          %li Analytics
+          %li Code Blocks
+    %input{:type => 'radio',:name => 'radio',:id => 'Sales'}
+    %label{:for => 'Sales'}
+      %img{:src => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/del.png'}
+      %span Sales
+      %div.lil_arrow
+      %div.bar
+      .swanky_wrapper__content
+        %ul
+          %li New Sales
+          %li Expired Sales
+          %li Sales Reports
+          %li Deliveries
+    %input{:type => 'radio',:name => 'radio',:id => 'Messages'}
+    %label{:for => 'Messages'}
+      %img{:src => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mess.png'}
+      %span Messages
+      %div.lil_arrow
+      %div.bar
+      .swanky_wrapper__content
+        %ul
+          %li Inbox
+          %li Outbox
+          %li Sent
+          %li Archived
+    %input{:type => 'radio',:name => 'radio',:id => 'Users'}
+    %label{:for => 'Users'}
+      %img{:src => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/users.png'}
+      %span Users
+      %div.lil_arrow
+      %div.bar
+      .swanky_wrapper__content
+        %ul
+          %li New User
+          %li User Groups
+          %li Permissions
+          %li Passwords
+    %input{:type => 'radio',:radio => 'radio',:id => 'Settings'}
+    %label{:for => 'Settings'}
+      %img{:src => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/set.png'}
+      %span Settings
+      %div.lil_arrow
+      .swanky_wrapper__content
+        %ul
+          %li Databases
+          %li Design
+          %li Change User
+          %li Log Out
+          
+  //////////// End Dropdown ////////////
+  
+// My Footer
+
+.love
+  %p Made with <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/love_copy.png" /> by <a href='https://www.jamiecoulter.co.uk' target='_blank'> Jcoulterdesign </a>

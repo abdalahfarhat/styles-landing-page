@@ -1,0 +1,254 @@
+
+.social-avatar, .social-avatar img:first-of-type {
+
+  width: 250px ;
+  height: 250px ;
+}
+.social-avatar {
+
+  display: block ;
+  position: relative ;
+  /*background: red ;*/
+  padding: 0px ;
+}
+.social-avatar img:first-of-type {
+
+  border: 10px solid white ;
+  box-shadow: 0px 0px 15px #eee ;
+  border-radius: 50% ;
+  margin: 0px ;
+}
+.social-avatar figcaption:first-of-type a {
+
+  display: inline-block ;
+  font-size: 0.5em ;
+  font-family: Ubuntu, "comic sans ms" ;
+  border: 3px solid white ;
+  border-radius: 100px/100px ;
+  background: #ff6600 ;
+  color: white ;
+  padding: 5px ;
+  min-height: 40px ;
+  min-width: 40px ;
+  position: absolute;
+}
+.social-avatar figcaption:first-of-type a span {
+
+  display: none ;
+  font-size: 0.9em ;
+}
+.social-avatar figcaption:first-of-type a:hover span {
+
+  display: inline;
+  padding-left: 2px ;
+}
+.social-avatar figcaption:first-of-type a:nth-child(1) {
+
+  top: 0px ;
+  left: 35px ;
+}
+.social-avatar figcaption:first-of-type a:nth-child(2) {
+
+  top: 45px ;
+  left: 5px ;
+}
+.social-avatar figcaption:first-of-type a:nth-child(3) {
+
+  top: 100px ;
+  left: -5px ;
+}
+.social-avatar figcaption:first-of-type a:nth-child(4) {
+
+  top: 155px ;
+  left: 5px ;
+}
+.social-avatar figcaption:first-of-type a:nth-child(5) {
+
+  top: 200px ;
+  left: 45px ;
+}
+.social-avatar figcaption:first-of-type a.s-facebook {
+
+  background: #3b5998 ;
+}
+.social-avatar figcaption:first-of-type a.s-twitter {
+
+  background: #4099FF ;
+}
+.social-avatar figcaption:first-of-type a.s-github {
+
+  background: #171515 ;
+}
+.social-avatar figcaption:first-of-type a.s-linkedin {
+
+  background: #0e76a8 ;
+}
+.social-avatar figcaption:first-of-type a.s-freecodecamp {
+
+  background: maroon ;
+}
+
+.social-profile {
+
+  display: inline-block; 
+  margin: auto; 
+}
+
+.project-thumb:hover {
+
+  box-shadow: 0px 0px 7px #f60;
+} 
+.project-thumb:hover figcaption {
+
+  text-shadow: 0px 0px 3px #f60;
+  border: 1px solid #f60 ;
+} 
+.project-thumb figcaption {
+
+  font-size: 0.5em ;
+  color: white ;
+  text-shadow: 0px 0px 3px blue;
+  margin-top: -3px ;
+  padding: 3px ;
+} 
+.project-thumb img:first-of-type {
+
+  height: 5em ;
+} 
+.project-thumb legend {
+
+  font-size: 0.4em ;
+  background: rgba(0, 0, 0, 0.7) ;
+  position: absolute;
+  top: 0px ;
+  width: 100% ;
+  height: 70% ;
+  color: white;
+  overflow: hidden ;
+  display: none ;
+}
+.project-thumb:hover legend {
+
+  display: block;
+}
+.project-thumb legend i {
+
+  font-size: 3em ;
+  display: inline-block;
+  padding-bottom: 0.3em ;
+}
+
+.navbar-default {
+
+  background: black url(//tnga.github.io/sharedbazar/img/bg_nav.png) repeat ;
+  box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.5) ;
+  font-family: Ubuntu, "comic sans ms" ;
+}
+
+*:hover, *:focus {
+
+  transition: all linear 0.3s ;
+}
+body, .reveal {
+
+  font-family: "DejaVu Sans", verdana, "Open Sans", sans, serif;
+  background: #222 url( //tnga.github.io/sharedbazar/img/bg.png) repeat ;
+}
+h4, h2, h3, h1, h5, .reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+
+  font-family: "GE Inspira", raleway, "DejaVu Sans", verdana, sans, serif;
+  text-transform: none ;
+  border-bottom: 1px solid white ;
+  padding-bottom: 0.7em ;
+}
+.reveal p, .reveal small {
+
+  line-height: 1.3em; 
+}
+.reveal q, .reveal blockquote {
+
+  font-family: Purisa, "Lucida Handwriting", "Comic Sans Ms" ;
+  font-style: normal ;
+}
+
+
+/* Take from iJS-ui
+--------------------
+Certains scripts sont utiliser pour générer du code HTML nécessaire pour gérer
+des fonctionnalités de certaines page du site. C'est le cas d'une boite de dialogue
+personnalisée via des scripts.
+*/
+/* début de la déclaration de style pour des éléments HTML généré par des scripts
+----------------------------------------------------------------------------------*/
+#notify-block {
+  padding: 10px 22px 10px 10px;
+  min-height: 40px;
+  min-width: 100px;
+  max-width: 300px;
+  max-height: 100px;
+  z-index: 100;
+  overflow: hidden;
+  font-family: "DejaVu Sans", _DejaVu_Sans, verdana, OpenSans, sans-serif;
+  font-size: 0.9em;
+  border-radius: 7px 0px 0px 7px;
+  box-shadow: -1px 1px 7px rgba(103, 103, 103, 0.7);
+  position: fixed;
+  top: 20%;
+  right: 0px;
+}
+@media (max-width: 800px) {
+  #notify-block {
+    max-width: 200px;
+  }
+}
+#notify-block.notify-normal {
+  background: #f2f2f2;
+  color: #1a1a1a;
+}
+#notify-block.notify-error {
+  background: #f00;
+  color: #fff;
+}
+#notify-block.notify-error .b-dialog-close {
+  background: #fff;
+  color: #f00;
+}
+#notify-block.notify-warring {
+  background: yellow;
+  color: #f00;
+}
+#notify-block.notify-success {
+  background: #f2f2f2;
+  color: #ffa300;
+}
+#notify-block .b-dialog-close {
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  font-size: 9px;
+}
+.b-dialog-close {
+  display: block;
+  background: #f00;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  padding: 2px;
+  width: 35px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "DejaVu Sans", _DejaVu_Sans, verdana, OpenSans, sans-serif;
+  font-size: 14px;
+}
+.b-dialog-close:hover {
+  box-shadow: 0px 0px 2px #f00;
+  font-size: 13px;
+  background: #f00;
+}

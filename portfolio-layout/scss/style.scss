@@ -1,0 +1,179 @@
+$primary: #de5f5f;
+$black: #333;
+$grey: #999999;
+
+$font-serif: "ff-meta-serif-web-pro", serif;
+$font-sans: "nimbus-sans", sans-serif;
+
+html {
+    box-sizing: border-box;
+    font-family: $font-serif;
+    color: $black;
+    font-size: 16px;
+}
+
+*,*::before,*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+.section {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+
+    @media (min-width: 40.625rem){
+        height: 100vh;
+    }
+
+    .section__inner {
+        display: block;
+        margin: 0 auto;
+        max-width: 1000px;
+        height: 100%;
+    }
+}
+.section--portfolio {
+    color: $black;
+    background: #fff;
+    min-height: 300px;
+    max-height: 70vh;
+    border-bottom: 1px solid #ccc;
+
+    @media (min-width: 40.625rem){
+        max-height: 80vh;
+    }
+
+    + .section--portfolio {
+        padding-top: 5vh;
+    }
+
+    .portfolio-description {
+        position: relative;
+        z-index: 10;
+        font-size: .875rem;
+        padding: 5vw 1rem 0;
+
+        @media (min-width: 40.625rem){
+            width: 35%;
+            padding: 8vw 1rem 0;
+        }
+
+        .pre {
+            display: block;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $black;
+            margin: 0 0 1rem 0;
+            letter-spacing: -.04em;
+            font-size: .875rem;
+        }
+
+        .link {
+            display: inline-block;
+            letter-spacing: 1.4px;
+            font-size: .75rem;
+            color: $black;
+            font-style: italic;
+            margin: 1rem 0 0;
+            border-bottom: 2px solid rgba(#000, 0);
+            
+            &:hover {
+                border-bottom: 2px solid;
+            }
+        }
+
+        a {
+            font-family: $font-sans;
+        }
+
+        p {
+            color: $grey;
+            line-height: 1.6;
+            font-family: $font-serif;
+        }
+    }
+
+    img {
+        display: block;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+        max-width: 1000px;
+        transition: all .5s ease;
+        
+        &:hover{
+            transform: translateY(-1rem);
+            
+        }
+
+        @media (min-width: 40.625rem){
+            position: absolute;
+            top: 5vh;
+            right: 0;
+            left: auto;
+            bottom: 0;
+            width: 85%;
+        }
+    }
+}
+
+
+.section--documenta {
+
+    .portfolio-description {
+        @media (min-width: 40.625rem){
+            margin: 0 0 0 auto;
+        }
+    }
+
+    img {
+        @media (min-width: 40.625rem){
+            right: auto;
+            left: -10vw;
+        }
+        @media (min-width: 54.375rem){
+            right: auto;
+            left: 0;
+        }
+    }
+}
+
+
+.section--gofreaks {
+    background: url(http://i45.imgup.net/gofreaks_b18b3.jpg) no-repeat top center;
+    background-size: cover;
+    text-align: center;
+
+    .portfolio-description {        
+        @media (min-width: 40.625rem){
+            margin: 0 auto;
+            width: 40%;
+            padding-top: 5vh;
+        }
+
+        p {
+            color: #515151;
+        }
+    }
+
+    img {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: 0;
+        margin: 3vw auto 0;
+    }
+}

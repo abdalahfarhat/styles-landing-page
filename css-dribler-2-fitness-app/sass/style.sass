@@ -1,0 +1,469 @@
+.elipse
+  &:hover
+    elipse
+      &::after
+        color: white
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat'
+
+/*---Resets---*/
+*
+  padding: 0
+  margin: 0
+  
+html 
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+*
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+html,body
+  width: 100%
+  height: 100%
+
+*, *:before, *:after 
+  -webkit-box-sizing: inherit
+  -moz-box-sizing: inherit
+  box-sizing: inherit
+
+/*---End Resets---*/
+
+
+
+/*---Color Variables---*/
+
+$main-purple: #581A51
+$steps-color: #6A2761
+$running-color: #802767
+$biking-color: #8A2864
+$swimming-color: #A52868
+$cardio-color: #B32969
+$fitness-color: #C22A6A
+$nutrition-color: #CB2E6C
+$menu-bg: #B22969
+
+$scale: 15%
+/*--End Color Variables---*/
+
+
+.container
+  background: #232526 /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #232526 , #414345) /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #232526 , #414345) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  
+/*   Holder for the Content   */
+.box
+  width: 1500px 
+  height: 900px
+  // background-color: azure
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+/*   Side Menu Bar   */  
+.menu
+  
+  display: flex
+  flex-direction: column
+  position: relative
+  z-index: 3
+  width: 200px
+  height: 100%
+  background-color: $menu-bg
+  box-shadow: 15px 0 30px 8px rgba(0,0,0,0.15)
+  
+/*   Holder for Logo   */  
+.logo-box
+  position: relative
+  width: 200px
+  height: 160px
+  background-color: $main-purple
+ 
+
+
+/*   Menu Buttons   */  
+.menu-list
+  
+  li
+    font-family: 'Montserrat', sans-serif
+    font-weight: 400
+    font-size: 14px
+    letter-spacing: 1px
+    padding: 26px 0px
+    list-style: none
+    color: white
+    transition: all ease-in-out 150ms
+    width: 200px
+    background-color: $main-purple
+    z-index: 4
+    
+    /*   Background for each menu   */
+    &:nth-child(1)
+      background-color: $steps-color
+    &:nth-child(2)
+      background-color: $running-color
+    &:nth-child(3)
+      background-color: $biking-color
+    &:nth-child(4)
+      background-color: $swimming-color
+    &:nth-child(5)
+      background-color: $cardio-color
+    &:nth-child(6)
+      background-color: $fitness-color
+    &:nth-child(7)
+      background-color: $nutrition-color
+    
+    &:hover
+      box-shadow: 2px 4px 30px 7px rgba(0,0,0,0.15)
+      cursor: pointer
+      width: 220px
+      position: relative
+      z-index: 5
+      /*   Add 8 px on hover to margin to keep up with animation   */
+    
+      a
+        margin-left: 88px
+    
+    /*   Margin to push menus to the right   */
+    
+    a
+      margin-left: 80px
+      transition: all ease-in-out 150ms
+      
+      
+/*    Gender Simbol and weight info on the bottom   */
+
+
+.big-man-bottom
+  color: fade-out($main-purple, 0.4)
+  font-size: 66.7px
+  text-align: center
+  font-stretch: expanded
+  margin-top: 60px
+  transform: scale(1,1.2)
+.weight
+  display: flex
+  position: relative
+  flex: 1
+  justify-content: center
+  align-items: flex-end
+  font-family: 'Montserrat', sans-serif
+  
+  span
+    &:nth-child(1),
+    &:nth-child(2)
+      margin-bottom: 40px
+      font-size: 18px
+    
+    &:nth-child(1)
+      color: white
+      font-size: 18px
+    
+    &:nth-child(2)
+      margin-left: 5px
+      color: fade-out($main-purple, 0.3)  
+      
+      
+      
+.content
+
+  /*   Background Gradient with Fallbacks   */
+  background: #ff0084 
+  background: -webkit-linear-gradient(to right top, $menu-bg , darken($main-purple , 8%)) 
+  background: linear-gradient(to right top, $menu-bg , darken($main-purple , 8%)) 
+  
+  /*   End of background gradients   */
+
+  height: 790px
+  display: flex
+    
+  
+  
+  
+  
+  /*   Holder for the info at the bottom   */
+.bot-info
+  display: flex
+  position: relative
+  background-color: yellow
+  font-family: 'Montserrat' , sans-serif
+  letter-spacing: 0.5px
+  width: 1300px
+  height: 100%
+  flex: 1
+  z-index: 2
+  box-shadow: 0 10px 40px 10px rgba(0,0,0,0.1)
+  background-color: $menu-bg
+  align-items: center
+  justify-content: space-between
+  
+.white-text
+  color: white
+  display: block
+.lower-text
+  color: fade-out($main-purple, 0.3)
+  
+  
+/*   Margins to push information to the inside   */  
+.your-week-target
+  margin-left: 50px
+.active-time
+  margin-right: 30px
+  
+.divider
+  height: 30px
+  width: 1px
+  background-color: grey
+  
+  
+
+/*  Start of the Calendar Styles   */
+
+
+    
+.calendar
+  width: 600px
+  height: 790px
+  margin-left: 100px
+  margin-top: 50px
+  padding-bottom: 70px
+  display: flex
+  flex-flow: column nowrap
+  justify-content: space-between
+  
+  
+  
+.semana
+  display: flex
+  justify-content: space-between
+  font-family: 'Montserrat' , sans-serif
+  font-size: 22px
+  color: white
+  letter-spacing: 1px
+  
+.week
+  display: flex
+  padding: 0 10px 
+  justify-content: space-between
+  text-align: center
+  font-family: 'Montserrat' , sans-serif
+  font-size: 22px
+  
+  &:first-child
+    // margin-top: -100px
+  &:last-child
+    margin-bottom: 80px
+  
+    
+  a
+    display: flex
+    width: 18px
+    height: 18px
+    position: relative
+    justify-content: center
+    align-items: center
+    &.faded-number 
+      &::after
+        color: rgba(255,255,255,0.4)
+      
+    &:hover
+      &::before
+        background-color: fade-out(yellow , 0.8)
+    
+    &.active
+      &::before
+        background-color: #FFAB18
+      &::after
+        color: $main-purple
+       
+    
+    &::before
+      content: ''
+      padding: 40px 
+      border-radius: 50%
+      background-color: transparent
+      color: black
+      cursor: pointer
+      transition: background ease-in-out 150ms
+    
+    &::after
+      content: attr(data-date)
+      color: white
+      position: absolute
+      cursor: pointer
+    
+      
+    
+      
+.mes
+  
+  width: 100%
+  height: 30px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 40px
+  color: white
+  font-family: 'Montserrat' , sans-serif
+  text-transform: uppercase
+  font-weight: 700
+     
+  a
+    padding: 10px
+    font-size: 60px
+    font-weight: light
+    transform: scale(1,1.1)
+    cursor: pointer
+    transition: all ease-in-out 150ms
+    
+    &:hover
+      transform: scale(0.9,1)
+      color: rgba(255,255,255,0.8)
+    
+  
+
+ 
+.graphs
+  display: flex
+  flex-grow: 1
+  // background-color: teal
+  align-items: center
+  // justify-content: center
+  flex-direction: column
+  
+.great-work
+  span
+    display: block
+    color: fade-out(#D43672, 0.9)
+    font-size: 40px
+    font-family: 'Montserrat' , sans-serif
+    font-weight: 700
+    letter-spacing: 1px
+    
+    &:first-child
+      margin-top: 20px
+  
+.circle-wrapper
+  margin-top: 30px
+  width: 310px
+  height: 310px
+  background-color: fade-out(#D43672, 0.9)
+  border-radius: 50%
+
+svg 
+  width: 320px
+  height: 320px
+  
+  text
+    fill: white
+    font-family: 'Montserrat' , sans-serif
+    font-size: 60px
+  
+  circle
+    position: relative
+    fill: none
+    stroke-width: 22px
+    &:nth-child(2)
+      stroke: fade-out(#D43672, 0.9)
+    &:nth-child(3)
+      stroke: url(#grad1)
+      stroke-linecap: round
+      stroke-linejoin: round
+      stroke-dasharray: 753.98px
+      stroke-dashoffset: 753.98px
+      transform-origin: 50% 50%
+      transform: rotate(-90deg)
+      transition: all 900ms cubic-bezier(.77,.04,.16,.99)
+
+  
+   
+.bottom-graph 
+  margin-top: 50px
+  margin-bottom: 50px
+  width: 100%
+  flex-grow: 1
+  // background-color: teal
+  // flex-direction: column
+  display: flex
+  padding-left: 30px
+  padding-right: 30px
+  
+.bar
+  width: 100%
+  background-color: fade-out(#D43672, 0.93)
+  margin: 0 10px
+  transition: all ease-in-out 900ms
+
+   
+  &:nth-child(2)
+    margin-top: 10%  
+  &:nth-child(3)
+    margin-top: 6%
+  &:nth-child(4)
+    margin-top: 12%
+  &:nth-child(5)  
+    margin-top: 4%
+  &:nth-child(6)
+    margin-top: 0%
+  &:nth-child(7)
+    margin-top: 4%
+  &:nth-child(8)
+    margin-top: 12%
+  
+  &.start
+    margin-top: 50%
+  
+  &.scale
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    background-color: transparent
+    font-family: 'Montserrat' , sans-serif
+    color: fade-out(#D43672, 0.7)
+  
+  // &:nth-child(2)
+  //   margin-top: 50%
+  // &:nth-child(3)
+  //   margin-top: 50%
+  // &:nth-child(4)
+  //   margin-top: 50%
+  // &:nth-child(5)
+  //   margin-top: 50%
+  // &:nth-child(6)
+  //   margin-top: 50%
+  // &:nth-child(7)
+  //   margin-top: 50%
+  // &:nth-child(8)
+  //   margin-top: 50%
+  
+  
+    // margin-bottom: 30px
+  
+  &:hover
+    background-color: orangered
+  
+  
+// .inside-bar
+//   width: 100%
+//   background: blue
+//   height: 80%
+//   translate-origin: bottom center
+//   transition: all ease-in-out 200ms
+//   // padding-top: 50px
+  
+//   &:hover
+//     height: 100%
+  
+    
+  

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Video Player Playground</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://unpkg.com/cloudinary-video-player@edge/dist/cld-video-player.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <select name="select" id="select">
+  <option value="0">Fluid player, with playlist (dark)</option>
+  <option value="1">Fluid player, with playlist (light)</option>
+  <option value="2">Fluid player, with recommendations (dark)</option>
+  <option value="3">Fluid player, with recommendations (light)</option>
+</select>
+
+<div class="video-container">
+  <video
+    id="example-player1"
+    controls
+    muted
+    class="cld-video-player cld-video-player-skin-dark cld-fluid"
+  />
+</div>
+
+<div class="video-container">
+  <video
+    id="example-player2"
+    controls
+    muted
+    class="cld-video-player cld-video-player-skin-light cld-fluid"
+  />
+</div>
+
+<div class="video-container">
+  <video
+    id="example-player3"
+    controls
+    muted
+    class="cld-video-player cld-video-player-skin-dark cld-fluid"
+  />
+</div>
+
+<div class="video-container">
+  <video
+    id="example-player4"
+    controls
+    muted
+    class="cld-video-player cld-video-player-skin-light cld-fluid"
+  />
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.js'></script>
+<script src='https://unpkg.com/cloudinary-video-player@edge/dist/cld-video-player.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

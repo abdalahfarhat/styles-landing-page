@@ -1,0 +1,147 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li><a ng-href="/?category={{item.category}}">{{item.category}}</a></li>
+                    <li class="active">{{item.title}}</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Product Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="margin-top: 0px;" class="page-header">{{item.title}}
+                    <small>{{item.slogan}}</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Product Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="img-responsive" ng-src="{{item.img_url}}" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3>Product Description</h3>
+
+                <div class="ratings" style="padding-left: 0px;">
+                    <p ng-if="reviews.length == 1" class="pull-right">{{numReviews}} review</p>
+                    <p ng-if="reviews.length != 1" class="pull-right">{{numReviews}} reviews</p>
+                    <p>
+                        <span ng-repeat="num in [1,2,3,4,5]" ng-class="getNumStars(num)"></span>
+                    </p>
+                </div>
+
+                <p>
+                    {{item.description}}
+                </p>
+
+                <p>
+                    <strong>Price: {{item.price | currency }}</strong>
+                </p>
+
+                <button class="btn btn-primary" type="submit" ng-click="addToCart(item._id)">
+                    Add to cart
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Related Products Row -->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header">Latest Reviews</h3>
+            </div>
+            <div class="col-lg-12" ng-repeat="review in item.reviews">
+
+                <div>
+                    <div>
+                        <h4 class="media-heading">{{review.name}}
+                            <small>{{review.date|date}}</small>
+                        </h4>
+                        <div class="ratings" style="padding-left: 0;">
+                            <span ng-repeat="num in [1,2,3,4,5]" ng-class="getNumStars(num)"></span>
+                        </div>
+                        {{review.comment}}
+                    </div>
+                </div>
+
+                <hr />
+
+            </div>
+
+
+        </div>
+
+        <!-- Comments Form -->
+        <div class="well">
+            <h4>Add a Review:</h4>
+            <!--<form action="/item/{{item._id}}/reviews" role="form" method="post">-->
+            <form name="newReview"  novalidate>
+                <div class="form-group">
+                    <label for="review">Review:</label>
+                    <textarea name="review" id="review" class="form-control" rows="3" ng-model="review.comment" required></textarea>
+                    <p ng-show="newReview.review.$invalid && !newReview.review.$pristine" class="help-block">A review is required</p>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter display name" ng-model="review.name" required>
+                    <p ng-show="newReview.name.$invalid && !newReview.name.$pristine" class="help-block">Your name is required</p>
+                </div>
+                <div class="form-group">
+
+                    <label class="radio-inline">
+                        <input type="radio" name="stars" id="stars1" value="1" ng-model="review.stars" required> 1 star
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="stars" id="stars2" value="2" ng-model="review.stars" required> 2 star
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="stars" id="stars3" value="3" ng-model="review.stars" required> 3 star
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="stars" id="stars4" value="4" ng-model="review.stars" required> 4 star
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="stars" id="stars5" value="5" ng-model="review.stars" required> 5 star
+                    </label>
+                    <p ng-show="newReview.stars.$invalid && !newReview.stars.$pristine" class="help-block">A star rating is required</p>
+                </div>
+                <button type="submit" ng-click="submitReview(item._id, review)" class="btn btn-primary" ng-disabled="newReview.$invalid">Submit Review</button>
+            </form>
+        </div>
+
+        <hr>
+
+        <!-- Related Products Row -->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header">Related Products</h3>
+            </div>
+            <div class="col-sm-3 col-xs-6" ng-repeat="relatedItem in relatedItems">
+                <a href="/item/{{relatedItem._id}}">
+                    <img class="img-responsive portfolio-item"
+                         ng-src="{{relatedItem.img_url}}"
+                         alt="">
+                </a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+
+</div>

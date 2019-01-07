@@ -1,0 +1,77 @@
+header.main-header
+	ul.menu
+		li.menu__item(data-sub="product"): a(href="#") Product
+		li.menu__item(data-sub="developer"): a(href="#") Developer
+		li.menu__item(data-sub="company"): a(href="#") Company
+	.dropdown-holder
+	
+		.dropdown__arrow
+		
+		.dropdown__bg
+			.dropdown__bg-bottom
+			
+		.dropdown__wrap
+			.dropdown-menu#product(data-sub="product")
+				.dropdown-menu__content
+					.top-section
+						.col-2
+							ul
+								li
+									a(href="")
+										h3 Payment
+										p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								li
+									a(href="")
+										h3 Connect
+										p  consectetur adipisicing elit nesciunt! Assumenda, adipisci.
+								li
+									a(href="")
+										h3 Atlas
+										p  ipsum dolor sit amet, consectetur adipisicing elit. .
+							ul
+								li
+									a(href="")
+										h3 Subscription
+										p  Lorem ipsum dolor sit amet, consectetur 
+								li
+									a(href="")
+										h3 Relay
+										p   amet, consectetur adipisicing elit. Nisi, sequi!
+
+					.bottom-section
+						ul
+							li: a(href="") Payment
+							li: a(href="") Connect
+							li: a(href="") Atlas
+							li: a(href="") Connect
+							li: a(href="") Atlas
+			.dropdown-menu#developer(data-sub="developer")
+				.dropdown-menu__content
+					.top-section
+						.col-2
+							div
+								h2.menu-title Front End
+								ul
+									li: a(href="") Payment
+									li: a(href="") Connect
+									li: a(href="") Atlas
+							div
+								h2.menu-title Back End
+								ul
+									li: a(href="") Payment
+									li: a(href="") Connect
+									li: a(href="") Atlas
+					.bottom-section.info
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam officia molestias
+			.dropdown-menu(data-sub="company")
+				.dropdown-menu__content
+					.top-section
+						ul
+							li: a(href="") Payment
+							li: a(href="") Connect
+							li: a(href="") Atlas
+					.bottom-section
+						ul
+							li: a(href="") Payment
+							li: a(href="") Connect
+							li: a(href="") Atlas

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stripe.com Style Dropdown Menu</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<header class="main-header">
+  <ul class="menu">
+    <li class="menu__item" data-sub="product"><a href="#">Product</a></li>
+    <li class="menu__item" data-sub="developer"><a href="#">Developer</a></li>
+    <li class="menu__item" data-sub="company"><a href="#">Company</a></li>
+  </ul>
+  <div class="dropdown-holder">
+    <div class="dropdown__arrow"></div>
+    <div class="dropdown__bg">
+      <div class="dropdown__bg-bottom"></div>
+    </div>
+    <div class="dropdown__wrap">
+      <div class="dropdown-menu" id="product" data-sub="product">
+        <div class="dropdown-menu__content">
+          <div class="top-section">
+            <div class="col-2">
+              <ul>
+                <li><a href="">
+                    <h3>Payment</h3>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a></li>
+                <li><a href="">
+                    <h3>Connect</h3>
+                    <p> consectetur adipisicing elit nesciunt! Assumenda, adipisci.</p></a></li>
+                <li><a href="">
+                    <h3>Atlas</h3>
+                    <p> ipsum dolor sit amet, consectetur adipisicing elit. .</p></a></li>
+              </ul>
+              <ul>
+                <li><a href="">
+                    <h3>Subscription</h3>
+                    <p> Lorem ipsum dolor sit amet, consectetur </p></a></li>
+                <li><a href="">
+                    <h3>Relay</h3>
+                    <p>  amet, consectetur adipisicing elit. Nisi, sequi!</p></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="bottom-section">
+            <ul>
+              <li><a href="">Payment</a></li>
+              <li><a href="">Connect</a></li>
+              <li><a href="">Atlas</a></li>
+              <li><a href="">Connect</a></li>
+              <li><a href="">Atlas</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown-menu" id="developer" data-sub="developer">
+        <div class="dropdown-menu__content">
+          <div class="top-section">
+            <div class="col-2">
+              <div>
+                <h2 class="menu-title">Front End</h2>
+                <ul>
+                  <li><a href="">Payment</a></li>
+                  <li><a href="">Connect</a></li>
+                  <li><a href="">Atlas</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="menu-title">Back End</h2>
+                <ul>
+                  <li><a href="">Payment</a></li>
+                  <li><a href="">Connect</a></li>
+                  <li><a href="">Atlas</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-section info">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam officia molestias</p>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown-menu" data-sub="company">
+        <div class="dropdown-menu__content">
+          <div class="top-section">
+            <ul>
+              <li><a href="">Payment</a></li>
+              <li><a href="">Connect</a></li>
+              <li><a href="">Atlas</a></li>
+            </ul>
+          </div>
+          <div class="bottom-section">
+            <ul>
+              <li><a href="">Payment</a></li>
+              <li><a href="">Connect</a></li>
+              <li><a href="">Atlas</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

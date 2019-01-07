@@ -1,0 +1,241 @@
+body {
+  colour: #000;
+}
+
+nav {
+  z-index: 1;
+  position: fixed;
+  right: 0;
+}
+
+article {
+  padding: 1% 7% 3% 7%;
+}
+
+h1 {
+  color: #eee;
+  font-family: 'Niconne';
+  font-size: 10em;
+  /*reset margin*/
+  margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+  /*reset margin*/
+}
+
+p {
+  padding-bottom: 1em;
+  color: #fff;
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+  /*reset margin*/
+}
+
+i {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  /*reset margin*/  
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2em;
+}
+
+li:hover .fa-home {
+  color: #00ffff;
+}
+
+li:hover .fa-quote-right {
+  color: #00ff7f;
+}
+
+li:hover .fa-code {
+  color: #ffdd00;
+}
+
+li:hover .fa-send {
+  color: #ff00ff;
+}
+
+li:hover .fa-share-alt {
+  color: #ff4500;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+}
+
+a:hover {
+  color: #337ab7;
+}
+
+a:hover i {
+  color: #337ab7;
+}
+
+
+/* id's */
+
+/* main nav */
+
+.main-nav {
+  text-align: right;
+  padding: 0;
+  width: 50px;
+  float: right;
+  background-color: rgba(125, 125, 125, 0.2);
+  border-radius: 0px 0px 0px 10px;
+}
+
+.main-nav ul {
+  float: right;
+}
+
+#home {
+  background: url('https://unsplash.it/1240/768?image=992') no-repeat center center fixed;
+  background-size: cover;
+  width: auto;
+  min-height: 100vh;
+  background-color: #111;
+}
+
+#home a:hover i {
+  color: #fff;
+}
+
+#about {
+  background: url('https://unsplash.it/1240/768?image=184') no-repeat center center fixed;
+  background-size: cover;
+  width: auto;
+  min-height: 100vh;
+  background-color: #222;
+}
+
+#about .imglink {
+  float:right;
+}
+
+#portfolio {
+  background: url('https://unsplash.it/1240/768?image=903') no-repeat center center fixed;
+  background-size: cover;
+  width: auto;
+  min-height: 100vh;
+  background-color: #333;
+}
+
+#portfolio .imglink a {
+  padding: 0 8px 0 0;
+}
+
+#contact {
+  position: relative;
+  background: url('https://unsplash.it/1240/768?image=769') no-repeat center center fixed;
+  background-size: cover;
+  width: auto;
+  min-height: 100vh;
+  background-color: #444;
+}
+
+/* classes */
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.container {
+  display:inline-block;
+  max-width:80%;
+}
+
+.center {
+  display:inline-block;
+  margin:0 auto;
+}
+
+.left {
+  display: inline-block;
+  width: 45%;
+}
+
+.right {
+  display: inline-block;
+  width: 45%;
+  float: right;
+}
+
+.clear:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.bottom li {
+  font-size: 1em;
+}
+
+.bottom li a {
+  padding: 0 8px 0 0;
+}
+
+.imglink {
+  display:inline-block;
+}
+
+.imglink a:hover {
+  -webkit-filter: drop-shadow(0px 0px 15px rgba(225, 225, 225, 1));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
+
+/* responsive */
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 6em;
+  }
+  li {
+    display: list-item;
+  }
+  #contact article li {
+    display: inline-block;
+  }
+  .left {
+    display: block;
+    width: 100%;
+  }
+  .right {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* to do
+min-width: 480px (because the original iphones in landscape were this size)
+min-width: 768px (because ipads and most tablets are this size in portrait)
+min-width: 1024px (because ipads in landscape are this size)
+min-width: 1280px (because the average desktop screen is this size or bigger)
+*/

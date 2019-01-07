@@ -1,0 +1,136 @@
+body
+    background: #6b4a4a
+    color: #333
+
+header
+    font-size: 1.2rem
+    font-weight: 300
+    & i
+        cursor: pointer
+        color: #ecceb8
+        &:hover
+            color:  #ff9930
+    & .fa-angle-left
+        font-size: 2.5rem
+        margin-right: 20px
+    & .fa-times
+        float: right
+        font-size: 1.2rem
+    & .item-location
+        position: relative
+        top: -5px
+        color:  #ff9930
+        font-weight: 300
+    & a
+        text-decoration: none
+        color:  #ff9930
+        &:hover
+            color: #ecceb8
+
+button
+    font-family: 'Raleway', sans-serif
+
+.container
+    margin: 50px
+    width: 800px
+    height: 500px
+    background: #FFF
+    border-radius: 20px
+    font-family: sans-serif
+    box-sizing: border-box
+    padding: 20px
+    font-family: 'Raleway', sans-serif
+
+    &-right
+        float: right
+        width: 380px
+        margin-top: 20px
+    &-left
+        float: left
+        width: 380px
+
+img
+    width: 300px
+    margin-top: 50px
+
+h4
+    font-size: 2rem
+    margin: 0
+    color:  #ff9930
+
+.view
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    border: 2px solid #9a9a9a
+    float: left
+    margin-right: 5px
+    cursor: pointer
+    position: relative
+    top: 320px
+    left: 175px
+    &:hover
+        background: #ff9930
+
+.item-description
+    line-height: 1.6rem
+
+.color-picker
+    & span
+        float: left
+        margin-right: 10px
+    & .color
+        width: 15px
+        height: 15px
+        border: 1px solid #9a9a9a
+        float: left
+        margin-right: 5px
+        cursor: pointer
+        box-sizing: border-box
+        &:hover
+            border: 2px solid #ff9930
+        &.color-1
+            background: #D0A59F
+        &.color-2
+            background: #6F7277
+        &.color-3
+            background: #E1D0B6
+
+.action-button-container
+    position: relative
+    top: -10px
+    left: 380px
+    width: 420px
+
+    & button
+        width: 180px
+        height: 40px
+        display: inline-block
+        float: left
+        cursor: pointer
+        margin-right: 10px
+        font-weight: 700
+        &.addToCart
+            background: #ff9930
+            border: none
+            color: #FFF
+            &:hover
+                opacity: .9
+            & span
+                padding-left: 10px
+            & i
+                border-right: 1px solid #e9c0a2
+                padding-right: 15px
+                box-sizing: border-box
+                font-size: 1.2rem
+                line-height: 40px
+
+        &.wishlist
+            background: #FFF
+            color: #ff9930
+            border: none
+            box-sizing: border-box
+            transition: .2s ease all
+            &:hover
+                border: 2px solid #ff9930
+                transition: .2s ease all

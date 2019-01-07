@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+body {
+  background: #e74c3c;
+  font-family: 'Oswald';
+}
+body a {
+  text-decoration: none;
+}
+
+.menu-link {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  left: 50%;
+  margin: 100px 0 0 -20px;
+}
+.menu-link:before {
+  content: "";
+  background: #fff;
+  height: 4px;
+  width: 40px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin: 0 0 0 -20px;
+  display: block;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.menu-link:after {
+  content: "";
+  background: #fff;
+  height: 4px;
+  width: 40px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin: 0 0 0 -20px;
+  display: block;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.menu-link.close:before {
+  transform: rotate(45deg);
+  top: -15px;
+  width: 25px;
+  margin: 0 0 0 -13px;
+}
+.menu-link.close:after {
+  transform: rotate(-45deg);
+  top: -15px;
+  width: 25px;
+  margin: 0 0 0 -13px;
+}

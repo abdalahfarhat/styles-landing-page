@@ -1,0 +1,107 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto'
+$blue: #607d8b
+=size($w, $h)
+	width: $w
+	height: $h
+=bd
+	border: 1px solid $blue
+	border-radius: 3px
+	overflow: hidden
+*
+	outline: none
+	letter-spacing: .8px
+body, html
+	margin: 0
+	color: #555
+	user-select: none
+	height: 100%
+body
+	font-family: 'Roboto', 'Microsoft JhengHei', Arial, sans-serif
+	&::after
+		content: ""
+		+size(100%, 100%)
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		background: url('https://zero-space.s3.amazonaws.com/photos/1daed4af-c439-451a-b6e6-eb1fb7506b55x840.jpg') 50% 50%
+		background-size: cover
+		opacity: .7
+.product
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	display: flex
+	align-content: center
+	background-color: #f3f3f3
+	+size(800px, 400px)
+	+bd
+	border-radius: 6px
+	box-shadow: 0 20px 30px rgba(#555, .2)
+	&-photo, &-content
+		float: left
+		width: 50%
+		box-sizing: border-box
+	&-photo
+		background: url('https://static.pexels.com/photos/90946/pexels-photo-90946-large.jpeg') no-repeat 50% 50%
+	&-content
+		padding: 15px
+		.infos
+			h3
+				border-bottom: 1px solid $blue
+				color: $blue
+				padding-bottom: 15px
+				margin-top: 0
+				margin-bottom: 5px
+				font-weight: normal
+				font-size: 1.5em
+			p
+		.price
+			font-size: 1.5em
+			text-align: right
+			padding-bottom: 15px
+			&::before
+				content: '$ '
+				font-size: initial
+		.actions
+			.qty-box
+				float: left
+				a
+					+size(30px, 30px)
+					+bd
+					display: inline-block
+					text-align: center
+					line-height: 30px
+					margin: 5px
+					&.minus, &.plus
+						border: 0
+						cursor: pointer
+						transition-duration: .3s
+						&:hover
+							background-color: rgba($blue, .1)
+					&.qty
+						border-color: rgba($blue, .5)
+			.cart
+				+bd
+				padding: 10px
+				text-align: center
+				color: $blue
+				cursor: pointer
+				position: relative
+				transition-duration: .3s
+				&::after
+					content: ""
+					+size(0, 100%)
+					background-color: $blue
+					position: absolute
+					right: 0
+					top: 0
+					z-index: -1
+					transition-duration: .3s
+				&:hover
+					color: white
+					&::after
+						right: auto
+						left: 0
+						+size(100%, 100%)

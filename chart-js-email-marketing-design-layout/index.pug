@@ -1,0 +1,154 @@
+#line_chart.statCont.clearfix
+  .legend
+    ul.clearfix
+      li
+        span.one
+        | What graph 1 means
+      li 
+        span.two
+        | What graph 2 means
+  .lineChartCont
+    canvas#canvas
+  .leftStats.statsCol
+    .stat1.stat
+      span.num 15
+      span.term Clicks
+    .stat2.stat
+      span.num 20
+      span.term Users
+    .stat3.stat
+      span.num 30
+      span.term Pageviews
+  .rightStats.statsCol
+    .stat1.stat
+      span.num 22
+      span.term Clicks
+    .stat2.stat
+      span.num 40
+      span.term Users
+    .stat3.stat
+      span.num 82
+      span.term Pageviews
+#pie_chart.statCont.clearfix
+  .pieChartCont
+    canvas#pieChart(width="300", height="300")
+  .legend
+    h4 Stats Total
+    ul
+      li
+        i.fa.fa-envelope
+        span 300
+        | Sent
+      li
+        i.fa.fa-thumbs-up
+        span 120
+        | Accepted
+      li
+        i.fa.fa-eye
+        span 100
+        | Viewed
+      li
+        i.fa.fa-folder-open
+        span 50
+        | Engaged
+      li
+        i.fa.fa-ban
+        span 129
+        | bounced
+      li
+        i.fa.fa-bar-chart
+        span -33
+        | Growth
+      li
+        i.fa.fa-exclamation
+        span 2
+        | Marked as Spam
+  .pieOptions
+    h4 Options
+    a(href="#")
+      i.fa.fa-download
+      | Download CSV
+    a(href="#")
+      i.fa.fa-pie-chart
+      | Creat Clone
+    a(href="#")
+      i.fa.fa-calendar
+      | View Schedules
+    a(href="#")
+      i.fa.fa-share
+      | Share
+    a(href="#") 
+      i.fa.fa-trash
+      | Delete
+#bar_chart.statCont
+  .barChartCont
+    canvas#barChart
+  .legend.clearfix
+    h4 Totals
+    .items.clicks
+      span.co 1120
+      span.cl CLICKS
+    .items.conversions
+      span.co 657
+      span.cl CONVERSIONS
+    h4 Averages
+    .items.avgClicks
+      span.co 48
+      span.cl AVG CLICKS
+    .items.avgConvs
+      span.co 38
+      span.cl AVG CONV
+#email_lists.statCont.clearfix
+  h4 Email Lists
+  ul.emailLists
+    li ALL
+      span 2934
+    li Black Friday
+      span 1102
+      a(href="#") delete
+    li.selected Christmas
+      span 670
+      a(href="#") delete
+    li Campaign X
+      span 862
+      a(href="#") delete
+    li Business mixer
+      span 300
+      a(href="#") delete
+  .indivEmailsTop.clearfix
+    .info.infoSent
+      span.num 2934
+      span.info SENT
+    .info.infoAccepted
+      span.num 2882
+      span.info RECIEVED
+    .info.infoBounced
+      span.num 52
+      span.info BOUNCED
+  ul.indivEmailsBottom
+    li somedude@fake.com
+    li madeupperson@notreal.com
+    li johnsmith@sesamestreet.com
+    li joeblow@nobody.com
+    li somedude@fake.com
+    li madeupperson@notreal.com
+    li johnsmith@sesamestreet.com
+    li joeblow@nobody.com
+    li somedude@fake.com
+    li madeupperson@notreal.com
+    li johnsmith@sesamestreet.com
+    li joeblow@nobody.com
+  .options
+    a.share(href="#")
+      i.fa.fa-share
+      | Share
+    a.export(href="#")
+      i.fa.fa-download
+      | Export
+    a.add(href="#")
+      i.fa.fa-edit
+      | Add Contacts
+    
+    
+  
+    

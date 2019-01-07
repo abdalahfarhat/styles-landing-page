@@ -1,0 +1,228 @@
+$primary-color: #38C5B9;
+
+@mixin easeOut {
+  transition: all .4s cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: $primary-color;
+  font-family: 'Open Sans';
+  color: white;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+}
+
+.burger {
+  position: absolute;
+  z-index: 10;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+  transform: rotateY(0);
+  @include easeOut;
+  
+  &__patty {
+    width: 28px;
+    height: 2px;
+    margin: 0 0 4px 0;
+    background: white;
+    @include easeOut;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // transform burger into 'x'
+  &--close {
+    transform: rotate(180deg);
+    
+    .burger__patty {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -4px);
+      }
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  
+  &--active {
+    visibility: visible;
+  }
+  
+  &__brand,
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  &__list {
+    margin: 0;
+    padding: 0;
+    background: mix(black, $primary-color, 20);
+    list-style-type: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+    
+    &--active {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  &__brand {
+    background: $primary-color;
+    @include easeOut;
+    transform: translate3d(0, 100%, 0);
+    
+    &--active {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  &__item {
+    transform: translate3d(500px, 0, 0);
+    @include easeOut;
+    
+    &--active {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  &__link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    padding: 15px 0;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    color: white;
+    @include easeOut;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 10px;
+      height: 2px;
+      background: white;
+      transform: translateX(-50%);
+      @include easeOut;
+    }
+    
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+  
+  // add delay to each menu item
+  @for $x from 1 through 6 {
+    .menu__item:nth-child(#{$x}) {
+      transition-delay: $x * .1s;
+    }
+  }
+}
+
+// responsive tablet view
+@include tablet {
+ ul.menu__list,
+ div.menu__brand {
+  float: none;
+  width: 100%;
+  min-height: 0;
+
+   &--active {
+     transform: translate3d(0, 0, 0);
+   }
+ }
+
+ .menu__list {
+   height: 75vh;
+   transform: translate3d(-100%, 0, 0);
+ }
+
+ .menu__link {
+   font-size: 24px;
+ }
+
+ .menu__brand {
+   height: 25vh;
+   transform: translate3d(100%, 0, 0);
+
+   .logo {
+     width: 90px;
+     height: 90px;
+   }
+ }
+}
+
+// make the demo look nice, not required for your own use.
+.logo {
+  width: 200px;
+  height: 200px;
+  background: lighten(black, 10);
+  border-radius: 50%;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  font-weight: 400;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 8vw;
+  
+  h1 > a {
+    color: white;
+    text-decoration: none;
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+.support {
+  position: fixed;
+  bottom: 24px;
+  color: rgba(black, 0.6);
+}

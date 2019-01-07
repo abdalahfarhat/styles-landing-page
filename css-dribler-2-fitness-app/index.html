@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Dribler - 2  Fitness App</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div class="container">
+  <div class="box">
+    <div class="menu">
+      <div class="logo-box"></div>
+      <div class="menu-list">
+        <ul>
+          <li> <a>Steps</a></li>
+          <li> <a>Running</a></li>
+          <li> <a>Biking</a></li>
+          <li> <a>Swimming</a></li>
+          <li> <a>Cardio</a></li>
+          <li> <a>Fitness</a></li>
+          <li> <a>Nutrition</a></li>
+        </ul>
+      </div><span class="big-man-bottom fa fa-male"></span>
+      <div class="weight"><span>79</span><span>Weight</span></div>
+    </div>
+    <div class="content">
+      <div class="calendar">
+        <div class="mes"><a class="fa fa-angle-left"></a><span>August 2016</span><a class="fa fa-angle-right"></a></div>
+        <div class="semana"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <div class="week"><a class="faded-number" data-date="31"> </a><a class="active" data-date="1"> </a><a data-date="2"> </a><a data-date="3"> </a><a data-date="4"> </a><a data-date="5"> </a><a data-date="6"> </a></div>
+        <div class="week"><a data-date="7"> </a><a data-date="8"> </a><a data-date="9"> </a><a data-date="10"> </a><a data-date="11"> </a><a data-date="12"> </a><a data-date="13"> </a></div>
+        <div class="week"><a data-date="14"> </a><a data-date="15"> </a><a data-date="16"> </a><a data-date="17"> </a><a data-date="18"> </a><a data-date="19"> </a><a data-date="20"> </a></div>
+        <div class="week"><a data-date="21"> </a><a data-date="22"> </a><a data-date="23"> </a><a data-date="24"> </a><a data-date="25"> </a><a data-date="26"></a><a data-date="27"> </a></div>
+        <div class="week"><a data-date="28"> </a><a data-date="29"> </a><a data-date="30"> </a><a data-date="31"> </a><a class="faded-number" data-date="1"></a><a class="faded-number" data-date="2"></a><a class="faded-number" data-date="3"></a></div>
+        <div class="week"><a class="faded-number" data-date="4"></a><a class="faded-number" data-date="5"></a><a class="faded-number" data-date="6"></a><a class="faded-number" data-date="7"></a><a class="faded-number" data-date="8"></a><a class="faded-number" data-date="9"></a><a class="faded-number" data-date="10"> </a></div>
+      </div>
+      <div class="graphs">
+        <div class="great-work"><span>GREAT WORK. YOU</span><span>REACHED YOUR GOAL</span></div>
+        <div class="circle-wrapper">
+          <svg id="progress" percent="0" viewport="0 0 300 300">
+            <defs>
+              <lineargradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#D43672;stop-opacity:1;"></stop>
+                <stop offset="100%" style="stop-color:#F4A721;stop-opacity:1;"> </stop>
+              </lineargradient>
+            </defs>
+            <circle cx="155" cy="155" r="120"></circle>
+            <circle cx="155" cy="155" r="120"></circle>
+            <text x="50%" y="50%" text-anchor="middle">85% </text>
+          </svg>
+        </div>
+        <div class="bottom-graph">
+          <div class="bar scale"><span>500</span><span>400</span><span>300</span><span>200</span><span>100</span><span class="push">0</span></div>
+          <div class="bar a start">
+            <div class="inside-bar"></div>
+          </div>
+          <div class="bar a start">
+            <div class="inside-bar"></div>
+          </div>
+          <div class="bar a start">
+            <div class="inside-bar"></div>
+          </div>
+          <div class="bar a start">
+            <div class="inside-bar"></div>
+          </div>
+          <div class="bar a start">
+            <div class="inside-bar"></div>
+          </div>
+          <div class="bar a start">
+            <div class="inside-bar"></div>
+          </div>
+          <div class="bar a start">
+            <div class="inside-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bot-info">
+      <div class="your-week-target"><span class="white-text">8000 KCal</span><span class="lower-text">Your Week Target</span></div>
+      <div class="divider"></div>
+      <div class="week-target"><span class="white-text">85 Km</span><span class="lower-text">Week Target</span></div>
+      <div class="divider"></div>
+      <div class="heart-rate"><span class="white-text">130 Bpm</span><span class="lower-text">Heart Rate</span></div>
+      <div class="divider"></div>
+      <div class="calories"><span class="white-text">480 KCal</span><span class="lower-text">Calories</span></div>
+      <div class="divider"></div>
+      <div class="distance"><span class="white-text">6,34 Km</span><span class="lower-text">Distance</span></div>
+      <div class="divider"></div>
+      <div class="active-time"><span class="white-text">32:18:42</span><span class="lower-text">Active Time</span></div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

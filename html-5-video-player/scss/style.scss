@@ -1,0 +1,634 @@
+@import url(//weloveiconfonts.com/api/?family=fontawesome);
+
+// Colors
+
+$light: #fff;
+$dark: #080b13;
+
+$darkhighlight: #0e2052;
+$lighthighlight: #61b5d9;
+
+$accent:  #f11753;
+
+$font-size: 16px; // 16px
+$line-height: 1.5rem; // 24px
+
+$spacing: $line-height * 3;
+$padding: $font-size;
+
+$f1: $font-size * 1.125; // 18px
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  font-weight: 400;
+}
+
+body {
+    background: $dark;
+    font: 16px/1.5 "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: $line-height;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    box-shadow: inset 0px -1px 0px rgba(#fff,0.5);
+    transition: all 0.5s;
+
+    &:hover {
+        box-shadow: inset 0px -24px 0px $lighthighlight;
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: $line-height * 46;
+
+    @extend .clearfix;
+}
+
+
+.truncate {
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* Site header */
+
+.site-header {
+    animation: slidein .5s;
+    background: $accent;
+    color: $light;
+    line-height: $spacing;
+}
+
+@keyframes slidein {
+    0% {
+        transform: translate3d(0,-$spacing,0);
+    }
+}
+
+.site-title {
+    font-size: $line-height;
+    font-weight: 300;
+    margin: $padding 0;
+    float: left;
+}
+
+.credit-line {
+    float: right;
+    margin: $padding 0;
+}
+
+.title-five {
+    background: $light;
+    border-radius: 100%;
+    color: $accent;
+    font-weight: 600;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}
+
+/* Video area */
+
+.video-area {
+    //animation: slidebottom 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    color: $light;
+    padding: $spacing 0;
+    //opacity: 0;
+}
+
+@keyframes slidebottom {
+    0% {
+        transform: translate3d(0,100%,0);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.video-column {
+    float: left;
+    max-width: 854px;
+}
+
+.video-player {
+    background: #000;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 480px;
+}
+
+.video {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.video-playlist {
+    float: right;
+    font-size: $f1;
+    font-weight: 600;
+    max-width: 250px;
+}
+
+.video-header {
+    background: $lighthighlight;
+    line-height: $line-height;
+    padding: $line-height;
+
+    @extend .clearfix;
+}
+
+.video-title {
+    float: left;
+    margin: 0;
+
+    @extend .truncate;
+
+    width: auto;
+    max-width: 75%;
+}
+
+.video-author {
+    font-size: $f1;
+    float: left;
+    margin-left: $line-height * 2;
+
+    a:hover {
+        box-shadow: inset 0px -24px 0px $accent;
+    }
+}
+
+/* Video controls */
+
+.video-controls {
+    box-sizing: border-box;
+    background: rgba($darkhighlight,0.8);
+    line-height: $line-height * 2;
+    padding: 0 $line-height;
+    position: absolute;
+        bottom: 0;
+    transform: translate3d(0,$line-height * 2,0);
+    width: 100%;
+    height: $line-height * 2;
+    vertical-align: middle;
+    transition: transform 0.5s;
+
+    button {
+        background: 0;
+        border: 0;
+        color: #fff;
+        font-size: $line-height;
+        width: $line-height * 2;
+        height: $line-height * 2;
+        vertical-align: middle;
+    }
+}
+
+.video-player:hover .video-controls {
+    transform: translate3d(0,0,0);
+}
+
+
+/* Seeker bar */
+
+.video-bars {
+    background: rgba($dark, 0.8);
+    display: inline-block;
+    margin: 0 1em;
+    position: relative;
+    width: 73%;
+    height: 8px;
+}
+
+.bar-seeker,
+.bar-progress,
+.bar-buffer {
+    position: absolute;
+    height: 8px;
+}
+
+.bar-seeker {
+    z-index: 1000;
+}
+
+.bar-progress {
+    z-index: 100;
+}
+
+.bar-buffer {
+    z-index: 10;
+}
+
+/*
+* Reset range input
+* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+*/
+
+input[type=range] {
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.bar-seeker::-ms-fill-lower {
+    background: transparent;
+}
+
+.bar-seeker::-ms-fill-upper {
+    background: transparent;
+}
+
+/* Style the seeker bar */
+
+@mixin rangeTrack($class) {
+
+    #{$class}::-webkit-slider-runnable-track {
+        @content;
+    }
+
+    #{$class}::-moz-range-track {
+        @content;
+    }
+
+    #{$class}::-ms-track {
+        @content;
+    }
+}
+
+@mixin rangeThumb($class) {
+
+    #{$class}::-webkit-slider-thumb {
+        @content;
+    }
+
+    #{$class}::-moz-range-thumb {
+        @content;
+    }
+
+    #{$class}::-ms-thumb {
+        @content;
+    }
+}
+
+@include rangeTrack(".bar-seeker") {
+    background: transparent;
+    height: 8px;
+    padding: 0;
+}
+
+@include rangeThumb(".bar-seeker") {
+    background: $accent;
+    border: 0;
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+    margin-top: -4px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE, still a little idiot */
+    .bar-seeker {
+        height: 24px;
+        margin-top: -5px;
+        padding: 0;
+        vertical-align: middle;
+    }
+}
+
+input.slider-volume {
+    //display: none;
+    position: absolute;
+        bottom: 36px;
+        right: -40px;
+    width: $line-height * 4;
+    opacity: 0;
+    transform: rotate(-90deg) scaleX(0);
+    transform-origin: left;
+    transition: all 1s;}
+
+@include rangeTrack(".slider-volume") {
+    background: rgba($darkhighlight,0.9);
+    height: 20px;
+}
+
+@include rangeThumb(".slider-volume") {
+    background: $accent;
+    border: 0;
+    width: 8px;
+    height: 24px;
+    margin-top: -2px;
+}
+
+.btn-sound:hover + .slider-volume,
+.slider-volume:hover {
+    opacity: 1;
+    transform: rotate(-90deg) scaleX(1);
+}
+
+/* Progress bars */
+
+/* Reset bar */
+progress {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+
+    background: transparent;
+    color: rgba($light,0.2);
+    border: none;
+    height: 8px;
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+     background: transparent;
+}
+
+progress::-webkit-progress-value {
+    background: transparent;
+}
+
+progress::-webkit-progress-bar {
+}
+
+/* Buffer bar styling */
+
+.bar-buffer::-webkit-progress-value {
+    background: rgba($light,0.2);
+}
+
+.bar-buffer::-moz-progress-bar {
+    background: rgba($light,0.2);
+}
+
+/* Progress bar styling */
+
+.bar-progress::-webkit-progress-value {
+    background: $accent;
+}
+
+.bar-progress::-moz-progress-bar {
+    background: $accent;
+}
+
+.bar-progress {
+    color: $accent;
+}
+
+/* Replay button */
+
+.btn-replay {
+    background: none;
+    border: none;
+    display: none;
+    color: $accent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: -110px;
+    font-size: $line-height * 6;
+    width: 220px;
+    height: 220px;
+}
+
+
+/* Time bubble for seeker bar */
+
+.time-bubble {
+    background: $lighthighlight;
+    border-radius: $line-height $line-height 0px;
+    height: $line-height;
+    line-height: $line-height;
+    position: absolute;
+        bottom: ($line-height * 2) + 0.2;
+        left: $line-height * 3.2;
+    padding: 0.5em;
+    display: none;
+}
+
+/* PLaylist */
+
+.playlist-title {
+    background: $darkhighlight;
+    padding: 16.5px;
+    max-height: 60px;
+}
+
+.next-video {
+    display: block;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        display: block;
+    }
+
+    &::before {
+        background: linear-gradient(0deg, rgba($darkhighlight,.9) 0%, transparent 60%);
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: all 0.5s;
+    }
+
+    &-title {
+        position: absolute;
+        transform: translateY(-($line-height * 3));
+        padding: $line-height/2 $line-height;
+        transition: all 0.5s;
+
+        @extend .truncate;
+    }
+
+    &-info {
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 400;
+        padding: $line-height/2 $line-height;
+        position: absolute;
+        transform: translateY(-($line-height * 4.5));
+        transition: all 0.5s;
+        opacity: 0;
+        width: 100%;
+
+        @extend .truncate;
+    }
+
+    &:hover {
+        .next-video-title {
+            transform: translateY(-($line-height * 6.5));
+        }
+
+        &::before {
+            background: rgba($darkhighlight,0.8);
+        }
+
+        .next-video-info {
+            opacity: 1;
+        }
+
+    }
+
+}
+
+.played-video {
+        transform: scale(0);
+        height: 0;
+        width: 0;
+}
+
+.video-popularity {
+    font-size: $f1;
+    font-weight: 600;
+    text-align: right;
+}
+
+.video-popularity,
+.description {
+    padding: 0 $line-height;
+}
+
+.likes {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* Like icon styling */
+.like-this {
+    box-shadow: none;
+    color: $accent;
+
+    &:hover {
+        animation: beat 1s infinite;
+        box-shadow: none;
+    }
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.meta-icon {
+    padding-left: 0.5em;
+}
+
+.like-prompt {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: $line-height + .2rem;
+    padding-left: .75em;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s;
+}
+
+// Add class via JS
+
+.wiggle {
+    animation: wiggle 0.5s;
+    animation-iteration-count: 4;
+}
+
+.wiggle + .like-prompt {
+    transform: scaleX(1);
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translateY(2px);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(2px);
+    }
+
+}
+
+.info-area {
+    background: $light;
+    color: $dark;
+}
+
+.info-heading {
+    color: $lighthighlight;
+    font-size: $line-height * 2;
+    font-weight: 300;
+    text-align: center;
+    margin: $spacing auto;
+}
+
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}

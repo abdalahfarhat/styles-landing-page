@@ -1,0 +1,18 @@
+body {background: linear-gradient(to right, #79CDCD, #79CDCD); align-items: center; justify-content: center; display: flex; padding-top: 10%;}
+
+a:link, a:visited, a:hover, a:active {color: white; text-decoration: none; font-style: normal; font-size:40px;}
+
+.circle-container {margin-right: 20px;}
+
+.circle {display: flex; height: 100px; width: 100px; background-color: blue;  border-radius: 50%; backface-visibility: hidden; position: absolute; top: 0; left: 0; align-items: center; justify-content: center; box-shadow: 1px 1px 10px 1px #000000; color: white;}
+
+.change {width: 100px; height: 100px; transition: all .5s ease; transform-style: preserve-3d; position: relative;}
+
+.circle-container:hover .change {transform: rotateX(180deg);}
+
+.back{transform: rotateX(180deg); font-style: normal; font-size:20px;}
+.front{font-style: normal; font-size:40px;}
+
+.facebook .circle {background-color: #3b5998;}
+.twitter .circle {background-color: #55acee;}
+.linkedin .circle {background-color: #007bb5;}

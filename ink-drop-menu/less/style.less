@@ -1,0 +1,227 @@
+html {
+  height: 100%;
+  background: #F1F1F1;
+}
+
+.no-button {
+  background: transparent;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  
+  &:hover,
+  &:focus,
+  &:active { outline: none; }
+}
+
+
+.menu__control {
+  &:extend(.no-button all);
+  
+  .icon { 
+    .show-icon;
+    //transform: translateX(0em);
+    transition: transform 1000ms cubic-bezier(.11,1,0,1) 0ms;
+    transition-property: transform, opacity;
+  }
+  
+  .icon--menu { z-index: 1; }
+  .icon--close { z-index: 2; }
+  .icon--back { z-index: 3; }
+  
+  .icon--close,
+  .icon--back { &:extend(.hide-icon); }
+  
+  .menu--open & {
+    .icon--close { &:extend(.show-icon); }
+    .icon--menu { &:extend(.hide-icon); }
+  }
+  
+  .menu--active & {
+    .icon--close { transition-delay: 400ms; }
+    .icon--back { &:extend(.show-icon); transition-delay: 600ms; }
+    .icon--menu { &:extend(.hide-icon); }
+  }
+}
+
+
+.hide-icon { transform: scale(0); opacity: 0; }
+.show-icon { transform: scale(1); opacity: 1; }
+
+
+////////////////////////////////////////
+
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #FFF;
+}
+
+.menu__options,
+.menu__actions {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+}
+
+.menu__options {
+  filter: url(#goo);
+}
+
+.menu__bg { 
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  filter: blur(7px);
+  margin-top: -7px;
+}
+
+.menu,
+.menu__bg {
+  transition: background-color 500ms ease-in-out 0ms;
+}
+
+.menu--active,
+.menu--active .menu__bg {
+  transition-delay: 300ms;
+}
+
+.menu--camera { &, .menu__bg { background-color: #309EE4; } }
+.menu--users { &, .menu__bg { background-color: #0AB5A8; } }
+.menu--comments { &, .menu__bg { background-color: #F7C524; } }
+.menu--likes { &, .menu__bg { background-color: #F28F1B; } }
+
+.menu__actions {
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 2em 1em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Action Buttons */
+
+.menu__control {
+  width: 20%;
+}
+
+.menu__control,
+.action {
+  &:extend(.no-button all);
+  
+  border-radius: 50%;
+  
+  position: relative;
+  
+  max-width: 6em;
+
+  &::after {
+    content: ' ';
+    display: block;
+    padding-top: 100%; 
+  }
+  
+  .icon { 
+    fill: currentColor;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+    max-width: 50%;
+  }
+}
+
+.action {
+  background: #000;
+  color: #FFF;
+  width: 25%;
+  margin: 0 1em;
+}
+
+.action--camera { background-color: #309EE4; }
+.action--users { background-color: #0AB5A8; }
+.action--comments { background-color: #F7C524; }
+.action--likes { background-color: #F28F1B; }
+
+
+.nth-offset(@index, @property: transition-delay, @start: 400ms, @offset: 50ms) when (@index > 0) {
+  &:nth-child(@{index}) {
+    @{property}: @start+ (@offset * (@index - 1)), 1000ms;
+  }
+  .nth-offset(@index - 1, @property, @start, @offset);
+}
+
+.action {
+  transform: translateY(-200%) scale(0.5,1.5);
+  transition: transform 500ms ease-in-out, visibility 0ms linear 600ms;
+  transition-timing-function: cubic-bezier(0.8,.01,.6,.14), linear;
+  visibility: visible;
+  .nth-offset(5, transition-delay, 0, 150ms); 
+  
+  .icon { 
+    transform: scale(0);
+    transition: transform 600ms ease-in-out;
+    transition-delay: inherit;
+  }
+}
+
+.menu--open {
+  .action { 
+    transform: translateY(0) scale(1,1);
+    transition-duration: 600ms, 0ms;
+    transition-timing-function: cubic-bezier(0,.01,0,1), linear; //cubic-bezier(.06,.88,.6,.97), linear; //cubic-bezier(.11,1,0,1), linear;
+    visibility: visible;
+    
+    .icon { transform: scale(1); }
+  }
+}
+
+.menu--active {
+  .action { 
+    transform: translateY(0) scale(0);
+    visibility: hidden;
+    //.icon { transform: scale(0) rotate(90deg); }
+  }
+}
+
+.menu--camera .action--camera,
+.menu--users .action--users, 
+.menu--comments .action--comments,
+.menu--likes .action--likes { 
+  transform: translateY(-200%) scale(0.4,1.5);
+  transition-duration: 900ms, 0ms;
+  transition-delay: 0ms, 0ms;
+  visibility: visible;
+}
+
+
+////////////////////////////////////////
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 1em 0.5em;
+  padding-top: 5.5em;
+}
+
+.box {
+  background: #eaeaea;
+  margin: 0.5em;
+  padding-top: 30%;
+  flex: 1 1 40%;
+  
+  @media (min-width: 800px) { flex-basis: 30%; }
+//  flex-basis: calc(45% - 2em);
+}
+  

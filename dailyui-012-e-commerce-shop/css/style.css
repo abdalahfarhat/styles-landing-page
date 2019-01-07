@@ -1,0 +1,283 @@
+/*--------------------
+General Style
+---------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+            user-select: none;
+}
+
+body {
+  background: #f4f5f9;
+  background: -webkit-linear-gradient(top, #f4f7f7 0%, #f4f7f7 60%, #e4e7ec 60%, #e4e7ec 100%);
+  background: linear-gradient(to bottom, #f4f7f7 0%, #f4f7f7 60%, #e4e7ec 60%, #e4e7ec 100%);
+}
+
+/*--------------------
+Buttons Style
+---------------------*/
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bic {
+  width: 44px;
+  height: 44px;
+  font-size: 32px;
+  color: #1e2022;
+  padding: 0px 6px;
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/*--------------------
+Main Container
+---------------------*/
+
+.ui {
+  width: 320px;
+  height: 568px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  background-color: #fff;
+  overflow: hidden;
+  
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  
+  -webkit-box-shadow: 0 30px 48px rgba(50,54,70,0.24);
+     -moz-box-shadow: 0 30px 48px rgba(50,54,70,0.24);
+          box-shadow: 0 30px 48px rgba(50,54,70,0.24);
+}
+
+/*--------------------
+StatusBar Simulation
+---------------------*/
+
+.statusbar {
+  width: 100%;
+  height: 24px;
+  padding: 0px 5px;
+  position: absolute;
+  top: 0;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 24px;
+  color: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.02);
+  z-index: 9999;
+}
+
+.statusbar span {
+  font-size: 18px;
+  padding: 0px 3px;
+  color: rgba(0,0,0,0.1);
+}
+
+#hour {
+  font-size: 13px;
+}
+
+.statusbar .ion-battery-half, 
+.statusbar .ion-ios-bolt {
+  float: right;
+}
+
+.statusbar .ion-wifi, 
+.statusbar .ion-ios-more {
+  float: left;
+}
+
+/*--------------------
+Screen
+---------------------*/
+
+.screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f4f7f8;
+  overflow: hidden;
+  z-index: 2;
+  
+  -webkit-box-shadow: 0 30px 48px rgba(50,54,70,0.24);
+     -moz-box-shadow: 0 30px 48px rgba(50,54,70,0.24);
+          box-shadow: 0 30px 48px rgba(50,54,70,0.24);
+}
+
+/*--------------------
+NavigationBar
+---------------------*/
+
+.shop {
+  width: 100%;
+  height: 380px;
+  padding: 24px 0px 0px 0px;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#menu,#login {
+  opacity: 0.7;
+  line-height: 64px;
+}
+
+#menu:hover,
+#login:hover {
+  opacity: 1;
+}
+
+/*--------------------
+Transitions
+---------------------*/
+
+.ui, .sidebar, .screen, .navbar, .cta, .product-price, #qtty, .product-qtty > a {
+  -webkit-transition: all 0.6s ease;
+     -moz-transition: all 0.6s ease;
+      -ms-transition: all 0.6s ease;
+       -o-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+}
+
+/*--------------------
+Product
+---------------------*/
+
+.product-img {
+  width: 186px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  
+  -webkit-transform: translate(-50%, -35%);
+          transform: translate(-50%, -35%);
+}
+
+.product-desc {
+  margin-top: 16px;
+  height: 100%;
+}
+
+.product-name,
+.product-qtty,
+.product-price {
+  width: 100%;
+  text-align: center;
+}
+
+.product-name {
+  color: #52616a;
+  font-size: 12px;
+  line-height: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.product-qtty > a {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 3px 8px 0;
+  color: #6d819c;
+  
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.product-qtty > a.clr {
+  padding: 1px 4px;
+  border: 1px solid transparent;
+}
+
+.product-qtty > a.clr:hover {
+  border-radius: 2px;
+  border: 1px solid #c9d6de;
+}
+
+.product-qtty > a.clr-clear {
+  color: #e4e7ec;
+}
+
+.product-qtty > a.clr-orange {
+  color: #FCA560;
+}
+
+.product-qtty > a.clr-black {
+  color: #000;
+  margin-right: 12px;
+}
+
+.product-qtty > a.act:hover {
+  color: #52616a;
+  background-color: #dddfe6;
+}
+
+#qtty {
+  color: #52616a;
+  border: 1px solid #c9d6de;
+  padding: 3px 16px 0;
+  cursor: default;
+}
+
+.product-price {
+  font-size: 28px;
+  line-height: 50px;
+}
+
+.product-cta {
+  width: 100%;
+  height: 56px;
+  background-color: #e4e7ec; 
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.cta {
+  width: 200px;
+  padding: 3px 30px 0;
+  text-align: center;
+  border: 1px solid #000;
+  position: relative;
+  top: 20px;
+  
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.cta:hover {
+  color: #fff;
+  background-color: #000;
+}

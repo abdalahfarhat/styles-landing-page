@@ -1,0 +1,16 @@
+dist/
+bin/
+public/
+node_modules/
+npm-debug.log
+.DS_Store
+.tern-project
+yarn-error.log
+.vscode/
+manifest.yml
+.imdone/
+website/data/contributors.json
+cypress/videos
+/coverage/
+.cache
+*.log

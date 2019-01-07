@@ -1,0 +1,478 @@
+.clearfix {
+  display: inline-block;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+body {
+  background: #eee;
+  font-family: "Montserrat", sans-serif;
+}
+
+.statCont {
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+  border: solid 1px #e0e0e0;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.statCont#line_chart .legend {
+  width: 100%;
+  float: left;
+  height: 40px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 130px;
+  overflow: hidden;
+}
+.statCont#line_chart .legend ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.statCont#line_chart .legend ul li {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+}
+.statCont#line_chart .legend ul li span {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 14px;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+.statCont#line_chart .legend ul li span.one {
+  border: solid 1px #4a809a;
+  background: #85b0c5;
+}
+.statCont#line_chart .legend ul li span.two {
+  border: solid 1px #4a809a;
+  background: #cfcfcf;
+}
+.statCont .lineChartCont {
+  width: 80%;
+  margin: 0 auto;
+  overflow: visible;
+}
+.statCont .lineChartCont canvas#canvas {
+  max-width: 100%;
+  max-height: 400px;
+}
+.statCont .statsCol {
+  position: absolute;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  padding-top: 60px;
+}
+.statCont .statsCol .stat {
+  width: 80%;
+  margin: 0 10% 10px 10%;
+  height: 60px;
+  border: solid 1px #ebebeb;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 1px 1px #ccc;
+  -webkit-box-shadow: 0 1px 1px #ccc;
+  box-shadow: 0 1px 1px #ccc;
+}
+.statCont .statsCol .stat span {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.statCont .statsCol .stat span.num {
+  font-size: 26px;
+}
+.statCont .statsCol .stat span.term {
+  font-size: 12px;
+}
+.statCont .leftStats {
+  left: 0;
+  color: #4a809a;
+}
+.statCont .rightStats {
+  right: 0;
+  color: #9c9c9c;
+}
+
+#pie_chart {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#pie_chart .pieChartCont {
+  width: 35%;
+  min-height: 300px;
+  float: left;
+}
+#pie_chart .pieChartCont canvas#pieChart {
+  width: 100%;
+  height: auto;
+}
+#pie_chart .legend {
+  float: left;
+  width: 35%;
+  height: auto;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+#pie_chart .legend ul {
+  margin: 0;
+  padding: 0;
+}
+#pie_chart .legend ul li {
+  display: inline-block;
+  width: 100%;
+  float: left;
+  line-height: 26px;
+  margin-bottom: 6px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-family: arial;
+}
+#pie_chart .legend ul li:nth-child(1) {
+  background: #F7464A;
+  color: #ebebeb;
+}
+#pie_chart .legend ul li:nth-child(2) {
+  background: #4D5360;
+  color: #ebebeb;
+}
+#pie_chart .legend ul li:nth-child(3) {
+  background: #FDB45C;
+}
+#pie_chart .legend ul li:nth-child(4) {
+  background: #46BFBD;
+}
+#pie_chart .legend ul li:nth-child(5) {
+  background: #949FB1;
+}
+#pie_chart .legend ul li i.fa {
+  margin-right: 15px;
+  min-width: 24px;
+}
+#pie_chart .legend ul li span {
+  margin-right: 10px;
+  display: inline-block;
+  min-width: 50px;
+}
+#pie_chart .pieOptions {
+  float: left;
+  width: 25%;
+  height: 100%;
+  min-height: 20px;
+}
+#pie_chart .pieOptions a {
+  width: 100%;
+  display: inline-block;
+  float: left;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #84BE6A;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 0 1px 1px #52873b;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border-bottom: solid 4px #3d642b;
+}
+#pie_chart .pieOptions a:Hover {
+  background: #93c67c;
+  border-bottom: solid 4px #487533;
+}
+#pie_chart .pieOptions a i.fa {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#bar_chart .barChartCont {
+  width: 60%;
+  padding-left: 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#bar_chart .barChartCont canvas#barChart {
+  width: 100%;
+  height: auto;
+  min-height: 450px;
+}
+#bar_chart .legend {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 35%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px;
+}
+#bar_chart .legend h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+#bar_chart .legend .items {
+  width: 100%;
+  float: left;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 12px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#bar_chart .legend .items span {
+  width: 100%;
+  display: inline-block;
+}
+#bar_chart .legend .items span.co {
+  font-size: 34px;
+}
+#bar_chart .legend .clicks {
+  background: rgba(220, 220, 220, 0.5);
+  border: solid 2px rgba(220, 220, 220, 0.8);
+}
+#bar_chart .legend .conversions {
+  background: rgba(151, 187, 205, 0.5);
+  border: solid 2px rgba(151, 187, 205, 0.8);
+}
+#bar_chart .legend .avgClicks {
+  width: 46%;
+  background: #A6D785;
+  border: solid 2px #6fb93d;
+  float: left;
+}
+#bar_chart .legend .avgConvs {
+  width: 46%;
+  background: #63D1F4;
+  border: solid 2px #10afe1;
+  float: right;
+}
+
+#email_lists h4 {
+  margin: 0;
+  padding: 0 20px;
+  font-size: 24px;
+  width: 35%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#email_lists ul.emailLists {
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  width: 35%;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#email_lists ul.emailLists li {
+  display: inline-block;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0;
+  line-height: 36px;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+#email_lists ul.emailLists li:hover {
+  cursor: pointer;
+}
+#email_lists ul.emailLists li:first-child {
+  border-bottom: solid 3px #ebebeb;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+#email_lists ul.emailLists li:first-child.selected {
+  background: #fff;
+  color: #009fd4;
+}
+#email_lists ul.emailLists li:first-child.selected span {
+  background: #ebebeb;
+}
+#email_lists ul.emailLists li.selected {
+  background: #ebebeb;
+}
+#email_lists ul.emailLists li.selected span {
+  background: #fff;
+}
+#email_lists ul.emailLists li span {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 4px 12px;
+  background: #eee;
+  line-height: 20px;
+  -moz-box-shadow: inset 0 1px 1px #ccc;
+  -webkit-box-shadow: inset 0 1px 1px #ccc;
+  box-shadow: inset 0 1px 1px #ccc;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  color: #444;
+}
+#email_lists ul.emailLists li a {
+  float: right;
+  text-decoration: none;
+  font-size: 12px;
+  color: #0079a2;
+  font-family: arial, sans-serif;
+}
+#email_lists ul.emailLists li a:hover {
+  text-decoration: underline;
+}
+#email_lists .indivEmailsTop {
+  width: 65%;
+  float: left;
+  padding: 0 20px;
+  margin: 0;
+  margin-top: -30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#email_lists .indivEmailsTop .info {
+  width: 33.3%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+}
+#email_lists .indivEmailsTop .info.infoBounced {
+  width: 33.4%;
+  float: right;
+}
+#email_lists .indivEmailsTop .info span {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+#email_lists .indivEmailsTop .info span.num {
+  font-size: 34px;
+}
+#email_lists ul.indivEmailsBottom {
+  width: 65%;
+  margin: 0;
+  padding: 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  border-top: solid 3px #ebebeb;
+  margin-top: 30px;
+  list-style: none;
+  font-family: arial, sans-serif;
+  line-height: 24px;
+}
+#email_lists ul.indivEmailsBottom li {
+  padding: 5px 12px;
+  color: #009fd4;
+  font-size: 14px;
+  border: solid 2px #fff;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+#email_lists ul.indivEmailsBottom li:nth-child(odd) {
+  background: #ebebeb;
+}
+#email_lists ul.indivEmailsBottom li a {
+  opacity: 0;
+  display: inline-block;
+  float: right;
+  padding: 3px 5px;
+  background: #fff;
+  border: solid 1px #ccc;
+  margin-right: 5px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  border-bottom-width: 3px;
+}
+#email_lists ul.indivEmailsBottom li:hover {
+  border-color: #009fd4;
+}
+#email_lists ul.indivEmailsBottom li:hover a {
+  opacity: 1;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+#email_lists ul.indivEmailsBottom li:hover a:hover {
+  background: #ffc;
+}
+#email_lists .options {
+  float: right;
+  padding: 10px 20px;
+}
+#email_lists .options a {
+  padding: 8px 14px;
+  border: solid 1px #ccc;
+  border-bottom-width: 4px;
+  margin-left: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: #777;
+  text-decoration: none;
+}
+#email_lists .options a:hover {
+  background: #eee;
+  color: #333;
+}
+#email_lists .options a i.fa {
+  margin-right: 4px;
+  display: inline-block;
+}

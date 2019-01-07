@@ -1,0 +1,356 @@
+body {
+  background: #801638;
+}
+body,
+body > * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+* {
+  transition: all 0.3s ease 0s;
+}
+/* Colours */
+::selection {
+  background: #000 !important;
+  color: #fff !important;
+}
+::-moz-selection {
+  background: #000 !important;
+  color: #fff !important;
+}
+body > div + div {
+  background: #801638;
+}
+body > div + div article:nth-child(1) {
+  background: #c22326;
+}
+body > div + div article:nth-child(2) {
+  background: #f37338;
+}
+body > div + div article:nth-child(3) {
+  background: #fdb632;
+}
+body > div + div article:nth-child(4) {
+  background: #027878;
+}
+body > div + div article:nth-child(5) {
+  background: #801638;
+}
+/* Main layout */
+html,
+body,
+body > div + div {
+  width: 100vw;
+  height: 100vh;
+}
+body > div + div {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  overflow: hidden;
+}
+/* Articles */
+body > div + div article {
+  flex: initial;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  vertical-align: bottom;
+  box-sizing: border-box;
+  padding: 2vh 1vw;
+  position: relative;
+}
+/* Big Headings */
+body > div:first-child {
+  position: fixed;
+  bottom: 8vh;
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 2;
+}
+body > div:first-child h1,
+body > div:first-child h2 {
+  margin: 0;
+  padding: 0;
+}
+/* Hover interaction */
+body > div + div:hover article {
+  flex: initial;
+  width: 10%;
+}
+body > div + div article:hover {
+  width: 70%;
+}
+article > div {
+  opacity: 0;
+  transition: opacity 0.2s ease 0;
+}
+article:hover > div {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.3s;
+}
+/* navigation */
+body > div + div article > h2 {
+  bottom: 2.2vh;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-size: 3vh;
+}
+body > div + div:hover article > h2 {
+  bottom: 2.8vh;
+  font-size: 2vh;
+}
+body > div + div article:hover > h2 {
+  bottom: 2.2vh;
+  font-size: 3vh;
+}
+/* Article layouts */
+article > div {
+  text-align: left;
+  width: 58vw;
+}
+article > div p,
+article > div h2,
+article > div h3 {
+  margin: 0 0 1em 0;
+  width: 30vw;
+}
+article > div p {
+  width: 30vw;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:after {
+  content: " >";
+}
+a:hover {
+  text-decoration: underline;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.col-6 {
+  width: 50%;
+  float: left;
+}
+/* Mobile */
+@media (max-width: 900px) {
+  body > div + div article {
+    padding: 2vh 3vw;
+  }
+  body > div + div article > h2 {
+    transform: rotate(90deg);
+    bottom: 23vh;
+    min-width: 12em;
+    text-align: left;
+    transform: rotate(-90deg);
+    transform-origin: 0 0 0;
+    opacity: 1;
+  }
+  body > div + div article:hover > h2 {
+    opacity: 0;
+  }
+  article div {
+    max-height: calc(100% - 28vh);
+    overflow-y: auto;
+  }
+  article div article div p {
+    width: 50vw;
+  }
+}
+.gallery {
+  width: 100%;
+  height: 0;
+  padding-top: 40%;
+  box-sizing: border-box;
+  position: relative;
+}
+.gallery .inner {
+  display: grid;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 22px;
+  grid-template-areas: "photo-1 photo-1 photo-2 photo-3 photo-3 photo-4" "photo-5 photo-5 photo-2 photo-3 photo-3 photo-4" "photo-5 photo-5 photo-2 photo-7 photo-8 photo-4" "photo-6 photo-6 photo-6 photo-7 photo-8 photo-9" "photo-6 photo-6 photo-6 photo-7 photo-8 photo-9";
+}
+.gallery .inner div {
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+}
+.gallery .inner div:nth-child(1) {
+  grid-area: photo-1;
+}
+.gallery .inner div:nth-child(2) {
+  grid-area: photo-2;
+}
+.gallery .inner div:nth-child(3) {
+  grid-area: photo-3;
+}
+.gallery .inner div:nth-child(4) {
+  grid-area: photo-4;
+}
+.gallery .inner div:nth-child(5) {
+  grid-area: photo-5;
+}
+.gallery .inner div:nth-child(6) {
+  grid-area: photo-6;
+}
+.gallery .inner div:nth-child(7) {
+  grid-area: photo-7;
+}
+.gallery .inner div:nth-child(8) {
+  grid-area: photo-8;
+}
+.gallery .inner div:nth-child(9) {
+  grid-area: photo-9;
+}
+body > div + div article:nth-child(1) {
+  /* Design */
+}
+body > div + div article:nth-child(1) .gallery .inner div:nth-child(1) {
+  background-image: url("");
+}
+body > div + div article:nth-child(1) .gallery .inner div:nth-child(2) {
+  background-image: url("");
+}
+body > div + div article:nth-child(1) .gallery .inner div:nth-child(3) {
+  background-image: url("https://rachelreveley.co.uk/projects/figleaves_1.jpg");
+}
+body > div + div article:nth-child(1) .gallery .inner div:nth-child(4) {
+  background-image: url("");
+}
+body > div + div article:nth-child(1) .gallery .inner div:nth-child(5) {
+  background-image: url("");
+}
+body > div + div article:nth-child(1) .gallery .inner div:nth-child(6) {
+  background-image: url("https://rachelreveley.co.uk/projects/col_1.jpg");
+}
+body > div + div article:nth-child(1) .gallery .inner div:nth-child(7) {
+  background-image: url("");
+}
+body > div + div article:nth-child(1) .gallery .inner div:nth-child(8) {
+  background-image: url("");
+}
+body > div + div article:nth-child(1) .gallery .inner div:nth-child(9) {
+  background-image: url("");
+}
+body > div + div article:nth-child(2) {
+  /* UX */
+}
+body > div + div article:nth-child(2) .gallery .inner div:nth-child(1) {
+  background-image: url("");
+}
+body > div + div article:nth-child(2) .gallery .inner div:nth-child(2) {
+  background-image: url("");
+}
+body > div + div article:nth-child(2) .gallery .inner div:nth-child(3) {
+  background-image: url("");
+}
+body > div + div article:nth-child(2) .gallery .inner div:nth-child(4) {
+  background-image: url("");
+}
+body > div + div article:nth-child(2) .gallery .inner div:nth-child(5) {
+  background-image: url("");
+}
+body > div + div article:nth-child(2) .gallery .inner div:nth-child(6) {
+  background-image: url("");
+}
+body > div + div article:nth-child(2) .gallery .inner div:nth-child(7) {
+  background-image: url("");
+}
+body > div + div article:nth-child(2) .gallery .inner div:nth-child(8) {
+  background-image: url("");
+}
+body > div + div article:nth-child(2) .gallery .inner div:nth-child(9) {
+  background-image: url("");
+}
+body > div + div article:nth-child(3) {
+  /* FE */
+}
+body > div + div article:nth-child(3) .gallery .inner div:nth-child(1) {
+  background-image: url("https://rachelreveley.co.uk/projects/lovehoney_1.jpg");
+}
+body > div + div article:nth-child(3) .gallery .inner div:nth-child(2) {
+  background-image: url("");
+}
+body > div + div article:nth-child(3) .gallery .inner div:nth-child(3) {
+  background-image: url("https://rachelreveley.co.uk/projects/arcadia_1.jpg");
+}
+body > div + div article:nth-child(3) .gallery .inner div:nth-child(4) {
+  background-image: url("");
+}
+body > div + div article:nth-child(3) .gallery .inner div:nth-child(5) {
+  background-image: url("");
+}
+body > div + div article:nth-child(3) .gallery .inner div:nth-child(6) {
+  background-image: url("");
+}
+body > div + div article:nth-child(3) .gallery .inner div:nth-child(7) {
+  background-image: url("https://rachelreveley.co.uk/projects/byc_1.jpg");
+}
+body > div + div article:nth-child(3) .gallery .inner div:nth-child(8) {
+  background-image: url("https://rachelreveley.co.uk/projects/zoomf_1.jpg");
+}
+body > div + div article:nth-child(3) .gallery .inner div:nth-child(9) {
+  background-image: url("https://rachelreveley.co.uk/projects/localmole_1.jpg");
+}
+body > div + div article:nth-child(4) {
+  /* Out of hours */
+}
+body > div + div article:nth-child(4) .gallery .inner div:nth-child(1) {
+  background-image: url("https://rachelreveley.co.uk/photos/weed-bowl.jpg");
+}
+body > div + div article:nth-child(4) .gallery .inner div:nth-child(2) {
+  background-image: url("https://rachelreveley.co.uk/photos/IMG_5407.jpg");
+}
+body > div + div article:nth-child(4) .gallery .inner div:nth-child(3) {
+  background-image: url("https://rachelreveley.co.uk/photos/dragon-egg-bowl.jpg");
+}
+body > div + div article:nth-child(4) .gallery .inner div:nth-child(4) {
+  background-image: url("https://rachelreveley.co.uk/photos/IMG_1518.JPG");
+}
+body > div + div article:nth-child(4) .gallery .inner div:nth-child(5) {
+  background-image: url("https://rachelreveley.co.uk/photos/IMG_5403.jpg");
+}
+body > div + div article:nth-child(4) .gallery .inner div:nth-child(6) {
+  background-image: url("https://rachelreveley.co.uk/photos/IMG_1586.jpg");
+}
+body > div + div article:nth-child(4) .gallery .inner div:nth-child(7) {
+  background-image: url("https://rachelreveley.co.uk/photos/IMG_5397.jpg");
+}
+body > div + div article:nth-child(4) .gallery .inner div:nth-child(8) {
+  background-image: url("https://rachelreveley.co.uk/photos/IMG_2392.jpg");
+}
+body > div + div article:nth-child(4) .gallery .inner div:nth-child(9) {
+  background-image: url("https://rachelreveley.co.uk/photos/IMG_1597.JPG");
+}

@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans);
+
+/* html element identifers */
+/* make fonts responsive */
+body {
+	width: 100%;
+}
+h1,h2,h3,h4,h5,h6,p {
+   line-height: 1.45;
+}
+
+/* base font sizes */
+h1 { font-size: 8em; }
+@media screen and (max-width: 1024px){
+	h1 { font-size: 7em; }
+}
+@media screen and (max-width: 900px){
+		h1 {font-size: 4em;	}
+}
+@media screen and (max-width: 522px){
+		h1 {font-size: 3em;	}
+}
+@media screen and (max-width: 400px){
+		h1 {font-size: 2em;	}
+}
+
+h2 { font-size: 2.5em; }
+@media screen and (max-width: 768px){
+		h2 {font-size: 2.25em;	}
+}
+@media screen and (max-width: 425px){
+		h2 {font-size: 2em;	}
+}
+@media screen and (max-width: 375px){
+		h2 {font-size: 1.25em;	}
+}
+h3 { font-size: 2em; }
+@media screen and (max-width: 1024px){
+		h3 {font-size: 1.75em;	}
+}
+@media screen and (max-width: 768px){
+		h3 {font-size: 1.5em;	}
+}
+@media screen and (max-width: 375px){
+		h3 {font-size: 1.25em;	}
+}
+h4 { font-size: 1.25em; }
+@media screen and (max-width: 1024px){
+		h4 {font-size: 1em;	}
+}
+@media screen and (max-width: 768px){
+		h4 {font-size: 0.95em;	}
+}
+@media screen and (max-width: 375px){
+		h4 {font-size: 0.75em;	}
+}
+h5 { font-size: 1.5em; }
+h6 { font-size: 0.95em; }
+p { font-size: 1.4em; }
+@media screen and (max-width: 1440px){
+	p { font-size: 1.25em;}
+}
+@media screen and (max-width: 1024px){
+	p { font-size: 1em;}
+}
+@media screen and (max-width: 768px){
+	p { font-size: 0.95em;}
+}
+
+/* font families */
+h1,
+h2,
+h3 {
+	font-family: courier, sans serif;
+}
+h4, h5, h6, p{
+	font-family: 'Work Sans', sans serif;
+}
+
+/* color et al */
+h4, p {
+	color: #777;
+}
+p {
+	text-align: justify;
+}
+
+/* hyperlinks */
+a:link {
+	color: #6ac5b0;
+}
+a:visited {
+	color: #6ac5b0;
+}
+a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+a:active {
+	color: blue;
+}
+
+/* unique identifiers */
+#page-header {}
+
+#about {
+	height: 100hv;
+	padding-top: 2em;
+	background: #fff;
+	color: #6ac5b0;
+}
+
+#portfolio {
+	min-height: 100vh;
+	padding-top: 2em;
+	background: #6ac5b0;
+	color: #fff;
+}
+
+#contact {
+	height: 100vh;
+	padding-top: 2em;
+	background: #fff;
+	color: #6ac5b0;
+}
+/* class identifiers */
+.bg-image {
+	width: 100%;
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-image: url('http://vanessa-smith.com/codecamp/images/header.png');
+	background-attachment: fixed;
+	color: #fff;
+}
+
+/* Nav Brand */
+.navbar {
+	font-family: courier, monospace, sans serif;
+}
+.navbar-nav {
+	font-size: 1.5em;
+}
+
+@media screen and (max-width: 1024px){
+.navbar-nav {font-size: 1.25em;}
+}
+@media screen and (max-width: 768px){
+	.navbar-nav {font-size: 1em;}
+}
+@media screen and (max-width: 425px){
+.navbar-nav {font-size: 0.85em;}
+}
+.me {
+	font-size: 1.85em;
+	color: #6ac5b0 !important;
+}
+@media screen and (max-width: 768px){
+.me {font-size: 1.5em;}
+}
+
+/* progress bars */
+.teal {
+	background-color: #6ac5b0;
+}
+.skills {
+	width: 95%;
+	height: auto;
+	margin: 0 auto;
+}
+.progress {
+	border-radius: 0.6em;
+}
+
+
+/*
+@media screen and (max-width: 1024px){
+	.progress-bar span {line-height: 1.25;}
+}*/
+
+/* useful multi purpose classes */
+.right{
+	text-align: right;
+
+}
+.center{
+	width: 90%;
+	margin: 0.25% auto;
+}
+.code{
+	font-family: courier, sans serif;
+}
+.footnote {
+	font-style: italic;
+	font-size: 1em;
+}
+.footnote-white {
+	padding-top: 1em;
+	color: #fff;
+	font-size: 1em;
+	font-style: italic;
+	text-align: center;
+}
+/* box shadow for image*/
+.shadow {
+	border-radius: 0.25em;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* contact form */
+button {
+	padding: 1.5em 0;
+	background-color: #6ac5b0;
+	color: #fff;
+
+}
+button:hover {
+	background-color: rgba(106,197,176,0.9);
+	color: #eee !important;
+}
+.center-2{
+	width: 80%;
+}
+input:focus {
+	background-color: rgba(106,197,176,0.6);
+	outline: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	color: #fff;
+}
+textarea:focus {
+	background-color: rgba(106,197,176,0.6);
+	outline: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	color: #fff;
+}

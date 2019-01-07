@@ -1,0 +1,321 @@
+/*
+------------------------------------
+---------------SETUP----------------
+------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  /* REMOVES FOCUS BOX ON BUTTONS */
+  outline: 0 !important;
+}
+
+html {
+  text-rendering: optimizeLegibility; !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  background-color: #FFE646;
+}
+
+
+/*
+------------------------------------
+---------------LAYOUT---------------
+------------------------------------
+*/
+
+/* BOX */
+#wrapper {
+  background-color: #FFF;
+  width: 695px;
+  height: 495px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  border-radius: 8px;
+  box-shadow: 0px 0px 29px rgba(227, 84, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 29px rgba(227, 84, 0, 0.6);
+  -moz-box-shadow: 0px 0px 29px rgba(227, 84, 0, 0.6);
+}
+
+/* FLEXBOX */
+.main-container {
+  height: 495px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LEFT COLUMN */
+.left-cl {
+  margin: 0 20px 0 0;
+  flex: 1;
+  z-index: 98;
+}
+
+/* RIGHT COLUMN */
+.right-cl {
+  margin: 0 20px 0 0px;
+  flex: 1;
+  z-index: 98;
+}
+
+/*
+------------------------------------
+----------------FONTS---------------
+------------------------------------
+*/
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  color: #9B9B9B;
+  letter-spacing: 1.98px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #9B9B9B;
+  letter-spacing: 1.98px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #9B9B9B;
+  letter-spacing: 3px;
+  padding-bottom: 5px;
+  margin-top: 50px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #9B9B9B;
+  letter-spacing: 1px;
+}
+
+/*
+------------------------------------
+--------------BUTTONS---------------
+------------------------------------
+*/
+
+/* BASKET BUTTON */
+.basket {
+  background-color: #FF7371;
+  border: none;
+  padding: 20px 50px;
+  border-radius: 100px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 1.98px;
+
+  margin-top: 50px;
+
+  /* ANIMATION */
+  -o-transition:color .3s ease-out, background .3s ease-in;
+  -ms-transition:color .3s ease-out, background .3s ease-in;
+  -moz-transition:color .3s ease-out, background .3s ease-in;
+  -webkit-transition:color .3s ease-out, background .3s ease-in;
+  transition:color .3s ease-out, background .3s ease-in;
+
+  /* ANIMATION */
+  -o-transition:color .1s ease-out, transform .1s ease-in;
+  -ms-transition:color .1s ease-out, transform .1s ease-in;
+  -moz-transition:color .1s ease-out, transform .1s ease-in;
+  -webkit-transition:color .1s ease-out, transform .1s ease-in;
+  transition:color .1s ease-out, transform .1s ease-in;
+}
+
+.basket:before {
+  background: url("https://res.cloudinary.com/dviuglhwb/image/upload/v1489676297/cart_t8m4la.svg") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
+  content: "";
+  display: inline-block;
+  color: #fff;
+  height: 25px;
+  margin-right: 13px;
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+  width: 30px;
+}
+
+.yellow {
+  background-color: #FFE546;
+  border: none;
+  padding: 12px;
+  border-radius: 100px;
+  border: #FFF solid 1px;
+  box-shadow: 0px 0px 0px 2px #fff inset;
+
+  margin-right: 20px;
+}
+
+.red {
+  background-color: #FF7372;
+  border: none;
+  padding: 12px;
+  border-radius: 100px;
+  border: #FFF solid 1px;
+  box-shadow: 0px 0px 0px 2px #fff inset;
+
+  margin-right: 20px;
+}
+
+.pink {
+  background-color: #FFC4CF;
+  border: none;
+  padding: 12px;
+  border-radius: 100px;
+  border: #FFF solid 1px;
+  box-shadow: 0px 0px 0px 2px #fff inset;
+
+  margin-right: 20px;
+}
+
+.blue {
+  background-color: #BADCE5;
+  border: none;
+  padding: 12px;
+  border-radius: 100px;
+  border: #FFF solid 1px;
+  box-shadow: 0px 0px 0px 2px #fff inset;
+}
+
+
+/*
+------------------------------------
+------------BG ELEMENTS-------------
+------------------------------------
+*/
+
+
+/* BACKGROUND DIAGONAL SHAPE */
+.diagonal {
+  position: absolute;
+  width: 100px;
+  height: 495px;
+  margin-left: 150px;
+  margin-top: -35px;
+  background: #FFE546;
+  z-index: -1;
+  /* Skew */
+  -webkit-transform: skew(-30deg);
+  -moz-transform: skew(-30deg);
+  -o-transform: skew(-30deg);
+  transform: skew(-30deg);
+}
+
+/* BUTTON BACK BACKGROUND */
+.button-back {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  border-top: 120px solid #FF7372;
+  border-right: 70px solid transparent;
+
+  -webkit-transform:rotate(360deg)
+
+  /* ANIMATION */
+  -o-transition:color .3s ease-out, border-top .3s ease-in;
+  -ms-transition:color .3s ease-out, border-top .3s ease-in;
+  -moz-transition:color .3s ease-out, border-top .3s ease-in;
+  -webkit-transition:color .3s ease-out, border-top .3s ease-in;
+  transition:color .3s ease-out, border-top .3s ease-in;
+}
+
+/* BUTTON BACK ICON */
+.button-back span {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 10px;
+
+  /* ANIMATION */
+  -o-transition:color .2s ease-out, transform .2s ease-in;
+  -ms-transition:color .2s ease-out, transform .2s ease-in;
+  -moz-transition:color .2s ease-out, transform .2s ease-in;
+  -webkit-transition:color .2s ease-out, transform .2s ease-in;
+  transition:color .2s ease-out, transform .2s ease-in;
+}
+
+
+/*
+------------------------------------
+---------------HOVERS---------------
+------------------------------------
+*/
+
+.basket:hover {
+  background-color: #FF935E;
+  cursor: pointer;
+  -ms-transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+.button-back:hover {
+  border-top: 120px solid #FF935E;
+  cursor: pointer;
+}
+
+.button-back span:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.yellow:hover {
+  border: #9B9B9B solid 1px;
+  box-shadow: 0px 0px 0px 2px #fff inset;
+  cursor: pointer;
+}
+
+.red:hover {
+  border: #9B9B9B solid 1px;
+  box-shadow: 0px 0px 0px 2px #fff inset;
+  cursor: pointer;
+}
+
+.pink:hover {
+  border: #9B9B9B solid 1px;
+  box-shadow: 0px 0px 0px 2px #fff inset;
+  cursor: pointer;
+}
+
+.blue:hover {
+  border: #9B9B9B solid 1px;
+  box-shadow: 0px 0px 0px 2px #fff inset;
+  cursor: pointer;
+}

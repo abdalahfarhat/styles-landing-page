@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Animated menu button</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+body {
+  background: #e74c3c;
+  font-family: 'Oswald';
+}
+body a {
+  text-decoration: none;
+}
+
+.menu-link {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  left: 50%;
+  margin: 100px 0 0 -20px;
+}
+.menu-link:before {
+  content: "";
+  background: #fff;
+  height: 4px;
+  width: 40px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin: 0 0 0 -20px;
+  display: block;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.menu-link:after {
+  content: "";
+  background: #fff;
+  height: 4px;
+  width: 40px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin: 0 0 0 -20px;
+  display: block;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.menu-link.close:before {
+  transform: rotate(45deg);
+  top: -15px;
+  width: 25px;
+  margin: 0 0 0 -13px;
+}
+.menu-link.close:after {
+  transform: rotate(-45deg);
+  top: -15px;
+  width: 25px;
+  margin: 0 0 0 -13px;
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <a class="menu-link" href="#">Menu</a>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

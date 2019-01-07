@@ -1,0 +1,3 @@
+A Pen created at CodePen.io. You can find this one at https://codepen.io/hpoydar/pen/MygORZ.
+
+ Minimal SVG gauge charts built with hand-rolled SVG and animated with the awesome [Snap.svg](http://snapsvg.io) library.  Used on the marketing and product pages of [Status Hero](https://statushero.com).  Here's a [blog post](https://statushero.com/blog/animated-svg-gauge-charts/) about how and why we built the charts.

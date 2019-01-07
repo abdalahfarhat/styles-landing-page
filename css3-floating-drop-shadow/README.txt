@@ -1,0 +1,3 @@
+A Pen created at CodePen.io. You can find this one at https://codepen.io/cfarm/pen/FHxnr.
+
+ This drop shadow floats underneath the image, creating a 3D effect of the image popping off the screen. The shadow uses CSS3 border-radius, alpha transparency and box shadow features. Works well for e-commerce product or showcase imagery. Much thanks to my brother Kit Farman for allowing me to use his photograph.
